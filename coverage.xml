@@ -1,119 +1,119 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1589015036">
-  <project timestamp="1589015036">
+<coverage generated="1589023842">
+  <project timestamp="1589023842">
     <package name="TonyBogdanov\MockableAnnotations\MockProvider">
       <file name="/Users/runner/runners/2.169.1/work/mockable-annotations/mockable-annotations/src/MockProvider/ClassMockProvider.php">
         <class name="TonyBogdanov\MockableAnnotations\MockProvider\ClassMockProvider" namespace="TonyBogdanov\MockableAnnotations\MockProvider" fullPackage="TonyBogdanov" package="TonyBogdanov">
           <metrics complexity="14" methods="11" coveredmethods="11" conditionals="0" coveredconditionals="0" statements="21" coveredstatements="21" elements="32" coveredelements="32"/>
         </class>
-        <line num="54" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="10"/>
-        <line num="64" type="stmt" count="10"/>
-        <line num="65" type="stmt" count="10"/>
-        <line num="66" type="stmt" count="10"/>
-        <line num="67" type="stmt" count="10"/>
-        <line num="69" type="stmt" count="10"/>
+        <line num="54" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="14"/>
+        <line num="64" type="stmt" count="14"/>
+        <line num="65" type="stmt" count="14"/>
+        <line num="66" type="stmt" count="14"/>
+        <line num="67" type="stmt" count="14"/>
+        <line num="69" type="stmt" count="14"/>
         <line num="77" type="method" name="mockClassAnnotations" visibility="public" complexity="3" crap="3" count="4"/>
         <line num="79" type="stmt" count="4"/>
         <line num="81" type="stmt" count="1"/>
         <line num="85" type="stmt" count="3"/>
         <line num="92" type="method" name="getAnnotations" visibility="public" complexity="1" crap="1" count="4"/>
         <line num="94" type="stmt" count="4"/>
-        <line num="103" type="method" name="setAnnotations" visibility="public" complexity="1" crap="1" count="10"/>
-        <line num="105" type="stmt" count="10"/>
-        <line num="106" type="stmt" count="10"/>
+        <line num="103" type="method" name="setAnnotations" visibility="public" complexity="1" crap="1" count="14"/>
+        <line num="105" type="stmt" count="14"/>
+        <line num="106" type="stmt" count="14"/>
         <line num="113" type="method" name="getStrategy" visibility="public" complexity="1" crap="1" count="4"/>
         <line num="115" type="stmt" count="4"/>
-        <line num="124" type="method" name="setStrategy" visibility="public" complexity="1" crap="1" count="10"/>
-        <line num="126" type="stmt" count="10"/>
-        <line num="127" type="stmt" count="10"/>
+        <line num="124" type="method" name="setStrategy" visibility="public" complexity="1" crap="1" count="14"/>
+        <line num="126" type="stmt" count="14"/>
+        <line num="127" type="stmt" count="14"/>
         <line num="134" type="method" name="hasFilter" visibility="public" complexity="1" crap="1" count="5"/>
         <line num="136" type="stmt" count="5"/>
         <line num="143" type="method" name="getFilter" visibility="public" complexity="2" crap="2" count="3"/>
         <line num="145" type="stmt" count="3"/>
-        <line num="154" type="method" name="setFilter" visibility="public" complexity="1" crap="1" count="10"/>
-        <line num="156" type="stmt" count="10"/>
-        <line num="157" type="stmt" count="10"/>
+        <line num="154" type="method" name="setFilter" visibility="public" complexity="1" crap="1" count="14"/>
+        <line num="156" type="stmt" count="14"/>
+        <line num="157" type="stmt" count="14"/>
         <line num="164" type="method" name="getPriority" visibility="public" complexity="1" crap="1" count="3"/>
         <line num="166" type="stmt" count="3"/>
-        <line num="175" type="method" name="setPriority" visibility="public" complexity="1" crap="1" count="10"/>
-        <line num="177" type="stmt" count="10"/>
-        <line num="178" type="stmt" count="10"/>
+        <line num="175" type="method" name="setPriority" visibility="public" complexity="1" crap="1" count="14"/>
+        <line num="177" type="stmt" count="14"/>
+        <line num="178" type="stmt" count="14"/>
         <metrics loc="182" ncloc="110" classes="1" methods="11" coveredmethods="11" conditionals="0" coveredconditionals="0" statements="21" coveredstatements="21" elements="32" coveredelements="32"/>
       </file>
       <file name="/Users/runner/runners/2.169.1/work/mockable-annotations/mockable-annotations/src/MockProvider/MethodMockProvider.php">
         <class name="TonyBogdanov\MockableAnnotations\MockProvider\MethodMockProvider" namespace="TonyBogdanov\MockableAnnotations\MockProvider" fullPackage="TonyBogdanov" package="TonyBogdanov">
           <metrics complexity="14" methods="11" coveredmethods="11" conditionals="0" coveredconditionals="0" statements="21" coveredstatements="21" elements="32" coveredelements="32"/>
         </class>
-        <line num="54" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="10"/>
-        <line num="64" type="stmt" count="10"/>
-        <line num="65" type="stmt" count="10"/>
-        <line num="66" type="stmt" count="10"/>
-        <line num="67" type="stmt" count="10"/>
-        <line num="69" type="stmt" count="10"/>
+        <line num="54" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="14"/>
+        <line num="64" type="stmt" count="14"/>
+        <line num="65" type="stmt" count="14"/>
+        <line num="66" type="stmt" count="14"/>
+        <line num="67" type="stmt" count="14"/>
+        <line num="69" type="stmt" count="14"/>
         <line num="77" type="method" name="mockMethodAnnotations" visibility="public" complexity="3" crap="3" count="4"/>
         <line num="79" type="stmt" count="4"/>
         <line num="81" type="stmt" count="1"/>
         <line num="85" type="stmt" count="3"/>
         <line num="92" type="method" name="getAnnotations" visibility="public" complexity="1" crap="1" count="4"/>
         <line num="94" type="stmt" count="4"/>
-        <line num="103" type="method" name="setAnnotations" visibility="public" complexity="1" crap="1" count="10"/>
-        <line num="105" type="stmt" count="10"/>
-        <line num="106" type="stmt" count="10"/>
+        <line num="103" type="method" name="setAnnotations" visibility="public" complexity="1" crap="1" count="14"/>
+        <line num="105" type="stmt" count="14"/>
+        <line num="106" type="stmt" count="14"/>
         <line num="113" type="method" name="getStrategy" visibility="public" complexity="1" crap="1" count="4"/>
         <line num="115" type="stmt" count="4"/>
-        <line num="124" type="method" name="setStrategy" visibility="public" complexity="1" crap="1" count="10"/>
-        <line num="126" type="stmt" count="10"/>
-        <line num="127" type="stmt" count="10"/>
+        <line num="124" type="method" name="setStrategy" visibility="public" complexity="1" crap="1" count="14"/>
+        <line num="126" type="stmt" count="14"/>
+        <line num="127" type="stmt" count="14"/>
         <line num="134" type="method" name="hasFilter" visibility="public" complexity="1" crap="1" count="5"/>
         <line num="136" type="stmt" count="5"/>
         <line num="143" type="method" name="getFilter" visibility="public" complexity="2" crap="2" count="3"/>
         <line num="145" type="stmt" count="3"/>
-        <line num="154" type="method" name="setFilter" visibility="public" complexity="1" crap="1" count="10"/>
-        <line num="156" type="stmt" count="10"/>
-        <line num="157" type="stmt" count="10"/>
+        <line num="154" type="method" name="setFilter" visibility="public" complexity="1" crap="1" count="14"/>
+        <line num="156" type="stmt" count="14"/>
+        <line num="157" type="stmt" count="14"/>
         <line num="164" type="method" name="getPriority" visibility="public" complexity="1" crap="1" count="3"/>
         <line num="166" type="stmt" count="3"/>
-        <line num="175" type="method" name="setPriority" visibility="public" complexity="1" crap="1" count="10"/>
-        <line num="177" type="stmt" count="10"/>
-        <line num="178" type="stmt" count="10"/>
+        <line num="175" type="method" name="setPriority" visibility="public" complexity="1" crap="1" count="14"/>
+        <line num="177" type="stmt" count="14"/>
+        <line num="178" type="stmt" count="14"/>
         <metrics loc="182" ncloc="110" classes="1" methods="11" coveredmethods="11" conditionals="0" coveredconditionals="0" statements="21" coveredstatements="21" elements="32" coveredelements="32"/>
       </file>
       <file name="/Users/runner/runners/2.169.1/work/mockable-annotations/mockable-annotations/src/MockProvider/PropertyMockProvider.php">
         <class name="TonyBogdanov\MockableAnnotations\MockProvider\PropertyMockProvider" namespace="TonyBogdanov\MockableAnnotations\MockProvider" fullPackage="TonyBogdanov" package="TonyBogdanov">
           <metrics complexity="14" methods="11" coveredmethods="11" conditionals="0" coveredconditionals="0" statements="21" coveredstatements="21" elements="32" coveredelements="32"/>
         </class>
-        <line num="54" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="10"/>
-        <line num="64" type="stmt" count="10"/>
-        <line num="65" type="stmt" count="10"/>
-        <line num="66" type="stmt" count="10"/>
-        <line num="67" type="stmt" count="10"/>
-        <line num="69" type="stmt" count="10"/>
+        <line num="54" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="14"/>
+        <line num="64" type="stmt" count="14"/>
+        <line num="65" type="stmt" count="14"/>
+        <line num="66" type="stmt" count="14"/>
+        <line num="67" type="stmt" count="14"/>
+        <line num="69" type="stmt" count="14"/>
         <line num="77" type="method" name="mockPropertyAnnotations" visibility="public" complexity="3" crap="3" count="4"/>
         <line num="79" type="stmt" count="4"/>
         <line num="81" type="stmt" count="1"/>
         <line num="85" type="stmt" count="3"/>
         <line num="92" type="method" name="getAnnotations" visibility="public" complexity="1" crap="1" count="4"/>
         <line num="94" type="stmt" count="4"/>
-        <line num="103" type="method" name="setAnnotations" visibility="public" complexity="1" crap="1" count="10"/>
-        <line num="105" type="stmt" count="10"/>
-        <line num="106" type="stmt" count="10"/>
+        <line num="103" type="method" name="setAnnotations" visibility="public" complexity="1" crap="1" count="14"/>
+        <line num="105" type="stmt" count="14"/>
+        <line num="106" type="stmt" count="14"/>
         <line num="113" type="method" name="getStrategy" visibility="public" complexity="1" crap="1" count="4"/>
         <line num="115" type="stmt" count="4"/>
-        <line num="124" type="method" name="setStrategy" visibility="public" complexity="1" crap="1" count="10"/>
-        <line num="126" type="stmt" count="10"/>
-        <line num="127" type="stmt" count="10"/>
+        <line num="124" type="method" name="setStrategy" visibility="public" complexity="1" crap="1" count="14"/>
+        <line num="126" type="stmt" count="14"/>
+        <line num="127" type="stmt" count="14"/>
         <line num="134" type="method" name="hasFilter" visibility="public" complexity="1" crap="1" count="5"/>
         <line num="136" type="stmt" count="5"/>
         <line num="143" type="method" name="getFilter" visibility="public" complexity="2" crap="2" count="3"/>
         <line num="145" type="stmt" count="3"/>
-        <line num="154" type="method" name="setFilter" visibility="public" complexity="1" crap="1" count="10"/>
-        <line num="156" type="stmt" count="10"/>
-        <line num="157" type="stmt" count="10"/>
+        <line num="154" type="method" name="setFilter" visibility="public" complexity="1" crap="1" count="14"/>
+        <line num="156" type="stmt" count="14"/>
+        <line num="157" type="stmt" count="14"/>
         <line num="164" type="method" name="getPriority" visibility="public" complexity="1" crap="1" count="3"/>
         <line num="166" type="stmt" count="3"/>
-        <line num="175" type="method" name="setPriority" visibility="public" complexity="1" crap="1" count="10"/>
-        <line num="177" type="stmt" count="10"/>
-        <line num="178" type="stmt" count="10"/>
+        <line num="175" type="method" name="setPriority" visibility="public" complexity="1" crap="1" count="14"/>
+        <line num="177" type="stmt" count="14"/>
+        <line num="178" type="stmt" count="14"/>
         <metrics loc="182" ncloc="110" classes="1" methods="11" coveredmethods="11" conditionals="0" coveredconditionals="0" statements="21" coveredstatements="21" elements="32" coveredelements="32"/>
       </file>
     </package>
@@ -122,24 +122,24 @@
         <class name="TonyBogdanov\MockableAnnotations\MockProvider\ClassMockProvider\Filter\ClassNameFilter" namespace="TonyBogdanov\MockableAnnotations\MockProvider\ClassMockProvider\Filter" fullPackage="TonyBogdanov" package="TonyBogdanov">
           <metrics complexity="7" methods="6" coveredmethods="6" conditionals="0" coveredconditionals="0" statements="12" coveredstatements="12" elements="18" coveredelements="18"/>
         </class>
-        <line num="37" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="7"/>
-        <line num="40" type="stmt" count="7"/>
-        <line num="41" type="stmt" count="7"/>
-        <line num="43" type="stmt" count="7"/>
+        <line num="37" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="11"/>
+        <line num="40" type="stmt" count="11"/>
+        <line num="41" type="stmt" count="11"/>
+        <line num="43" type="stmt" count="11"/>
         <line num="51" type="method" name="shouldMock" visibility="public" complexity="2" crap="2" count="4"/>
         <line num="53" type="stmt" count="4"/>
         <line num="54" type="stmt" count="1"/>
         <line num="55" type="stmt" count="4"/>
         <line num="62" type="method" name="getClassName" visibility="public" complexity="1" crap="1" count="5"/>
         <line num="64" type="stmt" count="5"/>
-        <line num="73" type="method" name="setClassName" visibility="public" complexity="1" crap="1" count="7"/>
-        <line num="75" type="stmt" count="7"/>
-        <line num="76" type="stmt" count="7"/>
+        <line num="73" type="method" name="setClassName" visibility="public" complexity="1" crap="1" count="11"/>
+        <line num="75" type="stmt" count="11"/>
+        <line num="76" type="stmt" count="11"/>
         <line num="83" type="method" name="isStrict" visibility="public" complexity="1" crap="1" count="5"/>
         <line num="85" type="stmt" count="5"/>
-        <line num="94" type="method" name="setStrict" visibility="public" complexity="1" crap="1" count="7"/>
-        <line num="96" type="stmt" count="7"/>
-        <line num="97" type="stmt" count="7"/>
+        <line num="94" type="method" name="setStrict" visibility="public" complexity="1" crap="1" count="11"/>
+        <line num="96" type="stmt" count="11"/>
+        <line num="97" type="stmt" count="11"/>
         <metrics loc="101" ncloc="56" classes="1" methods="6" coveredmethods="6" conditionals="0" coveredconditionals="0" statements="12" coveredstatements="12" elements="18" coveredelements="18"/>
       </file>
     </package>
@@ -178,23 +178,23 @@
         <class name="TonyBogdanov\MockableAnnotations\MockProvider\MethodMockProvider\Filter\MethodNameFilter" namespace="TonyBogdanov\MockableAnnotations\MockProvider\MethodMockProvider\Filter" fullPackage="TonyBogdanov" package="TonyBogdanov">
           <metrics complexity="7" methods="6" coveredmethods="6" conditionals="0" coveredconditionals="0" statements="11" coveredstatements="11" elements="17" coveredelements="17"/>
         </class>
-        <line num="37" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="6"/>
-        <line num="40" type="stmt" count="6"/>
-        <line num="41" type="stmt" count="6"/>
-        <line num="43" type="stmt" count="6"/>
+        <line num="37" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="10"/>
+        <line num="40" type="stmt" count="10"/>
+        <line num="41" type="stmt" count="10"/>
+        <line num="43" type="stmt" count="10"/>
         <line num="51" type="method" name="shouldMock" visibility="public" complexity="2" crap="2" count="3"/>
         <line num="54" type="stmt" count="3"/>
         <line num="55" type="stmt" count="3"/>
         <line num="62" type="method" name="getClassName" visibility="public" complexity="1" crap="1" count="4"/>
         <line num="64" type="stmt" count="4"/>
-        <line num="73" type="method" name="setClassName" visibility="public" complexity="1" crap="1" count="6"/>
-        <line num="75" type="stmt" count="6"/>
-        <line num="76" type="stmt" count="6"/>
+        <line num="73" type="method" name="setClassName" visibility="public" complexity="1" crap="1" count="10"/>
+        <line num="75" type="stmt" count="10"/>
+        <line num="76" type="stmt" count="10"/>
         <line num="83" type="method" name="getMethodName" visibility="public" complexity="1" crap="1" count="3"/>
         <line num="85" type="stmt" count="3"/>
-        <line num="94" type="method" name="setMethodName" visibility="public" complexity="1" crap="1" count="6"/>
-        <line num="96" type="stmt" count="6"/>
-        <line num="97" type="stmt" count="6"/>
+        <line num="94" type="method" name="setMethodName" visibility="public" complexity="1" crap="1" count="10"/>
+        <line num="96" type="stmt" count="10"/>
+        <line num="97" type="stmt" count="10"/>
         <metrics loc="101" ncloc="56" classes="1" methods="6" coveredmethods="6" conditionals="0" coveredconditionals="0" statements="11" coveredstatements="11" elements="17" coveredelements="17"/>
       </file>
     </package>
@@ -230,23 +230,23 @@
         <class name="TonyBogdanov\MockableAnnotations\MockProvider\PropertyMockProvider\Filter\PropertyNameFilter" namespace="TonyBogdanov\MockableAnnotations\MockProvider\PropertyMockProvider\Filter" fullPackage="TonyBogdanov" package="TonyBogdanov">
           <metrics complexity="7" methods="6" coveredmethods="6" conditionals="0" coveredconditionals="0" statements="11" coveredstatements="11" elements="17" coveredelements="17"/>
         </class>
-        <line num="37" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="6"/>
-        <line num="40" type="stmt" count="6"/>
-        <line num="41" type="stmt" count="6"/>
-        <line num="43" type="stmt" count="6"/>
+        <line num="37" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="10"/>
+        <line num="40" type="stmt" count="10"/>
+        <line num="41" type="stmt" count="10"/>
+        <line num="43" type="stmt" count="10"/>
         <line num="51" type="method" name="shouldMock" visibility="public" complexity="2" crap="2" count="3"/>
         <line num="54" type="stmt" count="3"/>
         <line num="55" type="stmt" count="3"/>
         <line num="62" type="method" name="getClassName" visibility="public" complexity="1" crap="1" count="4"/>
         <line num="64" type="stmt" count="4"/>
-        <line num="73" type="method" name="setClassName" visibility="public" complexity="1" crap="1" count="6"/>
-        <line num="75" type="stmt" count="6"/>
-        <line num="76" type="stmt" count="6"/>
+        <line num="73" type="method" name="setClassName" visibility="public" complexity="1" crap="1" count="10"/>
+        <line num="75" type="stmt" count="10"/>
+        <line num="76" type="stmt" count="10"/>
         <line num="83" type="method" name="getPropertyName" visibility="public" complexity="1" crap="1" count="3"/>
         <line num="85" type="stmt" count="3"/>
-        <line num="94" type="method" name="setPropertyName" visibility="public" complexity="1" crap="1" count="6"/>
-        <line num="96" type="stmt" count="6"/>
-        <line num="97" type="stmt" count="6"/>
+        <line num="94" type="method" name="setPropertyName" visibility="public" complexity="1" crap="1" count="10"/>
+        <line num="96" type="stmt" count="10"/>
+        <line num="97" type="stmt" count="10"/>
         <metrics loc="101" ncloc="56" classes="1" methods="6" coveredmethods="6" conditionals="0" coveredconditionals="0" statements="11" coveredstatements="11" elements="17" coveredelements="17"/>
       </file>
     </package>
@@ -280,103 +280,157 @@
     <package name="TonyBogdanov\MockableAnnotations\Reader">
       <file name="/Users/runner/runners/2.169.1/work/mockable-annotations/mockable-annotations/src/Reader/MockableReader.php">
         <class name="TonyBogdanov\MockableAnnotations\Reader\MockableReader" namespace="TonyBogdanov\MockableAnnotations\Reader" fullPackage="TonyBogdanov" package="TonyBogdanov">
-          <metrics complexity="39" methods="21" coveredmethods="21" conditionals="0" coveredconditionals="0" statements="71" coveredstatements="71" elements="92" coveredelements="92"/>
+          <metrics complexity="51" methods="33" coveredmethods="33" conditionals="0" coveredconditionals="0" statements="113" coveredstatements="113" elements="146" coveredelements="146"/>
         </class>
-        <line num="53" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="16"/>
-        <line num="55" type="stmt" count="16"/>
-        <line num="57" type="stmt" count="16"/>
-        <line num="64" type="method" name="getClassAnnotations" visibility="public" complexity="2" crap="2" count="3"/>
-        <line num="66" type="stmt" count="3"/>
-        <line num="68" type="stmt" count="3"/>
-        <line num="70" type="stmt" count="1"/>
-        <line num="74" type="stmt" count="3"/>
-        <line num="84" type="method" name="getClassAnnotation" visibility="public" complexity="3" crap="3" count="3"/>
-        <line num="86" type="stmt" count="3"/>
-        <line num="88" type="stmt" count="3"/>
-        <line num="90" type="stmt" count="2"/>
-        <line num="96" type="stmt" count="1"/>
-        <line num="105" type="method" name="getMethodAnnotations" visibility="public" complexity="2" crap="2" count="3"/>
-        <line num="107" type="stmt" count="3"/>
-        <line num="109" type="stmt" count="3"/>
-        <line num="111" type="stmt" count="1"/>
-        <line num="115" type="stmt" count="3"/>
-        <line num="125" type="method" name="getMethodAnnotation" visibility="public" complexity="3" crap="3" count="3"/>
-        <line num="127" type="stmt" count="3"/>
-        <line num="129" type="stmt" count="3"/>
-        <line num="131" type="stmt" count="2"/>
-        <line num="137" type="stmt" count="1"/>
-        <line num="146" type="method" name="getPropertyAnnotations" visibility="public" complexity="2" crap="2" count="3"/>
-        <line num="148" type="stmt" count="3"/>
-        <line num="150" type="stmt" count="3"/>
-        <line num="152" type="stmt" count="1"/>
-        <line num="156" type="stmt" count="3"/>
-        <line num="166" type="method" name="getPropertyAnnotation" visibility="public" complexity="3" crap="3" count="3"/>
-        <line num="168" type="stmt" count="3"/>
-        <line num="170" type="stmt" count="3"/>
+        <line num="66" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="28"/>
+        <line num="68" type="stmt" count="28"/>
+        <line num="70" type="stmt" count="28"/>
+        <line num="79" type="method" name="overrideClassAnnotations" visibility="public" complexity="1" crap="1" count="2"/>
+        <line num="81" type="stmt" count="2"/>
+        <line num="83" type="stmt" count="2"/>
+        <line num="84" type="stmt" count="2"/>
+        <line num="85" type="stmt" count="2"/>
+        <line num="100" type="method" name="overrideAliasClassAnnotations" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="102" type="stmt" count="1"/>
+        <line num="104" type="stmt" count="1"/>
+        <line num="105" type="stmt" count="1"/>
+        <line num="119" type="method" name="mergeClassAnnotations" visibility="public" complexity="1" crap="1" count="2"/>
+        <line num="121" type="stmt" count="2"/>
+        <line num="123" type="stmt" count="2"/>
+        <line num="124" type="stmt" count="2"/>
+        <line num="125" type="stmt" count="2"/>
+        <line num="140" type="method" name="mergeAliasClassAnnotations" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="142" type="stmt" count="1"/>
+        <line num="144" type="stmt" count="1"/>
+        <line num="145" type="stmt" count="1"/>
+        <line num="160" type="method" name="overrideMethodAnnotations" visibility="public" complexity="1" crap="1" count="2"/>
+        <line num="169" type="stmt" count="2"/>
+        <line num="171" type="stmt" count="2"/>
         <line num="172" type="stmt" count="2"/>
-        <line num="178" type="stmt" count="1"/>
-        <line num="185" type="method" name="getDelegate" visibility="public" complexity="1" crap="1" count="10"/>
-        <line num="187" type="stmt" count="10"/>
-        <line num="196" type="method" name="setDelegate" visibility="public" complexity="1" crap="1" count="16"/>
-        <line num="198" type="stmt" count="16"/>
-        <line num="199" type="stmt" count="16"/>
-        <line num="206" type="method" name="clearClassMockProviders" visibility="public" complexity="1" crap="1" count="1"/>
-        <line num="208" type="stmt" count="1"/>
-        <line num="209" type="stmt" count="1"/>
-        <line num="218" type="method" name="addClassMockProvider" visibility="public" complexity="3" crap="3" count="3"/>
-        <line num="220" type="stmt" count="3"/>
-        <line num="222" type="stmt" count="3"/>
-        <line num="224" type="stmt" count="3"/>
+        <line num="173" type="stmt" count="2"/>
+        <line num="190" type="method" name="overrideAliasMethodAnnotations" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="200" type="stmt" count="1"/>
+        <line num="202" type="stmt" count="1"/>
+        <line num="204" type="stmt" count="1"/>
+        <line num="219" type="method" name="mergeMethodAnnotations" visibility="public" complexity="1" crap="1" count="2"/>
         <line num="228" type="stmt" count="2"/>
-        <line num="229" type="stmt" count="2"/>
-        <line num="231" type="stmt" count="3"/>
-        <line num="235" type="stmt" count="3"/>
-        <line num="242" type="method" name="getClassMockProviders" visibility="public" complexity="1" crap="1" count="5"/>
-        <line num="244" type="stmt" count="5"/>
-        <line num="253" type="method" name="setClassMockProviders" visibility="public" complexity="2" crap="2" count="1"/>
-        <line num="255" type="stmt" count="1"/>
-        <line num="257" type="stmt" count="1"/>
+        <line num="230" type="stmt" count="2"/>
+        <line num="231" type="stmt" count="2"/>
+        <line num="232" type="stmt" count="2"/>
+        <line num="249" type="method" name="mergeAliasMethodAnnotations" visibility="public" complexity="1" crap="1" count="1"/>
         <line num="259" type="stmt" count="1"/>
+        <line num="261" type="stmt" count="1"/>
         <line num="263" type="stmt" count="1"/>
-        <line num="270" type="method" name="clearMethodMockProviders" visibility="public" complexity="1" crap="1" count="1"/>
-        <line num="272" type="stmt" count="1"/>
-        <line num="273" type="stmt" count="1"/>
-        <line num="282" type="method" name="addMethodMockProvider" visibility="public" complexity="3" crap="3" count="3"/>
-        <line num="284" type="stmt" count="3"/>
-        <line num="286" type="stmt" count="3"/>
-        <line num="288" type="stmt" count="3"/>
-        <line num="292" type="stmt" count="2"/>
-        <line num="293" type="stmt" count="2"/>
-        <line num="295" type="stmt" count="3"/>
-        <line num="299" type="stmt" count="3"/>
-        <line num="306" type="method" name="getMethodMockProviders" visibility="public" complexity="1" crap="1" count="5"/>
-        <line num="308" type="stmt" count="5"/>
-        <line num="317" type="method" name="setMethodMockProviders" visibility="public" complexity="2" crap="2" count="1"/>
-        <line num="319" type="stmt" count="1"/>
-        <line num="321" type="stmt" count="1"/>
-        <line num="323" type="stmt" count="1"/>
-        <line num="327" type="stmt" count="1"/>
-        <line num="334" type="method" name="clearPropertyMockProviders" visibility="public" complexity="1" crap="1" count="1"/>
-        <line num="336" type="stmt" count="1"/>
-        <line num="337" type="stmt" count="1"/>
-        <line num="346" type="method" name="addPropertyMockProvider" visibility="public" complexity="3" crap="3" count="3"/>
-        <line num="348" type="stmt" count="3"/>
-        <line num="350" type="stmt" count="3"/>
-        <line num="352" type="stmt" count="3"/>
-        <line num="356" type="stmt" count="2"/>
-        <line num="357" type="stmt" count="2"/>
-        <line num="359" type="stmt" count="3"/>
-        <line num="363" type="stmt" count="3"/>
-        <line num="370" type="method" name="getPropertyMockProviders" visibility="public" complexity="1" crap="1" count="5"/>
-        <line num="372" type="stmt" count="5"/>
-        <line num="381" type="method" name="setPropertyMockProviders" visibility="public" complexity="2" crap="2" count="1"/>
-        <line num="383" type="stmt" count="1"/>
-        <line num="385" type="stmt" count="1"/>
-        <line num="387" type="stmt" count="1"/>
-        <line num="391" type="stmt" count="1"/>
-        <metrics loc="395" ncloc="278" classes="1" methods="21" coveredmethods="21" conditionals="0" coveredconditionals="0" statements="71" coveredstatements="71" elements="92" coveredelements="92"/>
+        <line num="278" type="method" name="overridePropertyAnnotations" visibility="public" complexity="1" crap="1" count="2"/>
+        <line num="287" type="stmt" count="2"/>
+        <line num="289" type="stmt" count="2"/>
+        <line num="290" type="stmt" count="2"/>
+        <line num="291" type="stmt" count="2"/>
+        <line num="308" type="method" name="overrideAliasPropertyAnnotations" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="318" type="stmt" count="1"/>
+        <line num="320" type="stmt" count="1"/>
+        <line num="322" type="stmt" count="1"/>
+        <line num="337" type="method" name="mergePropertyAnnotations" visibility="public" complexity="1" crap="1" count="2"/>
+        <line num="346" type="stmt" count="2"/>
+        <line num="348" type="stmt" count="2"/>
+        <line num="349" type="stmt" count="2"/>
+        <line num="350" type="stmt" count="2"/>
+        <line num="367" type="method" name="mergeAliasPropertyAnnotations" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="377" type="stmt" count="1"/>
+        <line num="379" type="stmt" count="1"/>
+        <line num="381" type="stmt" count="1"/>
+        <line num="393" type="method" name="getClassAnnotations" visibility="public" complexity="2" crap="2" count="5"/>
+        <line num="395" type="stmt" count="5"/>
+        <line num="397" type="stmt" count="5"/>
+        <line num="399" type="stmt" count="1"/>
+        <line num="403" type="stmt" count="5"/>
+        <line num="413" type="method" name="getClassAnnotation" visibility="public" complexity="3" crap="3" count="3"/>
+        <line num="415" type="stmt" count="3"/>
+        <line num="417" type="stmt" count="3"/>
+        <line num="419" type="stmt" count="2"/>
+        <line num="425" type="stmt" count="1"/>
+        <line num="434" type="method" name="getMethodAnnotations" visibility="public" complexity="2" crap="2" count="5"/>
+        <line num="436" type="stmt" count="5"/>
+        <line num="438" type="stmt" count="5"/>
+        <line num="440" type="stmt" count="1"/>
+        <line num="444" type="stmt" count="5"/>
+        <line num="454" type="method" name="getMethodAnnotation" visibility="public" complexity="3" crap="3" count="3"/>
+        <line num="456" type="stmt" count="3"/>
+        <line num="458" type="stmt" count="3"/>
+        <line num="460" type="stmt" count="2"/>
+        <line num="466" type="stmt" count="1"/>
+        <line num="475" type="method" name="getPropertyAnnotations" visibility="public" complexity="2" crap="2" count="5"/>
+        <line num="477" type="stmt" count="5"/>
+        <line num="479" type="stmt" count="5"/>
+        <line num="481" type="stmt" count="1"/>
+        <line num="485" type="stmt" count="5"/>
+        <line num="495" type="method" name="getPropertyAnnotation" visibility="public" complexity="3" crap="3" count="3"/>
+        <line num="497" type="stmt" count="3"/>
+        <line num="499" type="stmt" count="3"/>
+        <line num="501" type="stmt" count="2"/>
+        <line num="507" type="stmt" count="1"/>
+        <line num="514" type="method" name="getDelegate" visibility="public" complexity="1" crap="1" count="16"/>
+        <line num="516" type="stmt" count="16"/>
+        <line num="525" type="method" name="setDelegate" visibility="public" complexity="1" crap="1" count="28"/>
+        <line num="527" type="stmt" count="28"/>
+        <line num="528" type="stmt" count="28"/>
+        <line num="535" type="method" name="clearClassMockProviders" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="537" type="stmt" count="1"/>
+        <line num="538" type="stmt" count="1"/>
+        <line num="547" type="method" name="addClassMockProvider" visibility="public" complexity="3" crap="3" count="7"/>
+        <line num="549" type="stmt" count="7"/>
+        <line num="551" type="stmt" count="7"/>
+        <line num="553" type="stmt" count="7"/>
+        <line num="557" type="stmt" count="2"/>
+        <line num="558" type="stmt" count="2"/>
+        <line num="560" type="stmt" count="7"/>
+        <line num="564" type="stmt" count="7"/>
+        <line num="571" type="method" name="getClassMockProviders" visibility="public" complexity="1" crap="1" count="9"/>
+        <line num="573" type="stmt" count="9"/>
+        <line num="582" type="method" name="setClassMockProviders" visibility="public" complexity="2" crap="2" count="1"/>
+        <line num="584" type="stmt" count="1"/>
+        <line num="586" type="stmt" count="1"/>
+        <line num="588" type="stmt" count="1"/>
+        <line num="592" type="stmt" count="1"/>
+        <line num="599" type="method" name="clearMethodMockProviders" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="601" type="stmt" count="1"/>
+        <line num="602" type="stmt" count="1"/>
+        <line num="611" type="method" name="addMethodMockProvider" visibility="public" complexity="3" crap="3" count="7"/>
+        <line num="613" type="stmt" count="7"/>
+        <line num="615" type="stmt" count="7"/>
+        <line num="617" type="stmt" count="7"/>
+        <line num="621" type="stmt" count="2"/>
+        <line num="622" type="stmt" count="2"/>
+        <line num="624" type="stmt" count="7"/>
+        <line num="628" type="stmt" count="7"/>
+        <line num="635" type="method" name="getMethodMockProviders" visibility="public" complexity="1" crap="1" count="9"/>
+        <line num="637" type="stmt" count="9"/>
+        <line num="646" type="method" name="setMethodMockProviders" visibility="public" complexity="2" crap="2" count="1"/>
+        <line num="648" type="stmt" count="1"/>
+        <line num="650" type="stmt" count="1"/>
+        <line num="652" type="stmt" count="1"/>
+        <line num="656" type="stmt" count="1"/>
+        <line num="663" type="method" name="clearPropertyMockProviders" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="665" type="stmt" count="1"/>
+        <line num="666" type="stmt" count="1"/>
+        <line num="675" type="method" name="addPropertyMockProvider" visibility="public" complexity="3" crap="3" count="7"/>
+        <line num="677" type="stmt" count="7"/>
+        <line num="679" type="stmt" count="7"/>
+        <line num="681" type="stmt" count="7"/>
+        <line num="685" type="stmt" count="2"/>
+        <line num="686" type="stmt" count="2"/>
+        <line num="688" type="stmt" count="7"/>
+        <line num="692" type="stmt" count="7"/>
+        <line num="699" type="method" name="getPropertyMockProviders" visibility="public" complexity="1" crap="1" count="9"/>
+        <line num="701" type="stmt" count="9"/>
+        <line num="710" type="method" name="setPropertyMockProviders" visibility="public" complexity="2" crap="2" count="1"/>
+        <line num="712" type="stmt" count="1"/>
+        <line num="714" type="stmt" count="1"/>
+        <line num="716" type="stmt" count="1"/>
+        <line num="720" type="stmt" count="1"/>
+        <metrics loc="724" ncloc="505" classes="1" methods="33" coveredmethods="33" conditionals="0" coveredconditionals="0" statements="113" coveredstatements="113" elements="146" coveredelements="146"/>
       </file>
     </package>
-    <metrics files="23" loc="1736" ncloc="990" classes="13" methods="78" coveredmethods="78" conditionals="0" coveredconditionals="0" statements="174" coveredstatements="174" elements="252" coveredelements="252"/>
+    <metrics files="23" loc="2065" ncloc="1217" classes="13" methods="90" coveredmethods="90" conditionals="0" coveredconditionals="0" statements="216" coveredstatements="216" elements="306" coveredelements="306"/>
   </project>
 </coverage>
