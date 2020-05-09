@@ -29,7 +29,7 @@ Doctrine's cached reader, make sure to also add `doctrine/cache` to your depende
 
 ## Providers
 
-The included `MockableAnnotationReader` mocks annotations using annotations providers for class, method and property
+The included `MockableAnnotationReader` mocks annotations using annotation providers for class, method and property
 level annotations respectively. Use any of the `[clear|get|set|add][Class|Method|Property]MockProvider(s)` methods
 to register your providers. The methods expect instances of the respective interfaces, so you can even build your
 own provider if required.
@@ -64,7 +64,7 @@ $newAnnotation = new AnotherTestAnnotation();
 $newAnnotation->value = "world";
 
 $reader = new MockableAnnotationReader( new AnnotationReader() );
-$reader->addClassMockProvider(  new ClassMockProvider(
+$reader->addClassMockProvider( new ClassMockProvider(
                                
    [ $newAnnotation ],
    new OverrideStrategy(),
