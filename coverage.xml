@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1589214308">
-  <project timestamp="1589214308">
+<coverage generated="1589224247">
+  <project timestamp="1589224247">
     <package name="TonyBogdanov\MockableAnnotations\MockProvider">
       <file name="/Users/runner/runners/2.169.1/work/mockable-annotations/mockable-annotations/src/MockProvider/ClassMockProvider.php">
         <class name="TonyBogdanov\MockableAnnotations\MockProvider\ClassMockProvider" namespace="TonyBogdanov\MockableAnnotations\MockProvider" fullPackage="TonyBogdanov" package="TonyBogdanov">
