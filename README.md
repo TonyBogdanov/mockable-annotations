@@ -112,3 +112,20 @@ the source class.\
 Keep in mind that only methods & properties in the source class will be inspected and matched against the target class.
 Annotations on methods and properties from the target (alias) class, which do not exist in the source one, will be
 ignored.
+
+## Mocking & Inheritance
+
+Doctrine annotations are not inheritable by design. Meaning that if you have class __A__ extending class __B__, and you
+define some class level annotations on __B__, retrieving annotations for __A__ will *not* include them.
+
+\* *Keep in mind that the above is only true for annotations. Methods and properties of parent classes are still
+visible and their annotations will be inspected in child classes.*
+
+The above, reflecting onto mocking, means that you would (in theory) need to separately mock both child and parent
+classes, since the reader will traverse them individually.
+
+The `MockableReader` can help alleviate this problem by respecting inheritance to some degree. When you mock class
+__B__, all class level annotations will be applied (unless the `strict` flag is set to `TRUE` on the `ClassNameFilter`)
+when the reader inspects any class that inherits from __B__, even if you did not explicitly mock it.
+
+If you *did* explicitly mock it, then the inherited annotations will be ignored.
