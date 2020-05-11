@@ -30,8 +30,20 @@ class AliasClass {
     public $property;
 
     /**
+     * @var string
+     *
+     * @TestPropertyAnnotation("aliased")
+     */
+    public $extraProperty;
+
+    /**
      * @TestMethodAnnotation("aliased")
      */
     public function method() {}
+
+    /**
+     * @TestMethodAnnotation("aliased")
+     */
+    public function extraMethod() {}
 
 }

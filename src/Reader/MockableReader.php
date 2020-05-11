@@ -396,9 +396,17 @@ class MockableReader implements Reader {
     public function overrideAliasAnnotations( string $className, string $aliasClassName, int $priority = 0 ): self {
 
         $this->overrideAliasClassAnnotations( $className, $aliasClassName, $priority );
+
         $reflection = new ReflectionClass( $className );
+        $aliasReflection = new ReflectionClass( $aliasClassName );
 
         foreach ( $reflection->getMethods() as $method ) {
+
+            if ( ! $aliasReflection->hasMethod( $method->getName() ) ) {
+
+                continue;
+
+            }
 
             $this->overrideAliasMethodAnnotations(
 
@@ -413,6 +421,12 @@ class MockableReader implements Reader {
         }
 
         foreach ( $reflection->getProperties() as $property ) {
+
+            if ( ! $aliasReflection->hasProperty( $property->getName() ) ) {
+
+                continue;
+
+            }
 
             $this->overrideAliasPropertyAnnotations(
 
@@ -441,9 +455,17 @@ class MockableReader implements Reader {
     public function mergeAliasAnnotations( string $className, string $aliasClassName, int $priority = 0 ): self {
 
         $this->mergeAliasClassAnnotations( $className, $aliasClassName, $priority );
+
         $reflection = new ReflectionClass( $className );
+        $aliasReflection = new ReflectionClass( $aliasClassName );
 
         foreach ( $reflection->getMethods() as $method ) {
+
+            if ( ! $aliasReflection->hasMethod( $method->getName() ) ) {
+
+                continue;
+
+            }
 
             $this->mergeAliasMethodAnnotations(
 
@@ -458,6 +480,12 @@ class MockableReader implements Reader {
         }
 
         foreach ( $reflection->getProperties() as $property ) {
+
+            if ( ! $aliasReflection->hasProperty( $property->getName() ) ) {
+
+                continue;
+
+            }
 
             $this->mergeAliasPropertyAnnotations(
 

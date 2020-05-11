@@ -30,8 +30,20 @@ class TestClass {
     public $property;
 
     /**
+     * @var string
+     *
+     * @TestPropertyAnnotation("declared")
+     */
+    public $unAliasedProperty;
+
+    /**
      * @TestMethodAnnotation("declared")
      */
     public function method() {}
+
+    /**
+     * @TestMethodAnnotation("declared")
+     */
+    public function unAliasedMethod() {}
 
 }
