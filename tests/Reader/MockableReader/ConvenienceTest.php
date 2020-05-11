@@ -30,6 +30,10 @@ use TonyBogdanov\MockableAnnotations\Test\Helper\Annotation\TestClassAnnotation;
 use TonyBogdanov\MockableAnnotations\Test\Helper\Annotation\TestMethodAnnotation;
 use TonyBogdanov\MockableAnnotations\Test\Helper\Annotation\TestPropertyAnnotation;
 use TonyBogdanov\MockableAnnotations\Test\Helper\TestClass;
+use ReflectionClass;
+use ReflectionProperty;
+use ReflectionMethod;
+use ReflectionException;
 
 /**
  * Class ConvenienceTest
@@ -280,6 +284,70 @@ class ConvenienceTest extends AbstractTestCase {
 
         $this->assertSame( $reader, call_user_func_array( [ $reader, $method ], array_merge( $args, [ 123 ] ) ) );
         $this->assertEquals( [ $expectedProvider ], call_user_func( [ $reader, $getter ] ) );
+
+    }
+
+    /**
+     * @throws AnnotationException
+     * @throws ReflectionException
+     */
+    public function testOverrideAlias() {
+
+        $reader = new MockableReader( new AnnotationReader() );
+        $reader->overrideAliasAnnotations( TestClass::class, AliasClass::class );
+
+        $classAnnotations = $reader->getClassAnnotations( new ReflectionClass( TestClass::class ) );
+        $this->assertCount( 1, $classAnnotations );
+        $this->assertInstanceOf( TestClassAnnotation::class, $classAnnotations[0] );
+        $this->assertSame( 'aliased', $classAnnotations[0]->value );
+
+        $methodAnnotations = $reader->getMethodAnnotations( new ReflectionMethod( TestClass::class, 'method' ) );
+        $this->assertCount( 1, $methodAnnotations );
+        $this->assertInstanceOf( TestMethodAnnotation::class, $methodAnnotations[0] );
+        $this->assertSame( 'aliased', $methodAnnotations[0]->value );
+
+        $propAnnotations = $reader->getPropertyAnnotations( new ReflectionProperty( TestClass::class, 'property' ) );
+        $this->assertCount( 1, $propAnnotations );
+        $this->assertInstanceOf( TestPropertyAnnotation::class, $propAnnotations[0] );
+        $this->assertSame( 'aliased', $propAnnotations[0]->value );
+
+    }
+
+    /**
+     * @throws AnnotationException
+     * @throws ReflectionException
+     */
+    public function testMergeAlias() {
+
+        $reader = new MockableReader( new AnnotationReader() );
+        $reader->mergeAliasAnnotations( TestClass::class, AliasClass::class );
+
+        $classAnnotations = $reader->getClassAnnotations( new ReflectionClass( TestClass::class ) );
+        $this->assertCount( 2, $classAnnotations );
+
+        $this->assertInstanceOf( TestClassAnnotation::class, $classAnnotations[0] );
+        $this->assertInstanceOf( TestClassAnnotation::class, $classAnnotations[1] );
+
+        $this->assertSame( 'declared', $classAnnotations[0]->value );
+        $this->assertSame( 'aliased', $classAnnotations[1]->value );
+
+        $methodAnnotations = $reader->getMethodAnnotations( new ReflectionMethod( TestClass::class, 'method' ) );
+        $this->assertCount( 2, $methodAnnotations );
+
+        $this->assertInstanceOf( TestMethodAnnotation::class, $methodAnnotations[0] );
+        $this->assertInstanceOf( TestMethodAnnotation::class, $methodAnnotations[1] );
+
+        $this->assertSame( 'declared', $methodAnnotations[0]->value );
+        $this->assertSame( 'aliased', $methodAnnotations[1]->value );
+
+        $propAnnotations = $reader->getPropertyAnnotations( new ReflectionProperty( TestClass::class, 'property' ) );
+        $this->assertCount( 2, $propAnnotations );
+
+        $this->assertInstanceOf( TestPropertyAnnotation::class, $propAnnotations[0] );
+        $this->assertInstanceOf( TestPropertyAnnotation::class, $propAnnotations[1] );
+
+        $this->assertSame( 'declared', $propAnnotations[0]->value );
+        $this->assertSame( 'aliased', $propAnnotations[1]->value );
 
     }
 

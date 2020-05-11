@@ -386,6 +386,96 @@ class MockableReader implements Reader {
     }
 
     /**
+     * @param string $className
+     * @param string $aliasClassName
+     * @param int $priority
+     *
+     * @return $this
+     * @throws ReflectionException
+     */
+    public function overrideAliasAnnotations( string $className, string $aliasClassName, int $priority = 0 ): self {
+
+        $this->overrideAliasClassAnnotations( $className, $aliasClassName, $priority );
+        $reflection = new ReflectionClass( $className );
+
+        foreach ( $reflection->getMethods() as $method ) {
+
+            $this->overrideAliasMethodAnnotations(
+
+                $className,
+                $method->getName(),
+                $aliasClassName,
+                $method->getName(),
+                $priority
+
+            );
+
+        }
+
+        foreach ( $reflection->getProperties() as $property ) {
+
+            $this->overrideAliasPropertyAnnotations(
+
+                $className,
+                $property->getName(),
+                $aliasClassName,
+                $property->getName(),
+                $priority
+
+            );
+
+        }
+
+        return $this;
+
+    }
+
+    /**
+     * @param string $className
+     * @param string $aliasClassName
+     * @param int $priority
+     *
+     * @return $this
+     * @throws ReflectionException
+     */
+    public function mergeAliasAnnotations( string $className, string $aliasClassName, int $priority = 0 ): self {
+
+        $this->mergeAliasClassAnnotations( $className, $aliasClassName, $priority );
+        $reflection = new ReflectionClass( $className );
+
+        foreach ( $reflection->getMethods() as $method ) {
+
+            $this->mergeAliasMethodAnnotations(
+
+                $className,
+                $method->getName(),
+                $aliasClassName,
+                $method->getName(),
+                $priority
+
+            );
+
+        }
+
+        foreach ( $reflection->getProperties() as $property ) {
+
+            $this->mergeAliasPropertyAnnotations(
+
+                $className,
+                $property->getName(),
+                $aliasClassName,
+                $property->getName(),
+                $priority
+
+            );
+
+        }
+
+        return $this;
+
+    }
+
+    /**
      * @param ReflectionClass $class
      *
      * @return array

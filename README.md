@@ -104,3 +104,11 @@ corresponding class / method / property who's annotations will override / be mer
 \
 This can be useful when you don't want to specify annotations programmatically and want to get them from an "Alias" or
 "Dummy" class / method / property.
+
+- `[override|merge]AliasAnnotations` - probably the most *convenient* of all, this method accepts a source class name
+and a target class name, then overrides / merges all class / method & property annotations from the target class with
+the source class.\
+\
+Keep in mind that only methods & properties in the source class will be inspected and matched against the target class.
+Annotations on methods and properties from the target (alias) class, which do not exist in the source one, will be
+ignored.
