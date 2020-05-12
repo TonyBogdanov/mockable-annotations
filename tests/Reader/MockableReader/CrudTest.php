@@ -9,7 +9,11 @@
 
 namespace TonyBogdanov\MockableAnnotations\Test\Reader\MockableReader;
 
+use Doctrine\Common\Annotations\AnnotationException;
 use Doctrine\Common\Annotations\AnnotationReader;
+use ReflectionException;
+use ReflectionProperty;
+use SplStack;
 use TonyBogdanov\MockableAnnotations\MockProvider\ClassMockProvider;
 use TonyBogdanov\MockableAnnotations\MockProvider\ClassMockProvider\Strategy\MergeStrategy as ClassMergeStrategy;
 use TonyBogdanov\MockableAnnotations\MockProvider\ClassMockProvider\Strategy\OverrideStrategy as ClassOverrideStrategy;
@@ -35,6 +39,26 @@ class CrudTest extends AbstractTestCase {
             ->crud( new MockableReader( $reader = new AnnotationReader() ), 'delegate' )
             ->get( $reader )
             ->set( new AnnotationReader() );
+
+    }
+
+    /**
+     * @throws ReflectionException
+     * @throws AnnotationException
+     */
+    public function testStateStack() {
+
+        $reader = new MockableReader( new AnnotationReader() );
+
+        $property = ( new ReflectionProperty( $reader, 'stateStack' ) );
+        $property->setAccessible( true );
+
+        $stateStack = $property->getValue( $reader );
+
+        $this
+            ->crud( $reader, 'stateStack' )
+            ->get( $stateStack )
+            ->set( new SplStack() );
 
     }
 

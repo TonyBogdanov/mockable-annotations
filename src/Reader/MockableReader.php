@@ -30,6 +30,9 @@ use TonyBogdanov\MockableAnnotations\MockProvider\PropertyMockProvider\Strategy\
 use TonyBogdanov\MockableAnnotations\MockProvider\PropertyMockProvider\Strategy\OverrideStrategy as PropertyOverrideStrategy;
 use TonyBogdanov\MockableAnnotations\MockProvider\PropertyMockProviderInterface;
 use TonyBogdanov\MockableAnnotations\MockProvider\SortableMockProviderInterface;
+use SplStack;
+use RuntimeException;
+use TonyBogdanov\MockableAnnotations\Reader\Exceptions\StateException;
 
 /**
  * Class MockableReader
@@ -59,14 +62,84 @@ class MockableReader implements Reader {
     protected $propertyMockProviders = [];
 
     /**
+     * @var SplStack
+     */
+    protected $stateStack;
+
+    /**
      * MockableReader constructor.
      *
      * @param Reader $delegate
      */
     public function __construct( Reader $delegate ) {
         
-        $this->setDelegate( $delegate );
+        $this
+            ->setDelegate( $delegate )
+            ->setStateStack( new SplStack() );
         
+    }
+
+    /**
+     * @return $this
+     */
+    public function pushState(): self {
+
+        $this->getStateStack()->push( [
+
+            $this->classMockProviders,
+            $this->methodMockProviders,
+            $this->propertyMockProviders,
+
+        ] );
+
+        return $this;
+
+    }
+
+    /**
+     * @return $this
+     * @throws StateException
+     */
+    public function popState(): self {
+
+        try {
+
+            $this->getStateStack()->pop();
+
+        } catch ( RuntimeException $e ) {
+
+            throw new StateException( StateException::CANNOT_POP_EMPTY, $e );
+
+        }
+
+        return $this;
+
+    }
+
+    /**
+     * @return $this
+     * @throws StateException
+     */
+    public function restoreState(): self {
+
+        try {
+
+            [
+
+                $this->classMockProviders,
+                $this->methodMockProviders,
+                $this->propertyMockProviders,
+
+            ] = $this->getStateStack()->pop();
+
+        } catch ( RuntimeException $e ) {
+
+            throw new StateException( StateException::CANNOT_POP_EMPTY, $e );
+
+        }
+
+        return $this;
+
     }
 
     /**
@@ -835,6 +908,27 @@ class MockableReader implements Reader {
 
         }
 
+        return $this;
+
+    }
+
+    /**
+     * @return SplStack
+     */
+    public function getStateStack(): SplStack {
+
+        return $this->stateStack;
+
+    }
+
+    /**
+     * @param SplStack $stateStack
+     *
+     * @return $this
+     */
+    public function setStateStack( SplStack $stateStack ): self {
+
+        $this->stateStack = $stateStack;
         return $this;
 
     }
