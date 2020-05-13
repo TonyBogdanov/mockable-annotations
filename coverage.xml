@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1589290466">
-  <project timestamp="1589290466">
+<coverage generated="1589372928">
+  <project timestamp="1589372928">
     <package name="TonyBogdanov\MockableAnnotations\MockProvider">
-      <file name="/Users/runner/runners/2.169.1/work/mockable-annotations/mockable-annotations/src/MockProvider/ClassMockProvider.php">
+      <file name="/home/runner/work/mockable-annotations/mockable-annotations/src/MockProvider/ClassMockProvider.php">
         <class name="TonyBogdanov\MockableAnnotations\MockProvider\ClassMockProvider" namespace="TonyBogdanov\MockableAnnotations\MockProvider" fullPackage="TonyBogdanov" package="TonyBogdanov">
           <metrics complexity="14" methods="11" coveredmethods="11" conditionals="0" coveredconditionals="0" statements="21" coveredstatements="21" elements="32" coveredelements="32"/>
         </class>
@@ -40,7 +40,7 @@
         <line num="178" type="stmt" count="18"/>
         <metrics loc="182" ncloc="110" classes="1" methods="11" coveredmethods="11" conditionals="0" coveredconditionals="0" statements="21" coveredstatements="21" elements="32" coveredelements="32"/>
       </file>
-      <file name="/Users/runner/runners/2.169.1/work/mockable-annotations/mockable-annotations/src/MockProvider/MethodMockProvider.php">
+      <file name="/home/runner/work/mockable-annotations/mockable-annotations/src/MockProvider/MethodMockProvider.php">
         <class name="TonyBogdanov\MockableAnnotations\MockProvider\MethodMockProvider" namespace="TonyBogdanov\MockableAnnotations\MockProvider" fullPackage="TonyBogdanov" package="TonyBogdanov">
           <metrics complexity="14" methods="11" coveredmethods="11" conditionals="0" coveredconditionals="0" statements="21" coveredstatements="21" elements="32" coveredelements="32"/>
         </class>
@@ -78,7 +78,7 @@
         <line num="178" type="stmt" count="18"/>
         <metrics loc="182" ncloc="110" classes="1" methods="11" coveredmethods="11" conditionals="0" coveredconditionals="0" statements="21" coveredstatements="21" elements="32" coveredelements="32"/>
       </file>
-      <file name="/Users/runner/runners/2.169.1/work/mockable-annotations/mockable-annotations/src/MockProvider/PropertyMockProvider.php">
+      <file name="/home/runner/work/mockable-annotations/mockable-annotations/src/MockProvider/PropertyMockProvider.php">
         <class name="TonyBogdanov\MockableAnnotations\MockProvider\PropertyMockProvider" namespace="TonyBogdanov\MockableAnnotations\MockProvider" fullPackage="TonyBogdanov" package="TonyBogdanov">
           <metrics complexity="14" methods="11" coveredmethods="11" conditionals="0" coveredconditionals="0" statements="21" coveredstatements="21" elements="32" coveredelements="32"/>
         </class>
@@ -118,7 +118,7 @@
       </file>
     </package>
     <package name="TonyBogdanov\MockableAnnotations\MockProvider\ClassMockProvider\Filter">
-      <file name="/Users/runner/runners/2.169.1/work/mockable-annotations/mockable-annotations/src/MockProvider/ClassMockProvider/Filter/ClassNameFilter.php">
+      <file name="/home/runner/work/mockable-annotations/mockable-annotations/src/MockProvider/ClassMockProvider/Filter/ClassNameFilter.php">
         <class name="TonyBogdanov\MockableAnnotations\MockProvider\ClassMockProvider\Filter\ClassNameFilter" namespace="TonyBogdanov\MockableAnnotations\MockProvider\ClassMockProvider\Filter" fullPackage="TonyBogdanov" package="TonyBogdanov">
           <metrics complexity="7" methods="6" coveredmethods="6" conditionals="0" coveredconditionals="0" statements="12" coveredstatements="12" elements="18" coveredelements="18"/>
         </class>
@@ -143,11 +143,11 @@
         <metrics loc="101" ncloc="56" classes="1" methods="6" coveredmethods="6" conditionals="0" coveredconditionals="0" statements="12" coveredstatements="12" elements="18" coveredelements="18"/>
       </file>
     </package>
-    <file name="/Users/runner/runners/2.169.1/work/mockable-annotations/mockable-annotations/src/MockProvider/ClassMockProvider/Filter/FilterInterface.php">
+    <file name="/home/runner/work/mockable-annotations/mockable-annotations/src/MockProvider/ClassMockProvider/Filter/FilterInterface.php">
       <metrics loc="29" ncloc="12" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
     </file>
     <package name="TonyBogdanov\MockableAnnotations\MockProvider\ClassMockProvider\Strategy">
-      <file name="/Users/runner/runners/2.169.1/work/mockable-annotations/mockable-annotations/src/MockProvider/ClassMockProvider/Strategy/MergeStrategy.php">
+      <file name="/home/runner/work/mockable-annotations/mockable-annotations/src/MockProvider/ClassMockProvider/Strategy/MergeStrategy.php">
         <class name="TonyBogdanov\MockableAnnotations\MockProvider\ClassMockProvider\Strategy\MergeStrategy" namespace="TonyBogdanov\MockableAnnotations\MockProvider\ClassMockProvider\Strategy" fullPackage="TonyBogdanov" package="TonyBogdanov">
           <metrics complexity="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="1" elements="2" coveredelements="2"/>
         </class>
@@ -155,7 +155,7 @@
         <line num="30" type="stmt" count="2"/>
         <metrics loc="34" ncloc="16" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="1" elements="2" coveredelements="2"/>
       </file>
-      <file name="/Users/runner/runners/2.169.1/work/mockable-annotations/mockable-annotations/src/MockProvider/ClassMockProvider/Strategy/OverrideStrategy.php">
+      <file name="/home/runner/work/mockable-annotations/mockable-annotations/src/MockProvider/ClassMockProvider/Strategy/OverrideStrategy.php">
         <class name="TonyBogdanov\MockableAnnotations\MockProvider\ClassMockProvider\Strategy\OverrideStrategy" namespace="TonyBogdanov\MockableAnnotations\MockProvider\ClassMockProvider\Strategy" fullPackage="TonyBogdanov" package="TonyBogdanov">
           <metrics complexity="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="1" elements="2" coveredelements="2"/>
         </class>
@@ -164,17 +164,17 @@
         <metrics loc="34" ncloc="16" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="1" elements="2" coveredelements="2"/>
       </file>
     </package>
-    <file name="/Users/runner/runners/2.169.1/work/mockable-annotations/mockable-annotations/src/MockProvider/ClassMockProvider/Strategy/StrategyInterface.php">
+    <file name="/home/runner/work/mockable-annotations/mockable-annotations/src/MockProvider/ClassMockProvider/Strategy/StrategyInterface.php">
       <metrics loc="30" ncloc="12" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
     </file>
-    <file name="/Users/runner/runners/2.169.1/work/mockable-annotations/mockable-annotations/src/MockProvider/ClassMockProviderInterface.php">
+    <file name="/home/runner/work/mockable-annotations/mockable-annotations/src/MockProvider/ClassMockProviderInterface.php">
       <metrics loc="29" ncloc="12" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
     </file>
-    <file name="/Users/runner/runners/2.169.1/work/mockable-annotations/mockable-annotations/src/MockProvider/MethodMockProvider/Filter/FilterInterface.php">
+    <file name="/home/runner/work/mockable-annotations/mockable-annotations/src/MockProvider/MethodMockProvider/Filter/FilterInterface.php">
       <metrics loc="29" ncloc="12" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
     </file>
     <package name="TonyBogdanov\MockableAnnotations\MockProvider\MethodMockProvider\Filter">
-      <file name="/Users/runner/runners/2.169.1/work/mockable-annotations/mockable-annotations/src/MockProvider/MethodMockProvider/Filter/MethodNameFilter.php">
+      <file name="/home/runner/work/mockable-annotations/mockable-annotations/src/MockProvider/MethodMockProvider/Filter/MethodNameFilter.php">
         <class name="TonyBogdanov\MockableAnnotations\MockProvider\MethodMockProvider\Filter\MethodNameFilter" namespace="TonyBogdanov\MockableAnnotations\MockProvider\MethodMockProvider\Filter" fullPackage="TonyBogdanov" package="TonyBogdanov">
           <metrics complexity="7" methods="6" coveredmethods="6" conditionals="0" coveredconditionals="0" statements="11" coveredstatements="11" elements="17" coveredelements="17"/>
         </class>
@@ -199,7 +199,7 @@
       </file>
     </package>
     <package name="TonyBogdanov\MockableAnnotations\MockProvider\MethodMockProvider\Strategy">
-      <file name="/Users/runner/runners/2.169.1/work/mockable-annotations/mockable-annotations/src/MockProvider/MethodMockProvider/Strategy/MergeStrategy.php">
+      <file name="/home/runner/work/mockable-annotations/mockable-annotations/src/MockProvider/MethodMockProvider/Strategy/MergeStrategy.php">
         <class name="TonyBogdanov\MockableAnnotations\MockProvider\MethodMockProvider\Strategy\MergeStrategy" namespace="TonyBogdanov\MockableAnnotations\MockProvider\MethodMockProvider\Strategy" fullPackage="TonyBogdanov" package="TonyBogdanov">
           <metrics complexity="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="1" elements="2" coveredelements="2"/>
         </class>
@@ -207,7 +207,7 @@
         <line num="30" type="stmt" count="2"/>
         <metrics loc="34" ncloc="16" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="1" elements="2" coveredelements="2"/>
       </file>
-      <file name="/Users/runner/runners/2.169.1/work/mockable-annotations/mockable-annotations/src/MockProvider/MethodMockProvider/Strategy/OverrideStrategy.php">
+      <file name="/home/runner/work/mockable-annotations/mockable-annotations/src/MockProvider/MethodMockProvider/Strategy/OverrideStrategy.php">
         <class name="TonyBogdanov\MockableAnnotations\MockProvider\MethodMockProvider\Strategy\OverrideStrategy" namespace="TonyBogdanov\MockableAnnotations\MockProvider\MethodMockProvider\Strategy" fullPackage="TonyBogdanov" package="TonyBogdanov">
           <metrics complexity="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="1" elements="2" coveredelements="2"/>
         </class>
@@ -216,17 +216,17 @@
         <metrics loc="34" ncloc="16" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="1" elements="2" coveredelements="2"/>
       </file>
     </package>
-    <file name="/Users/runner/runners/2.169.1/work/mockable-annotations/mockable-annotations/src/MockProvider/MethodMockProvider/Strategy/StrategyInterface.php">
+    <file name="/home/runner/work/mockable-annotations/mockable-annotations/src/MockProvider/MethodMockProvider/Strategy/StrategyInterface.php">
       <metrics loc="30" ncloc="12" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
     </file>
-    <file name="/Users/runner/runners/2.169.1/work/mockable-annotations/mockable-annotations/src/MockProvider/MethodMockProviderInterface.php">
+    <file name="/home/runner/work/mockable-annotations/mockable-annotations/src/MockProvider/MethodMockProviderInterface.php">
       <metrics loc="29" ncloc="12" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
     </file>
-    <file name="/Users/runner/runners/2.169.1/work/mockable-annotations/mockable-annotations/src/MockProvider/PropertyMockProvider/Filter/FilterInterface.php">
+    <file name="/home/runner/work/mockable-annotations/mockable-annotations/src/MockProvider/PropertyMockProvider/Filter/FilterInterface.php">
       <metrics loc="29" ncloc="12" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
     </file>
     <package name="TonyBogdanov\MockableAnnotations\MockProvider\PropertyMockProvider\Filter">
-      <file name="/Users/runner/runners/2.169.1/work/mockable-annotations/mockable-annotations/src/MockProvider/PropertyMockProvider/Filter/PropertyNameFilter.php">
+      <file name="/home/runner/work/mockable-annotations/mockable-annotations/src/MockProvider/PropertyMockProvider/Filter/PropertyNameFilter.php">
         <class name="TonyBogdanov\MockableAnnotations\MockProvider\PropertyMockProvider\Filter\PropertyNameFilter" namespace="TonyBogdanov\MockableAnnotations\MockProvider\PropertyMockProvider\Filter" fullPackage="TonyBogdanov" package="TonyBogdanov">
           <metrics complexity="7" methods="6" coveredmethods="6" conditionals="0" coveredconditionals="0" statements="11" coveredstatements="11" elements="17" coveredelements="17"/>
         </class>
@@ -251,7 +251,7 @@
       </file>
     </package>
     <package name="TonyBogdanov\MockableAnnotations\MockProvider\PropertyMockProvider\Strategy">
-      <file name="/Users/runner/runners/2.169.1/work/mockable-annotations/mockable-annotations/src/MockProvider/PropertyMockProvider/Strategy/MergeStrategy.php">
+      <file name="/home/runner/work/mockable-annotations/mockable-annotations/src/MockProvider/PropertyMockProvider/Strategy/MergeStrategy.php">
         <class name="TonyBogdanov\MockableAnnotations\MockProvider\PropertyMockProvider\Strategy\MergeStrategy" namespace="TonyBogdanov\MockableAnnotations\MockProvider\PropertyMockProvider\Strategy" fullPackage="TonyBogdanov" package="TonyBogdanov">
           <metrics complexity="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="1" elements="2" coveredelements="2"/>
         </class>
@@ -259,7 +259,7 @@
         <line num="30" type="stmt" count="2"/>
         <metrics loc="34" ncloc="16" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="1" elements="2" coveredelements="2"/>
       </file>
-      <file name="/Users/runner/runners/2.169.1/work/mockable-annotations/mockable-annotations/src/MockProvider/PropertyMockProvider/Strategy/OverrideStrategy.php">
+      <file name="/home/runner/work/mockable-annotations/mockable-annotations/src/MockProvider/PropertyMockProvider/Strategy/OverrideStrategy.php">
         <class name="TonyBogdanov\MockableAnnotations\MockProvider\PropertyMockProvider\Strategy\OverrideStrategy" namespace="TonyBogdanov\MockableAnnotations\MockProvider\PropertyMockProvider\Strategy" fullPackage="TonyBogdanov" package="TonyBogdanov">
           <metrics complexity="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="1" elements="2" coveredelements="2"/>
         </class>
@@ -268,17 +268,17 @@
         <metrics loc="34" ncloc="16" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="1" elements="2" coveredelements="2"/>
       </file>
     </package>
-    <file name="/Users/runner/runners/2.169.1/work/mockable-annotations/mockable-annotations/src/MockProvider/PropertyMockProvider/Strategy/StrategyInterface.php">
+    <file name="/home/runner/work/mockable-annotations/mockable-annotations/src/MockProvider/PropertyMockProvider/Strategy/StrategyInterface.php">
       <metrics loc="30" ncloc="12" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
     </file>
-    <file name="/Users/runner/runners/2.169.1/work/mockable-annotations/mockable-annotations/src/MockProvider/PropertyMockProviderInterface.php">
+    <file name="/home/runner/work/mockable-annotations/mockable-annotations/src/MockProvider/PropertyMockProviderInterface.php">
       <metrics loc="29" ncloc="12" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
     </file>
-    <file name="/Users/runner/runners/2.169.1/work/mockable-annotations/mockable-annotations/src/MockProvider/SortableMockProviderInterface.php">
+    <file name="/home/runner/work/mockable-annotations/mockable-annotations/src/MockProvider/SortableMockProviderInterface.php">
       <metrics loc="24" ncloc="10" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
     </file>
     <package name="TonyBogdanov\MockableAnnotations\Reader\Exceptions">
-      <file name="/Users/runner/runners/2.169.1/work/mockable-annotations/mockable-annotations/src/Reader/Exceptions/StateException.php">
+      <file name="/home/runner/work/mockable-annotations/mockable-annotations/src/Reader/Exceptions/StateException.php">
         <class name="TonyBogdanov\MockableAnnotations\Reader\Exceptions\StateException" namespace="TonyBogdanov\MockableAnnotations\Reader\Exceptions" fullPackage="TonyBogdanov" package="TonyBogdanov">
           <metrics complexity="2" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="6" coveredstatements="6" elements="7" coveredelements="7"/>
         </class>
@@ -293,7 +293,7 @@
       </file>
     </package>
     <package name="TonyBogdanov\MockableAnnotations\Reader">
-      <file name="/Users/runner/runners/2.169.1/work/mockable-annotations/mockable-annotations/src/Reader/MockableReader.php">
+      <file name="/home/runner/work/mockable-annotations/mockable-annotations/src/Reader/MockableReader.php">
         <class name="TonyBogdanov\MockableAnnotations\Reader\MockableReader" namespace="TonyBogdanov\MockableAnnotations\Reader" fullPackage="TonyBogdanov" package="TonyBogdanov">
           <metrics complexity="68" methods="40" coveredmethods="40" conditionals="0" coveredconditionals="0" statements="169" coveredstatements="169" elements="209" coveredelements="209"/>
         </class>
