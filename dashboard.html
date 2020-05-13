@@ -1,283 +1,186 @@
 <!DOCTYPE html>
-<html lang="en">
- <head>
-  <meta charset="UTF-8">
-  <title>Dashboard for /home/runner/work/mockable-annotations/mockable-annotations/src</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
-  <link href="css/nv.d3.min.css" rel="stylesheet" type="text/css">
-  <link href="css/style.css" rel="stylesheet" type="text/css">
-  <link href="css/custom.css" rel="stylesheet" type="text/css">
- </head>
- <body>
-  <header>
-   <div class="container-fluid">
-    <div class="row">
-     <div class="col-md-12">
-      <nav aria-label="breadcrumb">
-       <ol class="breadcrumb">
-         <li class="breadcrumb-item"><a href="index.html">/home/runner/work/mockable-annotations/mockable-annotations/src</a></li>
-         <li class="breadcrumb-item active">(Dashboard)</li>
+<html class="html">
+<head>
+    <meta charset="utf-8" />
+    <title>Protected Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    
+    <meta http-equiv="cache-control" content="max-age=0" />
+    <meta http-equiv="cache-control" content="no-cache" />
+    <meta http-equiv="expires" content="0" />
+    <meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
+    <meta http-equiv="pragma" content="no-cache" />
 
-       </ol>
-      </nav>
-     </div>
+    <style>
+        .hr {
+            margin-top: 20px;
+            margin-bottom: 20px;
+            border: 0;
+            border-top: 1px solid #eee;
+        }
+
+        .page {
+            width: 360px;
+            padding: 8% 0 0;
+            margin: auto;
+            box-sizing: border-box;
+        }
+
+        .form {
+            position: relative;
+            z-index: 1;
+            background: #ffffff;
+            max-width: 360px;
+            margin: 0 auto 100px;
+            padding: 45px;
+            text-align: center;
+            border-radius: 3px;
+            box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2),
+            0 5px 5px 0 rgba(0, 0, 0, 0.24);
+        }
+
+        .form input {
+            outline: 0;
+            background: #f2f2f2;
+            width: 100%;
+            border: 0;
+            margin: 0 0 15px;
+            padding: 15px;
+            box-sizing: border-box;
+            font-size: 14px;
+            border-radius: 3px;
+        }
+
+        .form .decrypt-button {
+            text-transform: uppercase;
+            outline: 0;
+            background: #00cae9;
+            width: 100%;
+            border: 0;
+            padding: 15px;
+            color: #ffffff;
+            font-size: 14px;
+            cursor: pointer;
+            border-radius: 3px;
+        }
+
+        .form .decrypt-button:active {
+            background: #009db5;
+        }
+
+        .html {
+            height: 100%;
+        }
+
+        .body {
+            margin-bottom: 1em;
+            background: #00cae9;
+            font-family: "Arial", sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            display: none;
+        }
+
+        .instructions {
+            margin-top: -1em;
+            margin-bottom: 1em;
+        }
+
+        .title {
+            font-size: 1.5em;
+        }
+    </style>
+</head>
+
+<body class="body" onload="onload()">
+<div class="page">
+    <div class="form">
+        <div class="instructions">
+            <p class="title">Protected Page</p>
+        </div>
+
+        <hr class="hr" />
+
+        <form id="form" action="#" method="post">
+            <input id="password" type="password" name="password" placeholder="Password" autofocus />
+            <input type="submit" class="decrypt-button" value="DECRYPT"/>
+        </form>
     </div>
-   </div>
-  </header>
-  <div class="container-fluid">
-   <div class="row">
-    <div class="col-md-12">
-     <h2>Classes</h2>
-    </div>
-   </div>
-   <div class="row">
-    <div class="col-md-6">
-     <h3>Coverage Distribution</h3>
-     <div id="classCoverageDistribution" style="height: 300px;">
-       <svg></svg>
-     </div>
-    </div>
-    <div class="col-md-6">
-     <h3>Complexity</h3>
-     <div id="classComplexity" style="height: 300px;">
-       <svg></svg>
-     </div>
-    </div>
-   </div>
-   <div class="row">
-    <div class="col-md-6">
-     <h3>Insufficient Coverage</h3>
-     <div class="scrollbox">
-      <table class="table">
-       <thead>
-        <tr>
-         <th>Class</th>
-         <th class="text-right">Coverage</th>
-        </tr>
-       </thead>
-       <tbody>
+</div>
 
-       </tbody>
-      </table>
-     </div>
-    </div>
-    <div class="col-md-6">
-     <h3>Project Risks</h3>
-     <div class="scrollbox">
-      <table class="table">
-       <thead>
-        <tr>
-         <th>Class</th>
-         <th class="text-right"><abbr title="Change Risk Anti-Patterns (CRAP) Index">CRAP</abbr></th>
-        </tr>
-       </thead>
-       <tbody>
+<script>
+    const STORAGE_KEY = 'coverage';
 
-       </tbody>
-      </table>
-     </div>
-    </div>
-   </div>
-   <div class="row">
-    <div class="col-md-12">
-     <h2>Methods</h2>
-    </div>
-   </div>
-   <div class="row">
-    <div class="col-md-6">
-     <h3>Coverage Distribution</h3>
-     <div id="methodCoverageDistribution" style="height: 300px;">
-       <svg></svg>
-     </div>
-    </div>
-    <div class="col-md-6">
-     <h3>Complexity</h3>
-     <div id="methodComplexity" style="height: 300px;">
-       <svg></svg>
-     </div>
-    </div>
-   </div>
-   <div class="row">
-    <div class="col-md-6">
-     <h3>Insufficient Coverage</h3>
-     <div class="scrollbox">
-      <table class="table">
-       <thead>
-        <tr>
-         <th>Method</th>
-         <th class="text-right">Coverage</th>
-        </tr>
-       </thead>
-       <tbody>
+    function decryptContent(encryptedMsg, pass) {
+        const salt = CryptoJS.enc.Hex.parse(encryptedMsg.substr(0, 32));
+        const iv = CryptoJS.enc.Hex.parse(encryptedMsg.substr(32, 32));
+        const encrypted = encryptedMsg.substring(64);
 
-       </tbody>
-      </table>
-     </div>
-    </div>
-    <div class="col-md-6">
-     <h3>Project Risks</h3>
-     <div class="scrollbox">
-      <table class="table">
-       <thead>
-        <tr>
-         <th>Method</th>
-         <th class="text-right"><abbr title="Change Risk Anti-Patterns (CRAP) Index">CRAP</abbr></th>
-        </tr>
-       </thead>
-       <tbody>
+        const key = CryptoJS.PBKDF2(pass, salt, {
+            keySize: 8,
+            iterations: 10
+        });
 
-       </tbody>
-      </table>
-     </div>
-    </div>
-   </div>
-   <footer>
-    <hr/>
-    <p>
-     <small>Generated by <a href="https://github.com/sebastianbergmann/php-code-coverage" target="_top">php-code-coverage 8.0.1</a> using <a href="https://secure.php.net/" target="_top">PHP 7.4.5</a> with <a href="https://github.com/krakjoe/pcov">PCOV 1.0.6</a> and <a href="https://phpunit.de/">PHPUnit 9.1.4</a> at Wed May 13 13:15:04 UTC 2020.</small>
-    </p>
-   </footer>
-  </div>
-  <script src="js/jquery.min.js" type="text/javascript"></script>
-  <script src="js/d3.min.js" type="text/javascript"></script>
-  <script src="js/nv.d3.min.js" type="text/javascript"></script>
-  <script type="text/javascript">
-$(document).ready(function() {
-  nv.addGraph(function() {
-    var chart = nv.models.multiBarChart();
-    chart.tooltips(false)
-      .showControls(false)
-      .showLegend(false)
-      .reduceXTicks(false)
-      .staggerLabels(true)
-      .yAxis.tickFormat(d3.format('d'));
+        return CryptoJS.AES.decrypt(encrypted, key, {
+            iv,
+            padding: CryptoJS.pad.Pkcs7,
+            mode: CryptoJS.mode.CBC
+        }).toString(CryptoJS.enc.Utf8);
+    }
 
-    d3.select('#classCoverageDistribution svg')
-      .datum(getCoverageDistributionData([0,0,0,0,0,0,0,0,0,0,0,14], "Class Coverage"))
-      .transition().duration(500).call(chart);
+    function decryptAndReplace(pass, suppress = false) {
+        const encryptedMsg = "789bef130bb5438357cfad3d36305ba96d0bcc512a842cd49a246b08fc9d04ef3775b464455bc54f660501aee0966e4b727c678d34a88117688ac84408cd33ce03fxRqC1nhzpwyagP17zjc2fY3GgRwtFUVeGYgjdeGXQ+Arf+XCsFGYtDBLgE4fB9Cp+SZpu1CgiwliiB+27yA/xsT2ANeBh9RStAwmBkHGrxZ4W6CIeSxOTTIEdrzLIBOsvt6iEdB8D3cN/db7IiI9p/C1k+TdFJsJI44XF195TPAwNrCBWhur0Bfye+jcfW2LfghGQDmKJm0AZezpjNl0UXAcZ4TgGgXbSVoe10MAuTXfR0xMywAMqlemXNie4su5Co314eXNcRsH7arNMtL33kzn4GoL68wQRQp0vRtZwF2Hm8wBTXDs05lXU74cxWHOJN30NDEP76MkfH7PbTomBdzzf5x0FSQNfbuCUe34V59sOa+kGpSKeCt43Txmx77q/OEN33iCDb7zL58S+WixUT6P5leKOpJ9eiSd4J9mQ7t08/Wroul8hmIdL/aZSWU1R3xlw0dzHJLxXmt8wAbgSI6/lBgo4rD/JK0OA3EnQoJ8ROB7NtfsoRIU8rWgbdYSEq/CWB92s9KKidybHS2MIsKLr+Qrsvy1EKjmXZ9X7+UlMXo5DuuAwy3EfxtUeJFSvyi45E3U4TGLc5MQct256btdh6dJTeRRl40j3bn5xm2Twdlk6pyC2vgL42zbKnE+/EoBIS/ScxBHIX/UIQUCfZc106lLfxW54rjJzfBypfkPjW58VaddntKOkxnpUKniubcrZ5dljWk9srm8WbBzXXEAFULPO7M2Zhei+eCFy5+TS+EHqnTTDfAAU8f1QEln59NdlhuAf4GLmKGXk+MRzN4n/Q2U0BqkZHgrYTcWCe5VBdfdtkP2gS0iq5tGtKtKjNTN0n1gpfwxljBIlS02lp3CKhXSu65okYu51pXG4PmxPTCuRNo/zyjEt7nnrUGL0Ecwlxbz3if0HObRcvsEWYDNg5W4VQ7AdxpIjA1GXxGc8Mv5KfSgkZc50T9uH0inYS00kKnQZPGbPdw99WfaW6/O86ODUCaY5LP22inYKL309ulLuB8s2Ciylu6nOLjroGJUeE84luuRfBYik//s6CCmJDLi8SiFd88Meix2YjQ7v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";
+        const encryptedHMAC = encryptedMsg.substring(0, 64);
+        const encryptedHTML = encryptedMsg.substring(64);
+        const decryptedHMAC = CryptoJS.HmacSHA256(
+            encryptedHTML,
+            CryptoJS.SHA256(pass).toString()
+        ).toString();
 
-    nv.utils.windowResize(chart.update);
+        if (decryptedHMAC !== encryptedHMAC) {
+            if (!suppress) {
+                alert( 'Wrong password!' );
+            }
+            sessionStorage.removeItem(STORAGE_KEY);
+            return false;
+        }
 
-    return chart;
-  });
+        // Save for the session
+        sessionStorage.setItem(STORAGE_KEY, pass);
 
-  nv.addGraph(function() {
-    var chart = nv.models.multiBarChart();
-    chart.tooltips(false)
-      .showControls(false)
-      .showLegend(false)
-      .reduceXTicks(false)
-      .staggerLabels(true)
-      .yAxis.tickFormat(d3.format('d'));
+        const plainHTML = decryptContent(encryptedHTML, pass);
 
-    d3.select('#methodCoverageDistribution svg')
-      .datum(getCoverageDistributionData([0,0,0,0,0,0,0,0,0,0,0,98], "Method Coverage"))
-      .transition().duration(500).call(chart);
+        document.write(plainHTML);
+        document.close();
 
-    nv.utils.windowResize(chart.update);
+        return true;
+    }
 
-    return chart;
-  });
+    function onload() {
+        if (sessionStorage.getItem(STORAGE_KEY) && decryptAndReplace(sessionStorage.getItem(STORAGE_KEY),true)) {
 
-  function getCoverageDistributionData(data, label) {
-    var labels = [
-      '0%',
-      '0-10%',
-      '10-20%',
-      '20-30%',
-      '30-40%',
-      '40-50%',
-      '50-60%',
-      '60-70%',
-      '70-80%',
-      '80-90%',
-      '90-100%',
-      '100%'
-    ];
-    var values = [];
-    $.each(labels, function(key) {
-      values.push({x: labels[key], y: data[key]});
-    });
+            return;
 
-    return [
-      {
-        key: label,
-        values: values,
-        color: "#4572A7"
-      }
-    ];
-  }
-  nv.addGraph(function() {
-    var chart = nv.models.scatterChart()
-      .showDistX(true)
-      .showDistY(true)
-      .showLegend(false)
-      .forceX([0, 100]);
-    chart.tooltipContent(function(graph) {
-      return '<p>' + graph.point.class + '</p>';
-    });
+        }
 
-    chart.xAxis.axisLabel('Code Coverage (in percent)');
-    chart.yAxis.axisLabel('Cyclomatic Complexity');
+        // Show page because there isn't a good password
+        // Otherwise, document.write would have stop this
+        document
+        .querySelectorAll(".body")
+        .forEach(el => (el.style.display = "block"));
 
-    d3.select('#classComplexity svg')
-      .datum(getComplexityData([[100,14,"<a href=\"MockProvider\/ClassMockProvider.php.html#21\">TonyBogdanov\\MockableAnnotations\\MockProvider\\ClassMockProvider<\/a>"],[100,7,"<a href=\"MockProvider\/ClassMockProvider\/Filter\/ClassNameFilter.php.html#19\">TonyBogdanov\\MockableAnnotations\\MockProvider\\ClassMockProvider\\Filter\\ClassNameFilter<\/a>"],[100,1,"<a href=\"MockProvider\/ClassMockProvider\/Strategy\/MergeStrategy.php.html#19\">TonyBogdanov\\MockableAnnotations\\MockProvider\\ClassMockProvider\\Strategy\\MergeStrategy<\/a>"],[100,1,"<a href=\"MockProvider\/ClassMockProvider\/Strategy\/OverrideStrategy.php.html#19\">TonyBogdanov\\MockableAnnotations\\MockProvider\\ClassMockProvider\\Strategy\\OverrideStrategy<\/a>"],[100,14,"<a href=\"MockProvider\/MethodMockProvider.php.html#21\">TonyBogdanov\\MockableAnnotations\\MockProvider\\MethodMockProvider<\/a>"],[100,7,"<a href=\"MockProvider\/MethodMockProvider\/Filter\/MethodNameFilter.php.html#19\">TonyBogdanov\\MockableAnnotations\\MockProvider\\MethodMockProvider\\Filter\\MethodNameFilter<\/a>"],[100,1,"<a href=\"MockProvider\/MethodMockProvider\/Strategy\/MergeStrategy.php.html#19\">TonyBogdanov\\MockableAnnotations\\MockProvider\\MethodMockProvider\\Strategy\\MergeStrategy<\/a>"],[100,1,"<a href=\"MockProvider\/MethodMockProvider\/Strategy\/OverrideStrategy.php.html#19\">TonyBogdanov\\MockableAnnotations\\MockProvider\\MethodMockProvider\\Strategy\\OverrideStrategy<\/a>"],[100,14,"<a href=\"MockProvider\/PropertyMockProvider.php.html#21\">TonyBogdanov\\MockableAnnotations\\MockProvider\\PropertyMockProvider<\/a>"],[100,7,"<a href=\"MockProvider\/PropertyMockProvider\/Filter\/PropertyNameFilter.php.html#19\">TonyBogdanov\\MockableAnnotations\\MockProvider\\PropertyMockProvider\\Filter\\PropertyNameFilter<\/a>"],[100,1,"<a href=\"MockProvider\/PropertyMockProvider\/Strategy\/MergeStrategy.php.html#19\">TonyBogdanov\\MockableAnnotations\\MockProvider\\PropertyMockProvider\\Strategy\\MergeStrategy<\/a>"],[100,1,"<a href=\"MockProvider\/PropertyMockProvider\/Strategy\/OverrideStrategy.php.html#19\">TonyBogdanov\\MockableAnnotations\\MockProvider\\PropertyMockProvider\\Strategy\\OverrideStrategy<\/a>"],[100,2,"<a href=\"Reader\/Exceptions\/StateException.php.html#20\">TonyBogdanov\\MockableAnnotations\\Reader\\Exceptions\\StateException<\/a>"],[100,68,"<a href=\"Reader\/MockableReader.php.html#42\">TonyBogdanov\\MockableAnnotations\\Reader\\MockableReader<\/a>"]], 'Class Complexity'))
-      .transition()
-      .duration(500)
-      .call(chart);
+        document
+        .getElementById("form")
+        .addEventListener("submit", e => {
+            e.preventDefault();
 
-    nv.utils.windowResize(chart.update);
+            decryptAndReplace(
+                document.getElementById("password").value
+            );
+        });
+    }
+</script>
 
-    return chart;
-  });
-
-  nv.addGraph(function() {
-    var chart = nv.models.scatterChart()
-      .showDistX(true)
-      .showDistY(true)
-      .showLegend(false)
-      .forceX([0, 100]);
-    chart.tooltipContent(function(graph) {
-      return '<p>' + graph.point.class + '</p>';
-    });
-
-    chart.xAxis.axisLabel('Code Coverage (in percent)');
-    chart.yAxis.axisLabel('Method Complexity');
-
-    d3.select('#methodComplexity svg')
-      .datum(getComplexityData([[100,1,"<a href=\"MockProvider\/ClassMockProvider.php.html#54\">TonyBogdanov\\MockableAnnotations\\MockProvider\\ClassMockProvider::__construct<\/a>"],[100,3,"<a href=\"MockProvider\/ClassMockProvider.php.html#77\">TonyBogdanov\\MockableAnnotations\\MockProvider\\ClassMockProvider::mockClassAnnotations<\/a>"],[100,1,"<a href=\"MockProvider\/ClassMockProvider.php.html#92\">TonyBogdanov\\MockableAnnotations\\MockProvider\\ClassMockProvider::getAnnotations<\/a>"],[100,1,"<a href=\"MockProvider\/ClassMockProvider.php.html#103\">TonyBogdanov\\MockableAnnotations\\MockProvider\\ClassMockProvider::setAnnotations<\/a>"],[100,1,"<a href=\"MockProvider\/ClassMockProvider.php.html#113\">TonyBogdanov\\MockableAnnotations\\MockProvider\\ClassMockProvider::getStrategy<\/a>"],[100,1,"<a href=\"MockProvider\/ClassMockProvider.php.html#124\">TonyBogdanov\\MockableAnnotations\\MockProvider\\ClassMockProvider::setStrategy<\/a>"],[100,1,"<a href=\"MockProvider\/ClassMockProvider.php.html#134\">TonyBogdanov\\MockableAnnotations\\MockProvider\\ClassMockProvider::hasFilter<\/a>"],[100,2,"<a href=\"MockProvider\/ClassMockProvider.php.html#143\">TonyBogdanov\\MockableAnnotations\\MockProvider\\ClassMockProvider::getFilter<\/a>"],[100,1,"<a href=\"MockProvider\/ClassMockProvider.php.html#154\">TonyBogdanov\\MockableAnnotations\\MockProvider\\ClassMockProvider::setFilter<\/a>"],[100,1,"<a href=\"MockProvider\/ClassMockProvider.php.html#164\">TonyBogdanov\\MockableAnnotations\\MockProvider\\ClassMockProvider::getPriority<\/a>"],[100,1,"<a href=\"MockProvider\/ClassMockProvider.php.html#175\">TonyBogdanov\\MockableAnnotations\\MockProvider\\ClassMockProvider::setPriority<\/a>"],[100,1,"<a href=\"MockProvider\/ClassMockProvider\/Filter\/ClassNameFilter.php.html#37\">TonyBogdanov\\MockableAnnotations\\MockProvider\\ClassMockProvider\\Filter\\ClassNameFilter::__construct<\/a>"],[100,2,"<a href=\"MockProvider\/ClassMockProvider\/Filter\/ClassNameFilter.php.html#51\">TonyBogdanov\\MockableAnnotations\\MockProvider\\ClassMockProvider\\Filter\\ClassNameFilter::shouldMock<\/a>"],[100,1,"<a href=\"MockProvider\/ClassMockProvider\/Filter\/ClassNameFilter.php.html#62\">TonyBogdanov\\MockableAnnotations\\MockProvider\\ClassMockProvider\\Filter\\ClassNameFilter::getClassName<\/a>"],[100,1,"<a href=\"MockProvider\/ClassMockProvider\/Filter\/ClassNameFilter.php.html#73\">TonyBogdanov\\MockableAnnotations\\MockProvider\\ClassMockProvider\\Filter\\ClassNameFilter::setClassName<\/a>"],[100,1,"<a href=\"MockProvider\/ClassMockProvider\/Filter\/ClassNameFilter.php.html#83\">TonyBogdanov\\MockableAnnotations\\MockProvider\\ClassMockProvider\\Filter\\ClassNameFilter::isStrict<\/a>"],[100,1,"<a href=\"MockProvider\/ClassMockProvider\/Filter\/ClassNameFilter.php.html#94\">TonyBogdanov\\MockableAnnotations\\MockProvider\\ClassMockProvider\\Filter\\ClassNameFilter::setStrict<\/a>"],[100,1,"<a href=\"MockProvider\/ClassMockProvider\/Strategy\/MergeStrategy.php.html#28\">TonyBogdanov\\MockableAnnotations\\MockProvider\\ClassMockProvider\\Strategy\\MergeStrategy::mock<\/a>"],[100,1,"<a href=\"MockProvider\/ClassMockProvider\/Strategy\/OverrideStrategy.php.html#28\">TonyBogdanov\\MockableAnnotations\\MockProvider\\ClassMockProvider\\Strategy\\OverrideStrategy::mock<\/a>"],[100,1,"<a href=\"MockProvider\/MethodMockProvider.php.html#54\">TonyBogdanov\\MockableAnnotations\\MockProvider\\MethodMockProvider::__construct<\/a>"],[100,3,"<a href=\"MockProvider\/MethodMockProvider.php.html#77\">TonyBogdanov\\MockableAnnotations\\MockProvider\\MethodMockProvider::mockMethodAnnotations<\/a>"],[100,1,"<a href=\"MockProvider\/MethodMockProvider.php.html#92\">TonyBogdanov\\MockableAnnotations\\MockProvider\\MethodMockProvider::getAnnotations<\/a>"],[100,1,"<a href=\"MockProvider\/MethodMockProvider.php.html#103\">TonyBogdanov\\MockableAnnotations\\MockProvider\\MethodMockProvider::setAnnotations<\/a>"],[100,1,"<a href=\"MockProvider\/MethodMockProvider.php.html#113\">TonyBogdanov\\MockableAnnotations\\MockProvider\\MethodMockProvider::getStrategy<\/a>"],[100,1,"<a href=\"MockProvider\/MethodMockProvider.php.html#124\">TonyBogdanov\\MockableAnnotations\\MockProvider\\MethodMockProvider::setStrategy<\/a>"],[100,1,"<a href=\"MockProvider\/MethodMockProvider.php.html#134\">TonyBogdanov\\MockableAnnotations\\MockProvider\\MethodMockProvider::hasFilter<\/a>"],[100,2,"<a href=\"MockProvider\/MethodMockProvider.php.html#143\">TonyBogdanov\\MockableAnnotations\\MockProvider\\MethodMockProvider::getFilter<\/a>"],[100,1,"<a href=\"MockProvider\/MethodMockProvider.php.html#154\">TonyBogdanov\\MockableAnnotations\\MockProvider\\MethodMockProvider::setFilter<\/a>"],[100,1,"<a href=\"MockProvider\/MethodMockProvider.php.html#164\">TonyBogdanov\\MockableAnnotations\\MockProvider\\MethodMockProvider::getPriority<\/a>"],[100,1,"<a href=\"MockProvider\/MethodMockProvider.php.html#175\">TonyBogdanov\\MockableAnnotations\\MockProvider\\MethodMockProvider::setPriority<\/a>"],[100,1,"<a href=\"MockProvider\/MethodMockProvider\/Filter\/MethodNameFilter.php.html#37\">TonyBogdanov\\MockableAnnotations\\MockProvider\\MethodMockProvider\\Filter\\MethodNameFilter::__construct<\/a>"],[100,2,"<a href=\"MockProvider\/MethodMockProvider\/Filter\/MethodNameFilter.php.html#51\">TonyBogdanov\\MockableAnnotations\\MockProvider\\MethodMockProvider\\Filter\\MethodNameFilter::shouldMock<\/a>"],[100,1,"<a href=\"MockProvider\/MethodMockProvider\/Filter\/MethodNameFilter.php.html#62\">TonyBogdanov\\MockableAnnotations\\MockProvider\\MethodMockProvider\\Filter\\MethodNameFilter::getClassName<\/a>"],[100,1,"<a href=\"MockProvider\/MethodMockProvider\/Filter\/MethodNameFilter.php.html#73\">TonyBogdanov\\MockableAnnotations\\MockProvider\\MethodMockProvider\\Filter\\MethodNameFilter::setClassName<\/a>"],[100,1,"<a href=\"MockProvider\/MethodMockProvider\/Filter\/MethodNameFilter.php.html#83\">TonyBogdanov\\MockableAnnotations\\MockProvider\\MethodMockProvider\\Filter\\MethodNameFilter::getMethodName<\/a>"],[100,1,"<a href=\"MockProvider\/MethodMockProvider\/Filter\/MethodNameFilter.php.html#94\">TonyBogdanov\\MockableAnnotations\\MockProvider\\MethodMockProvider\\Filter\\MethodNameFilter::setMethodName<\/a>"],[100,1,"<a href=\"MockProvider\/MethodMockProvider\/Strategy\/MergeStrategy.php.html#28\">TonyBogdanov\\MockableAnnotations\\MockProvider\\MethodMockProvider\\Strategy\\MergeStrategy::mock<\/a>"],[100,1,"<a href=\"MockProvider\/MethodMockProvider\/Strategy\/OverrideStrategy.php.html#28\">TonyBogdanov\\MockableAnnotations\\MockProvider\\MethodMockProvider\\Strategy\\OverrideStrategy::mock<\/a>"],[100,1,"<a href=\"MockProvider\/PropertyMockProvider.php.html#54\">TonyBogdanov\\MockableAnnotations\\MockProvider\\PropertyMockProvider::__construct<\/a>"],[100,3,"<a href=\"MockProvider\/PropertyMockProvider.php.html#77\">TonyBogdanov\\MockableAnnotations\\MockProvider\\PropertyMockProvider::mockPropertyAnnotations<\/a>"],[100,1,"<a href=\"MockProvider\/PropertyMockProvider.php.html#92\">TonyBogdanov\\MockableAnnotations\\MockProvider\\PropertyMockProvider::getAnnotations<\/a>"],[100,1,"<a href=\"MockProvider\/PropertyMockProvider.php.html#103\">TonyBogdanov\\MockableAnnotations\\MockProvider\\PropertyMockProvider::setAnnotations<\/a>"],[100,1,"<a href=\"MockProvider\/PropertyMockProvider.php.html#113\">TonyBogdanov\\MockableAnnotations\\MockProvider\\PropertyMockProvider::getStrategy<\/a>"],[100,1,"<a href=\"MockProvider\/PropertyMockProvider.php.html#124\">TonyBogdanov\\MockableAnnotations\\MockProvider\\PropertyMockProvider::setStrategy<\/a>"],[100,1,"<a href=\"MockProvider\/PropertyMockProvider.php.html#134\">TonyBogdanov\\MockableAnnotations\\MockProvider\\PropertyMockProvider::hasFilter<\/a>"],[100,2,"<a href=\"MockProvider\/PropertyMockProvider.php.html#143\">TonyBogdanov\\MockableAnnotations\\MockProvider\\PropertyMockProvider::getFilter<\/a>"],[100,1,"<a href=\"MockProvider\/PropertyMockProvider.php.html#154\">TonyBogdanov\\MockableAnnotations\\MockProvider\\PropertyMockProvider::setFilter<\/a>"],[100,1,"<a href=\"MockProvider\/PropertyMockProvider.php.html#164\">TonyBogdanov\\MockableAnnotations\\MockProvider\\PropertyMockProvider::getPriority<\/a>"],[100,1,"<a href=\"MockProvider\/PropertyMockProvider.php.html#175\">TonyBogdanov\\MockableAnnotations\\MockProvider\\PropertyMockProvider::setPriority<\/a>"],[100,1,"<a href=\"MockProvider\/PropertyMockProvider\/Filter\/PropertyNameFilter.php.html#37\">TonyBogdanov\\MockableAnnotations\\MockProvider\\PropertyMockProvider\\Filter\\PropertyNameFilter::__construct<\/a>"],[100,2,"<a href=\"MockProvider\/PropertyMockProvider\/Filter\/PropertyNameFilter.php.html#51\">TonyBogdanov\\MockableAnnotations\\MockProvider\\PropertyMockProvider\\Filter\\PropertyNameFilter::shouldMock<\/a>"],[100,1,"<a href=\"MockProvider\/PropertyMockProvider\/Filter\/PropertyNameFilter.php.html#62\">TonyBogdanov\\MockableAnnotations\\MockProvider\\PropertyMockProvider\\Filter\\PropertyNameFilter::getClassName<\/a>"],[100,1,"<a href=\"MockProvider\/PropertyMockProvider\/Filter\/PropertyNameFilter.php.html#73\">TonyBogdanov\\MockableAnnotations\\MockProvider\\PropertyMockProvider\\Filter\\PropertyNameFilter::setClassName<\/a>"],[100,1,"<a href=\"MockProvider\/PropertyMockProvider\/Filter\/PropertyNameFilter.php.html#83\">TonyBogdanov\\MockableAnnotations\\MockProvider\\PropertyMockProvider\\Filter\\PropertyNameFilter::getPropertyName<\/a>"],[100,1,"<a href=\"MockProvider\/PropertyMockProvider\/Filter\/PropertyNameFilter.php.html#94\">TonyBogdanov\\MockableAnnotations\\MockProvider\\PropertyMockProvider\\Filter\\PropertyNameFilter::setPropertyName<\/a>"],[100,1,"<a href=\"MockProvider\/PropertyMockProvider\/Strategy\/MergeStrategy.php.html#28\">TonyBogdanov\\MockableAnnotations\\MockProvider\\PropertyMockProvider\\Strategy\\MergeStrategy::mock<\/a>"],[100,1,"<a href=\"MockProvider\/PropertyMockProvider\/Strategy\/OverrideStrategy.php.html#28\">TonyBogdanov\\MockableAnnotations\\MockProvider\\PropertyMockProvider\\Strategy\\OverrideStrategy::mock<\/a>"],[100,2,"<a href=\"Reader\/Exceptions\/StateException.php.html#30\">TonyBogdanov\\MockableAnnotations\\Reader\\Exceptions\\StateException::__construct<\/a>"],[100,1,"<a href=\"Reader\/MockableReader.php.html#74\">TonyBogdanov\\MockableAnnotations\\Reader\\MockableReader::__construct<\/a>"],[100,1,"<a href=\"Reader\/MockableReader.php.html#85\">TonyBogdanov\\MockableAnnotations\\Reader\\MockableReader::pushState<\/a>"],[100,2,"<a href=\"Reader\/MockableReader.php.html#103\">TonyBogdanov\\MockableAnnotations\\Reader\\MockableReader::popState<\/a>"],[100,2,"<a href=\"Reader\/MockableReader.php.html#123\">TonyBogdanov\\MockableAnnotations\\Reader\\MockableReader::restoreState<\/a>"],[100,1,"<a href=\"Reader\/MockableReader.php.html#152\">TonyBogdanov\\MockableAnnotations\\Reader\\MockableReader::overrideClassAnnotations<\/a>"],[100,1,"<a href=\"Reader\/MockableReader.php.html#173\">TonyBogdanov\\MockableAnnotations\\Reader\\MockableReader::overrideAliasClassAnnotations<\/a>"],[100,1,"<a href=\"Reader\/MockableReader.php.html#192\">TonyBogdanov\\MockableAnnotations\\Reader\\MockableReader::mergeClassAnnotations<\/a>"],[100,1,"<a href=\"Reader\/MockableReader.php.html#213\">TonyBogdanov\\MockableAnnotations\\Reader\\MockableReader::mergeAliasClassAnnotations<\/a>"],[100,1,"<a href=\"Reader\/MockableReader.php.html#233\">TonyBogdanov\\MockableAnnotations\\Reader\\MockableReader::overrideMethodAnnotations<\/a>"],[100,1,"<a href=\"Reader\/MockableReader.php.html#263\">TonyBogdanov\\MockableAnnotations\\Reader\\MockableReader::overrideAliasMethodAnnotations<\/a>"],[100,1,"<a href=\"Reader\/MockableReader.php.html#292\">TonyBogdanov\\MockableAnnotations\\Reader\\MockableReader::mergeMethodAnnotations<\/a>"],[100,1,"<a href=\"Reader\/MockableReader.php.html#322\">TonyBogdanov\\MockableAnnotations\\Reader\\MockableReader::mergeAliasMethodAnnotations<\/a>"],[100,1,"<a href=\"Reader\/MockableReader.php.html#351\">TonyBogdanov\\MockableAnnotations\\Reader\\MockableReader::overridePropertyAnnotations<\/a>"],[100,1,"<a href=\"Reader\/MockableReader.php.html#381\">TonyBogdanov\\MockableAnnotations\\Reader\\MockableReader::overrideAliasPropertyAnnotations<\/a>"],[100,1,"<a href=\"Reader\/MockableReader.php.html#410\">TonyBogdanov\\MockableAnnotations\\Reader\\MockableReader::mergePropertyAnnotations<\/a>"],[100,1,"<a href=\"Reader\/MockableReader.php.html#440\">TonyBogdanov\\MockableAnnotations\\Reader\\MockableReader::mergeAliasPropertyAnnotations<\/a>"],[100,5,"<a href=\"Reader\/MockableReader.php.html#469\">TonyBogdanov\\MockableAnnotations\\Reader\\MockableReader::overrideAliasAnnotations<\/a>"],[100,5,"<a href=\"Reader\/MockableReader.php.html#528\">TonyBogdanov\\MockableAnnotations\\Reader\\MockableReader::mergeAliasAnnotations<\/a>"],[100,2,"<a href=\"Reader\/MockableReader.php.html#584\">TonyBogdanov\\MockableAnnotations\\Reader\\MockableReader::getClassAnnotations<\/a>"],[100,3,"<a href=\"Reader\/MockableReader.php.html#604\">TonyBogdanov\\MockableAnnotations\\Reader\\MockableReader::getClassAnnotation<\/a>"],[100,2,"<a href=\"Reader\/MockableReader.php.html#625\">TonyBogdanov\\MockableAnnotations\\Reader\\MockableReader::getMethodAnnotations<\/a>"],[100,3,"<a href=\"Reader\/MockableReader.php.html#645\">TonyBogdanov\\MockableAnnotations\\Reader\\MockableReader::getMethodAnnotation<\/a>"],[100,2,"<a href=\"Reader\/MockableReader.php.html#666\">TonyBogdanov\\MockableAnnotations\\Reader\\MockableReader::getPropertyAnnotations<\/a>"],[100,3,"<a href=\"Reader\/MockableReader.php.html#686\">TonyBogdanov\\MockableAnnotations\\Reader\\MockableReader::getPropertyAnnotation<\/a>"],[100,1,"<a href=\"Reader\/MockableReader.php.html#705\">TonyBogdanov\\MockableAnnotations\\Reader\\MockableReader::getDelegate<\/a>"],[100,1,"<a href=\"Reader\/MockableReader.php.html#716\">TonyBogdanov\\MockableAnnotations\\Reader\\MockableReader::setDelegate<\/a>"],[100,1,"<a href=\"Reader\/MockableReader.php.html#726\">TonyBogdanov\\MockableAnnotations\\Reader\\MockableReader::clearClassMockProviders<\/a>"],[100,3,"<a href=\"Reader\/MockableReader.php.html#738\">TonyBogdanov\\MockableAnnotations\\Reader\\MockableReader::addClassMockProvider<\/a>"],[100,1,"<a href=\"Reader\/MockableReader.php.html#762\">TonyBogdanov\\MockableAnnotations\\Reader\\MockableReader::getClassMockProviders<\/a>"],[100,2,"<a href=\"Reader\/MockableReader.php.html#773\">TonyBogdanov\\MockableAnnotations\\Reader\\MockableReader::setClassMockProviders<\/a>"],[100,1,"<a href=\"Reader\/MockableReader.php.html#790\">TonyBogdanov\\MockableAnnotations\\Reader\\MockableReader::clearMethodMockProviders<\/a>"],[100,3,"<a href=\"Reader\/MockableReader.php.html#802\">TonyBogdanov\\MockableAnnotations\\Reader\\MockableReader::addMethodMockProvider<\/a>"],[100,1,"<a href=\"Reader\/MockableReader.php.html#826\">TonyBogdanov\\MockableAnnotations\\Reader\\MockableReader::getMethodMockProviders<\/a>"],[100,2,"<a href=\"Reader\/MockableReader.php.html#837\">TonyBogdanov\\MockableAnnotations\\Reader\\MockableReader::setMethodMockProviders<\/a>"],[100,1,"<a href=\"Reader\/MockableReader.php.html#854\">TonyBogdanov\\MockableAnnotations\\Reader\\MockableReader::clearPropertyMockProviders<\/a>"],[100,3,"<a href=\"Reader\/MockableReader.php.html#866\">TonyBogdanov\\MockableAnnotations\\Reader\\MockableReader::addPropertyMockProvider<\/a>"],[100,1,"<a href=\"Reader\/MockableReader.php.html#890\">TonyBogdanov\\MockableAnnotations\\Reader\\MockableReader::getPropertyMockProviders<\/a>"],[100,2,"<a href=\"Reader\/MockableReader.php.html#901\">TonyBogdanov\\MockableAnnotations\\Reader\\MockableReader::setPropertyMockProviders<\/a>"],[100,1,"<a href=\"Reader\/MockableReader.php.html#918\">TonyBogdanov\\MockableAnnotations\\Reader\\MockableReader::getStateStack<\/a>"],[100,1,"<a href=\"Reader\/MockableReader.php.html#929\">TonyBogdanov\\MockableAnnotations\\Reader\\MockableReader::setStateStack<\/a>"]], 'Method Complexity'))
-      .transition()
-      .duration(500)
-      .call(chart);
-
-    nv.utils.windowResize(chart.update);
-
-    return chart;
-  });
-
-  function getComplexityData(data, label) {
-    var values = [];
-    $.each(data, function(key) {
-      var value = Math.round(data[key][0]*100) / 100;
-      values.push({
-        x: value,
-        y: data[key][1],
-        class: data[key][2],
-        size: 0.05,
-        shape: 'diamond'
-      });
-    });
-
-    return [
-      {
-        key: label,
-        values: values,
-        color: "#4572A7"
-      }
-    ];
-  }
-});
-  </script>
- </body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/crypto-js.min.js" integrity="sha384-lp4k1VRKPU9eBnPePjnJ9M2RF3i7PC30gXs70+elCVfgwLwx1tv5+ctxdtwxqZa7" crossorigin="anonymous"></script>
+</body>
 </html>

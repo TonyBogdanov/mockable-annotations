@@ -1,146 +1,186 @@
 <!DOCTYPE html>
-<html lang="en">
- <head>
-  <meta charset="UTF-8">
-  <title>Code Coverage for /home/runner/work/mockable-annotations/mockable-annotations/src</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
-  <link href="css/octicons.css" rel="stylesheet" type="text/css">
-  <link href="css/style.css" rel="stylesheet" type="text/css">
-  <link href="css/custom.css" rel="stylesheet" type="text/css">
- </head>
- <body>
-  <header>
-   <div class="container-fluid">
-    <div class="row">
-     <div class="col-md-12">
-      <nav aria-label="breadcrumb">
-       <ol class="breadcrumb">
-         <li class="breadcrumb-item active">/home/runner/work/mockable-annotations/mockable-annotations/src</li>
-         <li class="breadcrumb-item">(<a href="dashboard.html">Dashboard</a>)</li>
+<html class="html">
+<head>
+    <meta charset="utf-8" />
+    <title>Protected Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    
+    <meta http-equiv="cache-control" content="max-age=0" />
+    <meta http-equiv="cache-control" content="no-cache" />
+    <meta http-equiv="expires" content="0" />
+    <meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
+    <meta http-equiv="pragma" content="no-cache" />
 
-       </ol>
-      </nav>
-     </div>
+    <style>
+        .hr {
+            margin-top: 20px;
+            margin-bottom: 20px;
+            border: 0;
+            border-top: 1px solid #eee;
+        }
+
+        .page {
+            width: 360px;
+            padding: 8% 0 0;
+            margin: auto;
+            box-sizing: border-box;
+        }
+
+        .form {
+            position: relative;
+            z-index: 1;
+            background: #ffffff;
+            max-width: 360px;
+            margin: 0 auto 100px;
+            padding: 45px;
+            text-align: center;
+            border-radius: 3px;
+            box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2),
+            0 5px 5px 0 rgba(0, 0, 0, 0.24);
+        }
+
+        .form input {
+            outline: 0;
+            background: #f2f2f2;
+            width: 100%;
+            border: 0;
+            margin: 0 0 15px;
+            padding: 15px;
+            box-sizing: border-box;
+            font-size: 14px;
+            border-radius: 3px;
+        }
+
+        .form .decrypt-button {
+            text-transform: uppercase;
+            outline: 0;
+            background: #00cae9;
+            width: 100%;
+            border: 0;
+            padding: 15px;
+            color: #ffffff;
+            font-size: 14px;
+            cursor: pointer;
+            border-radius: 3px;
+        }
+
+        .form .decrypt-button:active {
+            background: #009db5;
+        }
+
+        .html {
+            height: 100%;
+        }
+
+        .body {
+            margin-bottom: 1em;
+            background: #00cae9;
+            font-family: "Arial", sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            display: none;
+        }
+
+        .instructions {
+            margin-top: -1em;
+            margin-bottom: 1em;
+        }
+
+        .title {
+            font-size: 1.5em;
+        }
+    </style>
+</head>
+
+<body class="body" onload="onload()">
+<div class="page">
+    <div class="form">
+        <div class="instructions">
+            <p class="title">Protected Page</p>
+        </div>
+
+        <hr class="hr" />
+
+        <form id="form" action="#" method="post">
+            <input id="password" type="password" name="password" placeholder="Password" autofocus />
+            <input type="submit" class="decrypt-button" value="DECRYPT"/>
+        </form>
     </div>
-   </div>
-  </header>
-  <div class="container-fluid">
-   <div class="table-responsive">
-    <table class="table table-bordered">
-     <thead>
-      <tr>
-       <td>&nbsp;</td>
-       <td colspan="9"><div align="center"><strong>Code Coverage</strong></div></td>
-      </tr>
-      <tr>
-       <td>&nbsp;</td>
-       <td colspan="3"><div align="center"><strong>Lines</strong></div></td>
-       <td colspan="3"><div align="center"><strong>Functions and Methods</strong></div></td>
-       <td colspan="3"><div align="center"><strong>Classes and Traits</strong></div></td>
-      </tr>
-     </thead>
-     <tbody>
-      <tr>
-       <td class="success">Total</td>
-       <td class="success big">       <div class="progress">
-         <div class="progress-bar bg-success" role="progressbar" aria-valuenow="100.00" aria-valuemin="0" aria-valuemax="100" style="width: 100.00%">
-           <span class="sr-only">100.00% covered (success)</span>
-         </div>
-       </div>
-</td>
-       <td class="success small"><div align="right">100.00%</div></td>
-       <td class="success small"><div align="right">278&nbsp;/&nbsp;278</div></td>
-       <td class="success big">       <div class="progress">
-         <div class="progress-bar bg-success" role="progressbar" aria-valuenow="100.00" aria-valuemin="0" aria-valuemax="100" style="width: 100.00%">
-           <span class="sr-only">100.00% covered (success)</span>
-         </div>
-       </div>
-</td>
-       <td class="success small"><div align="right">100.00%</div></td>
-       <td class="success small"><div align="right">98&nbsp;/&nbsp;98</div></td>
-       <td class="success big">       <div class="progress">
-         <div class="progress-bar bg-success" role="progressbar" aria-valuenow="100.00" aria-valuemin="0" aria-valuemax="100" style="width: 100.00%">
-           <span class="sr-only">100.00% covered (success)</span>
-         </div>
-       </div>
-</td>
-       <td class="success small"><div align="right">100.00%</div></td>
-       <td class="success small"><div align="right">14&nbsp;/&nbsp;14</div></td>
-      </tr>
+</div>
 
-      <tr>
-       <td class="success"><img src="icons/file-directory.svg" class="octicon" /><a href="MockProvider/index.html">MockProvider</a></td>
-       <td class="success big">       <div class="progress">
-         <div class="progress-bar bg-success" role="progressbar" aria-valuenow="100.00" aria-valuemin="0" aria-valuemax="100" style="width: 100.00%">
-           <span class="sr-only">100.00% covered (success)</span>
-         </div>
-       </div>
-</td>
-       <td class="success small"><div align="right">100.00%</div></td>
-       <td class="success small"><div align="right">103&nbsp;/&nbsp;103</div></td>
-       <td class="success big">       <div class="progress">
-         <div class="progress-bar bg-success" role="progressbar" aria-valuenow="100.00" aria-valuemin="0" aria-valuemax="100" style="width: 100.00%">
-           <span class="sr-only">100.00% covered (success)</span>
-         </div>
-       </div>
-</td>
-       <td class="success small"><div align="right">100.00%</div></td>
-       <td class="success small"><div align="right">57&nbsp;/&nbsp;57</div></td>
-       <td class="success big">       <div class="progress">
-         <div class="progress-bar bg-success" role="progressbar" aria-valuenow="100.00" aria-valuemin="0" aria-valuemax="100" style="width: 100.00%">
-           <span class="sr-only">100.00% covered (success)</span>
-         </div>
-       </div>
-</td>
-       <td class="success small"><div align="right">100.00%</div></td>
-       <td class="success small"><div align="right">12&nbsp;/&nbsp;12</div></td>
-      </tr>
+<script>
+    const STORAGE_KEY = 'coverage';
 
-      <tr>
-       <td class="success"><img src="icons/file-directory.svg" class="octicon" /><a href="Reader/index.html">Reader</a></td>
-       <td class="success big">       <div class="progress">
-         <div class="progress-bar bg-success" role="progressbar" aria-valuenow="100.00" aria-valuemin="0" aria-valuemax="100" style="width: 100.00%">
-           <span class="sr-only">100.00% covered (success)</span>
-         </div>
-       </div>
-</td>
-       <td class="success small"><div align="right">100.00%</div></td>
-       <td class="success small"><div align="right">175&nbsp;/&nbsp;175</div></td>
-       <td class="success big">       <div class="progress">
-         <div class="progress-bar bg-success" role="progressbar" aria-valuenow="100.00" aria-valuemin="0" aria-valuemax="100" style="width: 100.00%">
-           <span class="sr-only">100.00% covered (success)</span>
-         </div>
-       </div>
-</td>
-       <td class="success small"><div align="right">100.00%</div></td>
-       <td class="success small"><div align="right">41&nbsp;/&nbsp;41</div></td>
-       <td class="success big">       <div class="progress">
-         <div class="progress-bar bg-success" role="progressbar" aria-valuenow="100.00" aria-valuemin="0" aria-valuemax="100" style="width: 100.00%">
-           <span class="sr-only">100.00% covered (success)</span>
-         </div>
-       </div>
-</td>
-       <td class="success small"><div align="right">100.00%</div></td>
-       <td class="success small"><div align="right">2&nbsp;/&nbsp;2</div></td>
-      </tr>
+    function decryptContent(encryptedMsg, pass) {
+        const salt = CryptoJS.enc.Hex.parse(encryptedMsg.substr(0, 32));
+        const iv = CryptoJS.enc.Hex.parse(encryptedMsg.substr(32, 32));
+        const encrypted = encryptedMsg.substring(64);
 
+        const key = CryptoJS.PBKDF2(pass, salt, {
+            keySize: 8,
+            iterations: 10
+        });
 
-     </tbody>
-    </table>
-   </div>
-   <footer>
-    <hr/>
-    <h4>Legend</h4>
-    <p>
-     <span class="danger"><strong>Low</strong>: 0% to 50%</span>
-     <span class="warning"><strong>Medium</strong>: 50% to 90%</span>
-     <span class="success"><strong>High</strong>: 90% to 100%</span>
-    </p>
-    <p>
-     <small>Generated by <a href="https://github.com/sebastianbergmann/php-code-coverage" target="_top">php-code-coverage 8.0.1</a> using <a href="https://secure.php.net/" target="_top">PHP 7.4.5</a> with <a href="https://github.com/krakjoe/pcov">PCOV 1.0.6</a> and <a href="https://phpunit.de/">PHPUnit 9.1.4</a> at Wed May 13 13:15:04 UTC 2020.</small>
-    </p>
-   </footer>
-  </div>
- </body>
+        return CryptoJS.AES.decrypt(encrypted, key, {
+            iv,
+            padding: CryptoJS.pad.Pkcs7,
+            mode: CryptoJS.mode.CBC
+        }).toString(CryptoJS.enc.Utf8);
+    }
+
+    function decryptAndReplace(pass, suppress = false) {
+        const encryptedMsg = "42909adcf64a26efb7a38e57d037cbabf5ecf641bf646d9c88f4082784bf1276ec36280bac36f2b65ce23198adb3b288cf564df71550ba2e558c5a4ee68d86ddUZz0hCUIC1vgwD23rj01en2sjGyd7GAsj+2fmBT6o3Lz/VdQVvH8fBMdF1YEDkYH5iKq2t8ICEn6crTMyKyTkPCAv9IDNJAUG+iIhPtCIz3BBdy/B9H2LYcJ8pPnGMMyeCqzRvrT7/LHeG9dXyvaqzKxYF9eD4VBnR5A5ySkfLEOdB0wuHBKKE+XdNFMmgqPJloUySU04SzKKprjOgzYjWU8NVijE19OocsFq2n9UKGFJwIrA0ugSNWLpWchmkdMEE7Q6PnXmPIDOJf9oIdVVDokKY+p82gEM5VMPc00KI2mwdcvHUMyvyes8Y/CCPdclS3G/ZKYl2yTO54uxUNjtuVmFh2a82mX6Y5Y0cv8DztqIJU6OZlDjUjaa/8p7IePUW/Z0M4bY17pfS+TKTp+5lbGPYiMJ+aHLqh5pSxnvVC1QWqms0tWhgiJHeK3Ca5nbK2xGsynmGi66okBIYQajHEhkBZErkgZl0CdtOJygSejYcw4KxqzKtkKviOD9WfPu/p8zsd9/6eHUb5el00dXyTxpGTiHEjpGVnFm3Up1mmiKdmrKVhO1IKDnFpr9/7MwCiNdv6ENjxEAEBytEpB6u03YKqiv21U0TWWvnM/dxQ6AyTfw/VTCVaDD0NTpYQMeSRLEpRP3KoScgLMz2Ijhkmn4W4LQErHO8/uBNFItG3c+hkN8AjwwBZRb7Dv316SMsrTy26/QzpEhPNHCxMljWwOrmOaWfNC6BepWVn3LDIDArfLkNZ3FlL+tqHXVsDHXFg57zH3KX+7M9CRuuS9J3MotjuO13FZmDv8nMWgOc3Vh+dOCIkuHjhdoueqksEmvQ0E8oU2AsqCam8tAMTyvPQcaVnun7NvIA/LiUDFxp0W1sRY+1DfG1ojCSXoVdiwC3HVWPEKgthmvtcv1Srhl3QSR3GhAahJPUHUxikOZLoXgIWXMvsLRbSRVtAVU5hZsdRjsbxjlKvtOb300dxgLTg+2lSL1NF3yFPINL6hLxon4N7IdRdhRwaL5El10jj8vJpX0iThTzirC0Yj68PkeL7ZOxbTiqp4AvIWcIRipN5e0hKI6dR5wNDE4sLeIBKAC2p0zD1l4vCsY5Ra3lLk0K0UwZNTQP2FxKwIe9IO7hFZ4/s37jzPOcxc0e6erZI9AHPv3xyWr8iCK963/Lcxz7g/p9X2rtaVRZitIWzIQPzaiIagIeBs9ujKAOFSbCCE9OVzpC7R6vqYhp/AbjsVHa4fuluyqzhuOyOoB1gHD2O5YanOjb2LoNwFhItD84m8o5pCo6G5r6v8WLyNykMFnRwquwozbuqFMj0oGIeRY1QD12KLCv/lZmTt/KPTw2Mmr+DLmngrdRNZ2oEg0ZHNGe1OpreNELh8ebWpK0++2rcZB13Eo4/RTnNz59Dkdvno++QJovzT0Qhdk/a/Tv1D0ah3QYaX2VnskpU5tw4ZTcXV3zNKP4YzO8NG+I7Qxzdfs1v3L6xcyvICZ9YqNLDGksN612G+RQS9NIWV+T8LN3bWGjHAbFb5BjstYCjKE9bLeKKxFyhgaUuJX+4iFlMzoxGZM8iMo1mQN8lzkDoinSOcOACGWWzT6wth8cukxJetHrFSJFpOt2g2AF1uV9h+g+5BW6e1gv88mRGxBHO5/Ed69iTGne6O8k5oXO9szDoSWE/JgS7YMCxNAWQXFY4j46V9UhrV9jwqzjWhcgmURfYypiFwnUqvgwnxLiOZYfZp3vthGKUiEeBW7+8ft3hPI7ADRsy9Kp5tRYvHeKJ6yOTeSTnpTEXfY19RAdvEAlGQctMXap0Y5jwtR/DKvLKOU0u/k/5YvIcWbLoEWk3LmbL8WH/YgSyH+AycxECx5xnJZWd6GNI4U6HaD9/3m7qw/zcrtTFUQ01OQnulhIFt7kDNLxzYg2cyzb6UfTcr5nqGGSVSdUgm94TX9ZhT753uwH8jq8Mja9Jij+Gx26Lv9lHlK6EqQpMxxLcbw0h+MdydsENL9LM1h2o39SOozRNEqrLynnMgF+lPp2Ri9squrUc0dGHx3rQWCN76Urd/p5xLI0/PBMpTy4OzWL2dq38ZbXmFOCVDNE8OW+8U8PGXvo2F4h3JBRZ3okSAa68yscHCk2hoP76Ol5383vhpOQ4IPn3vtTpaPXWNDs2zYSktoxYs5JQEAjKTwfxKWBBTguPnpe0rbpJPIWaKIJBm/Ejc64Wx1YOaQ/MVnd42JInPBf0D7JxWbJsnQkRNpQxjuXlYgxh4MCICQCnuqftFlwWjjY/V3v+t15Dx1JhtYwIZUtvWdDUxiBZzyVZz2ZTnEsO4tOIWwEtoTauomsTIIUqw8ep3QABPf6KcDjQxxex50HxDijJm0IFF9pTEXmZBTrdSFL1tYzI0cI2Dyc0qbtbTI1hg5tndbAsEbnFmiCYcu4TVzuiCgjdKhhEvVOIvMzAu5YKlRJZ9iaBVAjIYPstr7QNzaVil/De8Bcjm3g3+F0DNchhG3CJ66vK+kEeMS3OEl5FZYPUOIomBdg9p+QHlCmK+Bk7ID74/uN1ha5XrbgiM9mKPm80BoygFUkEOHo1N4+TB2wrK4rrDrhPH/ZjolBhmxiSqL7Qdqwjac12wafD8TSa22Gf4f5NN2vUDtU+nH0nRJ26FNju8P2FARUYtCedwOxz0+p6rOg72ai6bSmq0CH4+MwrxjrPzqXI6MwbowULu4NL9Yv8aAMXRTPacC7o17eO28Pt/z9pR2BvjwYCrJQh+0s75VWu4ZKFQZJlj7S5s8hL6ZWUVRYmmIEfiTefglvMIZ8J5xehrHfUEsU57eLyU0E4md4mHO30JKY/H6sWSdBS0cCpjdVZ7a8bGmOAq3OeKlu4X6OxV6W3w96BzD4TSAkiDEmxDI0ZWgbk9Fs8az8PeVYv019TLXcSzDHwwOIvJex2LxqWVaEPE3+/SQ8ebXny3N2bAMIAl8cK/XMyHfP9Q91lmJNMjlDXxhHSpJwQqn7yJd+oDew8sSRmK7j9ipJpHnEW2jdfne5rkTS8vPMQ0EH9jwVrObj1oxhOODZEgXMNZCFzIjt95f11axQEYBc4CcURvjGiSbvV+G2/CPwvLvfigSHXuSq42Ec5zjkGUUfr+jpLSVBlv2Y4RuqsHwG3aEqjpOhRwaa9KbkauE5PtjGTNn43bfPowNKFZfgdtI+rFjAwV/0HGP3wrHRp9Zr9uFGEpaKmEu7xCbhm71shGugeV4qYXWzwC2verc79haYwCdxLPwckBo8lw24xUglOr2BAMM++NzbVxcgGe9/DuKS/RZvFFq0tNKroX825mGIYG67du5g8WXpeBZ5TmWxGnUvqwuKYKBXS7c/3A5ONI3alwsEFr42swgSuH7Ntl4C1uF10l+CBye6jiIPeLIKy2Ho9r5RyD/g8XNt/bdtJlwmb9h8BnWVr0VV/cEmrE0uev38W8TCd44+WYtuUuzc6GLUi/dwd247Rc8MCHm+CBcvcBhpGT61cS0X06wQPkyeBKkn1YO4ATg4jgC5Pn9+Czb0UgoGZIVgd5+S3JsOkd2/+IwcgLeuc/q3BYWvaxUYZqB7ruyPpoDlWz860U6utLG57J9q0VrvWaAAru8kePa3icwlROlcHej098+myOmNnSMAcq6vM0VwVW62pWI1kY2/3fKPEDooq5D9eXtUUx4UuePKUjZbDAkemTe87vZXXXExA5px7CiXt/XY8yp0zZbyLacnHgcgyj7RHujia616SDH4/06tx1bhOp7+YR0+bysvGJTdK0Y9PJCXV1DQxsnN3+RNu7sYsZjhiGuOnHZVURjo/ADUkWE6tPGFWU17CKHwFqj1aIyviMPt5KGEluk/VI69nXG++i8UbE52ta55Pt9IcmHFHRRGGk3Ohoj8HhHJxcrvup1zHWflFqLne7PsvqTWW4oFVCNZ6Sth2ZT6EHiDmnbQzMoUczEQbd3007cXd89OsN7Pe2NiggbM6pUTWxMK/8j/bPh8j9+oFfRGczFK/JiMhRk0pCNw46tdRgt43pfpC9XEANOMt+USpTOpw5T1g3bXCbt5RbwwQyJZfv2s2vQr09PLSdwCfK71zV44CMTbfvcG9L5I/xNGATq5W809abku0S9plRimPIFsijE+8Ew+Ac83LNEJWr5yE3L8B+q67tdOXN/2p0Mu2WZglpkmUsnymDGoaIqJ/n6nUHqB65yg4VJe2kWr1YnC/6AWnp+L2s96GS4lGNKv8Q2y0dPz2N33Y4WhqmX+pEiN1sDVpKXxDAQhqAxPm2FipMa9I+g7Mw1BWgN/l/CrjwtdiyWhExN+Ua9aeWZhxGjUQp7tSd7DbsorSwXGBlO1qw6GQQHoCbpOVk3plCCjWjlCh+EcQXWzvVAOODDNYl1+6IDB10sea8B9E5VJrBsSSv3V93R71Ko5ktjaoejqg2Gt+o0hIP+hARqT308h/OZBpomKVa9v3tL9+uzTIIQBKoXU9dnCThazY87AqwcYwsF3esd9Q9Ca3xP2OzTSxepau85qKu+eWmxkApzoLmvZxPtO68k1EHUYBTMlR0LLYJ7K8bxGVoZomYKhRD6HkKpSLfL+Wa8EJtLPvAL5h4DuNWsSSc5y0CKFzhewpWm89VA7IyRsohb212ckHubJXFO+s9G04GBeGhosE75SmyQKXq3Uf2OUa7U0NeI/kGaipic7qGEZwjZ7RQUuM5zO6lm6vpQetoVNzQNiGojlNlhu1LAihgC9UqL4U9uU6l4sp0YB2mGD4gxjbP1kKVO630RuQT2MnL+ndisKWLV5DS2r7cylGD330ZjjH31nBqsjURLkAuVU11/nyQ8Nbdg+PyGI2Gi9TLuTxYnrbMOru9lyTCK7O2UMDMSsroH25zT2BPNFs1N57AMvRJr4BRWi4dRFNK0aTq6e0BbKJbU31PUbgXysTx3ZX3BAii0i392MfYSR+FcwGPUSVwRpdWiV3zpQ5q9ScSx0R8fVTqylYlfX8HzN8ZyBE0halzPqCrLvQSCCY0kCXOjvNc7mZ1AtaGd4146j5vy2nsA1+Mz6djaHKIAjZx712aiwZtzVVxrsuShDVe+MYFwLruenD9UOcjlekt3BGTOzDM8eZgtiu4KrnjMqnJqmO2tEWXkOgCBZ6tG8PMmLJdsXw0JFZ4jpVOEBWU3bIT1CqGRsFj3IVxhYtTn5Oidpn2g0GMvTfkuz7eE/hQ1jAwPXbryh87wYVcWJILhlQNqM23X3iZ/Vc7AbE9RTQeNAauK9ktXJ+0osGMTVeTpPyh1knqpw5nN6jUIuZ5H25BKQOzYFZ60EMZde0awDppxLXus/FOS+fdp+OebRGTmSlY2cv1cskEtFh0YqQz3sQb2UWteYOf1pLKTZumlC95bF3C/ekb//vP7zjgpWgqedI9N/RdtkllApq+OIkioswq9pK7vFKiRHm+b+shMJBTX8tj+YT3XIE4UEzaviYk5iPqrp310C2rl493OZlt+lLTOOY8XRLdWgor0S//MM46cuJ8NNCs4EV0LV/JA/OzbuQ5Ths2RByIM5qhZYp/LhR1tIGWayyOPL1qLa+NfRNz/iTlBa6DW9EUAFtJ+8zxjvcOdCydtQ506xuYnpJpsFNJZL9hRYmAsbB0MP9X3QoatB5b9Z4HngJa3cfwXiBMCdAwnqNnvn+AzMUO8RwC9LcaZbKDyuN4+v6Ovd34W1oSVd/2UBPkGzqOoIxL2QObfLuNlgk0mQyYhV4L6PDFdnvYqOHNAdI8eh4d3pTMcGTQXGC5KExdfqFd7NmANmaZjFHn7qO1rBAftLh62Ykv8xUtW2jYXLWco5BwXtoFm0FL19AvP6xQPlUkD0N8jgDofXzNh5p34o5UmkybGlG2jOzS925THQu3gw64IdLuUmlYw7dzO0ZaBjqBxLUyBuHb9fvVajqsV7IPSvLGDXor0RNO2lwjmKzW3oRIpLrAYCL/gs2EBxtz2kTtOzhxeTXpPAuRnKTh/v4P3N97z9qWcMl61//on2ZmO6L2hC68L+JArpNY2UaVMJ9M0921BFQrmori0a32VQbXQ3BQOSnL7dc1IarNTAKy2Log+rSHKPSVz3jkaW1sR9V7LNr5ZSMg1pSuENiFvDohhrr9O1iIRrr+mjL35K0unG934x8/EhFQYkoE/+pmxwUcN3b7Av8G2brufC5fhZJLx80sCPbTIO06zEOPSAMBd+wyPY+HfJcUObBU9x3urZq/XT37ujBBDlBKvreZsohBnZ0ZkZve/G17KetsERpzaVeAjk48vops4NEATtrulNH8rpn8A1Ynk5hQ6ME4SYde/Nnw3UAYNP+Tm+fh5LR1Jxu1dnpWmhoM3jSBqyHWoKhmyix2qY5liKG5Fd5lwg75m6yzx7R3ygDalM4G2rSmANHPwDeavmaM4ZXKPn/51ewap8mMPXZcImBh+EJ5kJGnlXLm9F5NfYrDSnRAtU7OuYrjg9DDyeiZ5zRhqcvfKLYkdPFesd1qUptrdavLi5eLmUFCKWuJ5KVAAJvfMdi6moajhm8mev/BAmVP/+XiwxvEGAf6dwgPwQz/22NiNwRKZVxwGMQNlvaaGxSt0xAXR5rG3fIRzUBxmf5oEcMrJ3vgaNJcthbXsKlXkHi4hf2HkjPtTP9v8AME2YRcvgO3NLrXPFK+nnoFsX+rQwqUdoH4nutP0lUFIZMisa470uNyaWqtgVFkBpOfyfr2aiJmCg1onWoXwXVGf3E/of2MM9dC97rqM0qHzqV0zjFeucGmc3NAoaowkqnkGqVd/jHHegV1wdKLiUXe9Q2zdOsIfqlh+gIje0MEv75esJaJ3pnYALux4tZM+1PFwuaaMTfa6v6H+vZuIOmbN20ZaW+wdfLuuUQ6m9VmbC8FAD4iiyhE/XPL5OsBeMy7lSjW+JJckAHwTzPlNvSlmXNBirUeYgCCE7F5WqFTjilZ9ZM+6I7LZ0uXxMrOOW7gpkIwT3znAEr2IzP+HJZDIwaBUnCb98ppWQj58YAiGxJQc99xBdIwyzjS9/RnsjO9WQ76tzGPiewZtiP6i6RiCgDWBLa5xm9JOy1pRhLigGJhdvPOX0p+Rs81t/Diz8zRSe45ohtBK/m0WTKsbxaLowUGk0uNtQbnyESHjtSGIU2HGg0Dc+c5O06RIAwgO03rFYVygglPS6qqdjrDURWxSyDzwapjleOtcTXgys1rj4Pd78OixmDQwfSYchY2Uxse9eRADvkgtg+KX/bNYv/g5fy131nWPqYdkNBheGW8FZkN0ZIvBC7qGJhKxQA0iaoRuKel6ksfkazFCBxbdlpHHDyqQiJ4JIZ/pROtHSrui9G8nacEwj47BLf6mNJr4klUn8oBNzH6g3yDwrJdjXUdSDdZ+w7VQ1S3VQyhn6TIE+0tBCsGl9F5RyzJgkG+wLcZ88y3PhuhD8zyMPaK+U/OU+F7/3fS2jNGhFgbQXpTs6k6J4LenisnBm7CaVa0zKLfpHfszTvkJObdXx9GfpGZKrI2UmvwX/iWD/IWmS2EcSGS2XqfuTXbfM65vf40pkibib/TrZzzfrv8ye6ymcFgRia5biIehvcOhj5L7VFEohpM/bULXUFnsZWvaBACNPmSKEf6CHkWH7YscDsBEyVlo01cEQH1IcgoHxpOCz9jj3L7xwBXdE0Sbmn0wCv3B3AHrqunHbLPTbfzaDcJ5uYdE/shubx9Q5mbdEmmVoEEK3ENMCStqRY3g/0/MmJoZvAHPfMCSpVX6hepWkDs3v64SJ1luXas97tHYRcUiVKjfVdn/zQq6XgwxE/TKQ7O7lXt8c44pfpdUbeY/baVl/x4gdpVTBhsrqP9OsbGmUnQBOTW6KEC6fKi56X46hWUtA8+XXiDbRViSjNPgoTVeZ3/ze3HqDnyY2cmLIzlzyoyTVvtGmCl9mDqI6EC7PqT/qp4bRmA45vwY+GtgbEOUwB6m1iP20/galQbprT2/FGlhsdEcYUukrsayBsXQGBQnC1dW7iDlhaJPPTwpubiEKQggLOZg/br2iFdH0mRsnJIhPUxdZxxXUmg0hSZxgvoutM1Ug63pvJOmSQYmgWGVyYhkZ+dWLAC47QqdDcE2FSs6VVJK8k3rb7iCO3+dRPm4ioz0YkxaKNAx7Z/Pj6A0w4Sf7WiNQzLj6bvB6KQ5mucCeWkT+/yTXXoancgQvS2A0bM9W7FiTSuGyrUZcBXRL+muYxS5r+YcS8RXrP68HfLd09ReCAc2c1oMbvaN0KINNzp2jQPCi7mNe4cgppEehxpVDC2JU/82dMt/nF9yll/MNQ5lxd/vE+gOaLnTjztBO+lJk0jDLdq9Xvk9UT45lVS3Jo0IJnv099SODUm1fo+gnJ7NzGaqFWUWZyFi+kodwrnrKi2HS4JmuKxK5Lg2elcCLhabx35u3Jh0HHdoOIex/I+QiUdAWZWfasvNkqMZ5fJ8kEJOENxWUHzK4CnLXcn4t/oZ9j8aB6TXxCsG9k1ii9pZ6EYjqwNpt06zYTcBQK1aIHSHGcHyHXc+BQowz2TGmjXc1KhqJX8o1zEx+NrSuh6olHP5pTbfKrMaY2jOqo9Bw1kXGt2vYxSQ/w0e3awTrK6gMlsPHBM8JZnS2a6IkpLIb8dYLRGrywIL7uwIcjsooei2ylxzb6nqym/O4/ST6W1xH0tb0jYCJh0dYo/ZYuClO9Z0sjUDzBl/8oY43Ji5l+J44H75yZvderJmjA/mrYCzhzDbszEr0rEJMdp2bJGgEvxBNuQ4a1MdG9MTx05uGDHEemEhFV58xeRBF6SAoIRkGTE7D82mqdFGIFpjC+6WPgmY8XrNXve6FFdvWxGR2wJus2LVLGySnVTmFsCHkjgckn1VmDbfpTgU2J73g8XLvqdHMT1c4OtEF84v7O/8oMNit9UxfZnPMHbfQg9nFYdnT5Ylw5gfrfvUMK0tD76IynApWxpdMweFc6yXj1ij7sNxVbGAFhcJM/Z2Hoi6MXgCSw0rbleZB8LHhjbCzF1TLwoLuEIia6uHdBL03Z0c6aZIHHErXapHDg9awZI4eLNvBpR1qguvNjxYhD/mNdgnrPVa9Vyg5pQmNtI3nG6dXd4K3KsYpzGSYI7anM4c5aQUOgrSAGQPytRmSBDoK76IVTq";
+        const encryptedHMAC = encryptedMsg.substring(0, 64);
+        const encryptedHTML = encryptedMsg.substring(64);
+        const decryptedHMAC = CryptoJS.HmacSHA256(
+            encryptedHTML,
+            CryptoJS.SHA256(pass).toString()
+        ).toString();
+
+        if (decryptedHMAC !== encryptedHMAC) {
+            if (!suppress) {
+                alert( 'Wrong password!' );
+            }
+            sessionStorage.removeItem(STORAGE_KEY);
+            return false;
+        }
+
+        // Save for the session
+        sessionStorage.setItem(STORAGE_KEY, pass);
+
+        const plainHTML = decryptContent(encryptedHTML, pass);
+
+        document.write(plainHTML);
+        document.close();
+
+        return true;
+    }
+
+    function onload() {
+        if (sessionStorage.getItem(STORAGE_KEY) && decryptAndReplace(sessionStorage.getItem(STORAGE_KEY),true)) {
+
+            return;
+
+        }
+
+        // Show page because there isn't a good password
+        // Otherwise, document.write would have stop this
+        document
+        .querySelectorAll(".body")
+        .forEach(el => (el.style.display = "block"));
+
+        document
+        .getElementById("form")
+        .addEventListener("submit", e => {
+            e.preventDefault();
+
+            decryptAndReplace(
+                document.getElementById("password").value
+            );
+        });
+    }
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/crypto-js.min.js" integrity="sha384-lp4k1VRKPU9eBnPePjnJ9M2RF3i7PC30gXs70+elCVfgwLwx1tv5+ctxdtwxqZa7" crossorigin="anonymous"></script>
+</body>
 </html>
