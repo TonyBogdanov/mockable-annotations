@@ -1,186 +1,120 @@
 <!DOCTYPE html>
-<html class="html">
-<head>
-    <meta charset="utf-8" />
-    <title>Protected Page</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    
-    <meta http-equiv="cache-control" content="max-age=0" />
-    <meta http-equiv="cache-control" content="no-cache" />
-    <meta http-equiv="expires" content="0" />
-    <meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
-    <meta http-equiv="pragma" content="no-cache" />
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>Code Coverage for /home/runner/work/mockable-annotations/mockable-annotations/src/MockProvider/MethodMockProvider/Filter/FilterInterface.php</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="../../../css/bootstrap.min.css" rel="stylesheet" type="text/css">
+  <link href="../../../css/octicons.css" rel="stylesheet" type="text/css">
+  <link href="../../../css/style.css" rel="stylesheet" type="text/css">
+  <link href="../../../css/custom.css" rel="stylesheet" type="text/css">
+ </head>
+ <body>
+  <header>
+   <div class="container-fluid">
+    <div class="row">
+     <div class="col-md-12">
+      <nav aria-label="breadcrumb">
+       <ol class="breadcrumb">
+         <li class="breadcrumb-item"><a href="../../../index.html">/home/runner/work/mockable-annotations/mockable-annotations/src</a></li>
+         <li class="breadcrumb-item"><a href="../../index.html">MockProvider</a></li>
+         <li class="breadcrumb-item"><a href="../index.html">MethodMockProvider</a></li>
+         <li class="breadcrumb-item"><a href="index.html">Filter</a></li>
+         <li class="breadcrumb-item active">FilterInterface.php</li>
 
-    <style>
-        .hr {
-            margin-top: 20px;
-            margin-bottom: 20px;
-            border: 0;
-            border-top: 1px solid #eee;
-        }
-
-        .page {
-            width: 360px;
-            padding: 8% 0 0;
-            margin: auto;
-            box-sizing: border-box;
-        }
-
-        .form {
-            position: relative;
-            z-index: 1;
-            background: #ffffff;
-            max-width: 360px;
-            margin: 0 auto 100px;
-            padding: 45px;
-            text-align: center;
-            border-radius: 3px;
-            box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2),
-            0 5px 5px 0 rgba(0, 0, 0, 0.24);
-        }
-
-        .form input {
-            outline: 0;
-            background: #f2f2f2;
-            width: 100%;
-            border: 0;
-            margin: 0 0 15px;
-            padding: 15px;
-            box-sizing: border-box;
-            font-size: 14px;
-            border-radius: 3px;
-        }
-
-        .form .decrypt-button {
-            text-transform: uppercase;
-            outline: 0;
-            background: #00cae9;
-            width: 100%;
-            border: 0;
-            padding: 15px;
-            color: #ffffff;
-            font-size: 14px;
-            cursor: pointer;
-            border-radius: 3px;
-        }
-
-        .form .decrypt-button:active {
-            background: #009db5;
-        }
-
-        .html {
-            height: 100%;
-        }
-
-        .body {
-            margin-bottom: 1em;
-            background: #00cae9;
-            font-family: "Arial", sans-serif;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-            display: none;
-        }
-
-        .instructions {
-            margin-top: -1em;
-            margin-bottom: 1em;
-        }
-
-        .title {
-            font-size: 1.5em;
-        }
-    </style>
-</head>
-
-<body class="body" onload="onload()">
-<div class="page">
-    <div class="form">
-        <div class="instructions">
-            <p class="title">Protected Page</p>
-        </div>
-
-        <hr class="hr" />
-
-        <form id="form" action="#" method="post">
-            <input id="password" type="password" name="password" placeholder="Password" autofocus />
-            <input type="submit" class="decrypt-button" value="DECRYPT"/>
-        </form>
+       </ol>
+      </nav>
+     </div>
     </div>
-</div>
+   </div>
+  </header>
+  <div class="container-fluid">
+   <div class="table-responsive">
+    <table class="table table-bordered">
+     <thead>
+      <tr>
+       <td>&nbsp;</td>
+       <td colspan="10"><div align="center"><strong>Code Coverage</strong></div></td>
+      </tr>
+      <tr>
+       <td>&nbsp;</td>
+       <td colspan="3"><div align="center"><strong>Classes and Traits</strong></div></td>
+       <td colspan="4"><div align="center"><strong>Functions and Methods</strong></div></td>
+       <td colspan="3"><div align="center"><strong>Lines</strong></div></td>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td class="">Total</td>
+       <td class=" big"></td>
+       <td class=" small"><div align="right">n/a</div></td>
+       <td class=" small"><div align="right">0&nbsp;/&nbsp;0</div></td>
+       <td class=" big"></td>
+       <td class=" small"><div align="right">n/a</div></td>
+       <td class=" small"><div align="right">0&nbsp;/&nbsp;0</div></td>
+       <td class=" small"><abbr title="Change Risk Anti-Patterns (CRAP) Index">CRAP</abbr></td>
+       <td class=" big"></td>
+       <td class=" small"><div align="right">n/a</div></td>
+       <td class=" small"><div align="right">0&nbsp;/&nbsp;0</div></td>
+      </tr>
 
-<script>
-    const STORAGE_KEY = 'coverage';
 
-    function decryptContent(encryptedMsg, pass) {
-        const salt = CryptoJS.enc.Hex.parse(encryptedMsg.substr(0, 32));
-        const iv = CryptoJS.enc.Hex.parse(encryptedMsg.substr(32, 32));
-        const encrypted = encryptedMsg.substring(64);
+     </tbody>
+    </table>
+   </div>
+   <table id="code" class="table table-borderless table-condensed">
+    <tbody>
+     <tr><td><div align="right"><a name="1"></a><a href="#1">1</a></div></td><td class="codeLine"><span class="default">&lt;?php</span></td></tr>
+     <tr><td><div align="right"><a name="2"></a><a href="#2">2</a></div></td><td class="codeLine"></td></tr>
+     <tr><td><div align="right"><a name="3"></a><a href="#3">3</a></div></td><td class="codeLine"><span class="comment">/**</span></td></tr>
+     <tr><td><div align="right"><a name="4"></a><a href="#4">4</a></div></td><td class="codeLine"><span class="comment">&nbsp;*&nbsp;Copyright&nbsp;(c)&nbsp;Tony&nbsp;Bogdanov&nbsp;&lt;support@tonybogdanov.com&gt;</span></td></tr>
+     <tr><td><div align="right"><a name="5"></a><a href="#5">5</a></div></td><td class="codeLine"><span class="comment">&nbsp;*</span></td></tr>
+     <tr><td><div align="right"><a name="6"></a><a href="#6">6</a></div></td><td class="codeLine"><span class="comment">&nbsp;*&nbsp;For&nbsp;the&nbsp;full&nbsp;copyright&nbsp;and&nbsp;license&nbsp;information,&nbsp;please&nbsp;view&nbsp;the&nbsp;LICENSE</span></td></tr>
+     <tr><td><div align="right"><a name="7"></a><a href="#7">7</a></div></td><td class="codeLine"><span class="comment">&nbsp;*&nbsp;file&nbsp;that&nbsp;was&nbsp;distributed&nbsp;with&nbsp;this&nbsp;source&nbsp;code.</span></td></tr>
+     <tr><td><div align="right"><a name="8"></a><a href="#8">8</a></div></td><td class="codeLine"><span class="comment">&nbsp;*/</span></td></tr>
+     <tr><td><div align="right"><a name="9"></a><a href="#9">9</a></div></td><td class="codeLine"></td></tr>
+     <tr><td><div align="right"><a name="10"></a><a href="#10">10</a></div></td><td class="codeLine"><span class="keyword">namespace</span><span class="default">&nbsp;</span><span class="default">TonyBogdanov</span><span class="default">\</span><span class="default">MockableAnnotations</span><span class="default">\</span><span class="default">MockProvider</span><span class="default">\</span><span class="default">MethodMockProvider</span><span class="default">\</span><span class="default">Filter</span><span class="keyword">;</span></td></tr>
+     <tr><td><div align="right"><a name="11"></a><a href="#11">11</a></div></td><td class="codeLine"></td></tr>
+     <tr><td><div align="right"><a name="12"></a><a href="#12">12</a></div></td><td class="codeLine"><span class="keyword">use</span><span class="default">&nbsp;</span><span class="default">ReflectionMethod</span><span class="keyword">;</span></td></tr>
+     <tr><td><div align="right"><a name="13"></a><a href="#13">13</a></div></td><td class="codeLine"></td></tr>
+     <tr><td><div align="right"><a name="14"></a><a href="#14">14</a></div></td><td class="codeLine"><span class="comment">/**</span></td></tr>
+     <tr><td><div align="right"><a name="15"></a><a href="#15">15</a></div></td><td class="codeLine"><span class="comment">&nbsp;*&nbsp;Interface&nbsp;FilterInterface</span></td></tr>
+     <tr><td><div align="right"><a name="16"></a><a href="#16">16</a></div></td><td class="codeLine"><span class="comment">&nbsp;*</span></td></tr>
+     <tr><td><div align="right"><a name="17"></a><a href="#17">17</a></div></td><td class="codeLine"><span class="comment">&nbsp;*&nbsp;@package&nbsp;TonyBogdanov\MockableAnnotations\MockProvider\MethodMockProvider\Filter</span></td></tr>
+     <tr><td><div align="right"><a name="18"></a><a href="#18">18</a></div></td><td class="codeLine"><span class="comment">&nbsp;*/</span></td></tr>
+     <tr><td><div align="right"><a name="19"></a><a href="#19">19</a></div></td><td class="codeLine"><span class="keyword">interface</span><span class="default">&nbsp;</span><span class="default">FilterInterface</span><span class="default">&nbsp;</span><span class="keyword">{</span></td></tr>
+     <tr><td><div align="right"><a name="20"></a><a href="#20">20</a></div></td><td class="codeLine"></td></tr>
+     <tr><td><div align="right"><a name="21"></a><a href="#21">21</a></div></td><td class="codeLine"><span class="default">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="comment">/**</span></td></tr>
+     <tr><td><div align="right"><a name="22"></a><a href="#22">22</a></div></td><td class="codeLine"><span class="comment">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;@param&nbsp;ReflectionMethod&nbsp;$method</span></td></tr>
+     <tr><td><div align="right"><a name="23"></a><a href="#23">23</a></div></td><td class="codeLine"><span class="comment">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;@param&nbsp;array&nbsp;$annotations</span></td></tr>
+     <tr><td><div align="right"><a name="24"></a><a href="#24">24</a></div></td><td class="codeLine"><span class="comment">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*</span></td></tr>
+     <tr><td><div align="right"><a name="25"></a><a href="#25">25</a></div></td><td class="codeLine"><span class="comment">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;@return&nbsp;bool</span></td></tr>
+     <tr><td><div align="right"><a name="26"></a><a href="#26">26</a></div></td><td class="codeLine"><span class="comment">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*/</span></td></tr>
+     <tr><td><div align="right"><a name="27"></a><a href="#27">27</a></div></td><td class="codeLine"><span class="default">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="keyword">public</span><span class="default">&nbsp;</span><span class="keyword">function</span><span class="default">&nbsp;</span><span class="default">shouldMock</span><span class="keyword">(</span><span class="default">&nbsp;</span><span class="default">ReflectionMethod</span><span class="default">&nbsp;</span><span class="default">$method</span><span class="keyword">,</span><span class="default">&nbsp;</span><span class="keyword">array</span><span class="default">&nbsp;</span><span class="default">$annotations</span><span class="default">&nbsp;</span><span class="keyword">)</span><span class="keyword">:</span><span class="default">&nbsp;</span><span class="default">bool</span><span class="keyword">;</span></td></tr>
+     <tr><td><div align="right"><a name="28"></a><a href="#28">28</a></div></td><td class="codeLine"></td></tr>
+     <tr><td><div align="right"><a name="29"></a><a href="#29">29</a></div></td><td class="codeLine"><span class="keyword">}</span></td></tr>
 
-        const key = CryptoJS.PBKDF2(pass, salt, {
-            keySize: 8,
-            iterations: 10
-        });
-
-        return CryptoJS.AES.decrypt(encrypted, key, {
-            iv,
-            padding: CryptoJS.pad.Pkcs7,
-            mode: CryptoJS.mode.CBC
-        }).toString(CryptoJS.enc.Utf8);
-    }
-
-    function decryptAndReplace(pass, suppress = false) {
-        const encryptedMsg = "42682ba9a28a33f82c0499b410d19159aea1f8f032056256eefc2ea120dc7b6e57493cb4f9d063e00118412c7c90cbcd02d767c1016cd5f49b74b735713adebfn3bxb2MlbET/jnTr8susKIr5skoYu8/rNUzZWT7tTZ/L9a9JK7NnKvArOM2EB6Jub1lx2k6+wgl+NbXhlZh53I7EJ03Nmd6vVwfnFHBbVdM8RQooh6KmqLd/33LXoPFzjVTbXtDW16uDj0xWlKpAEjbI4LSZNEL+PtWzdA2RFTwfoljwqvBasETB5F8QzYpPY0Tpil6CnL2/CqwGkHOv9144FS4be5fJyngkuHT1bfHRgsZfZf1ryHEea1BHvIfFhJDJNpNiz2EVypd8gIRkwscBTSB7CMmI3hhQF9mlgwoL0cE35eEHZjpQQgUkFkh1z132XaOGb83Hc+E6DqfHTqdPUstmVsda7GCc+jRMN5vg/GgzsF1hxfoqg4n8WhGsNRufsBBoa4vD0dv1kOyPKbkq/0OkQjx3adLeomvJUnU37QSdrLF2bMSINay6HGiXoV/hDi7htRfoXrhz5nr0aSUwehT2OGekMn6MDNCa4LcMXZ3AK1Rbfhg7rPFo6vjWK7hqy0GleUBlDIBb2TiEkcd6fcwRX4Qsq7TP9eUc32vtY9hjkYOVepLMBClsw/YPP5q44JLYNBQQFaSo0MDET+MQoeMUv6J3yw0+uPnQUlfGbd7Fzzlq+HVJuYqPLLVDPF3m987dvyY4UmBUvyPxUtXEgYH4h6XCC+rGA4u0285VCO8tMGXM7pa620apjaFPdnAizrmXklwnE8G8zaESUlV9MuJnhqztHS2YFS0tZ8AB09otn7Yo5K+2T/aMo4V7SYRuXjXW8JCjlwGrvgKMK0bKul1BQduRTR43Z1T+mD22c6RfGQ9sUm2vHBPdkQbPypM9vFD5aXoc6yR3D7rdH5KLtgg65tAirO9wuxZxoRnQ5vgGG5Rqcxd7+QfQFi1e85ES/W9M2lqmk62Sno3/iGUIP8l7qjMUgFq52tmPImK0lwjJ85v3TEXqzAagOujjFXRqyNdebAj88VipQULQu8buHIrfppo2IfKJAZg+MtYzyz4P7xOg6a35JTUZ0CrhiT02mMaiQPTSy3KM9FU+q0L3n+kElVHnubDx1iARYMe5A9i2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";
-        const encryptedHMAC = encryptedMsg.substring(0, 64);
-        const encryptedHTML = encryptedMsg.substring(64);
-        const decryptedHMAC = CryptoJS.HmacSHA256(
-            encryptedHTML,
-            CryptoJS.SHA256(pass).toString()
-        ).toString();
-
-        if (decryptedHMAC !== encryptedHMAC) {
-            if (!suppress) {
-                alert( 'Wrong password!' );
-            }
-            sessionStorage.removeItem(STORAGE_KEY);
-            return false;
-        }
-
-        // Save for the session
-        sessionStorage.setItem(STORAGE_KEY, pass);
-
-        const plainHTML = decryptContent(encryptedHTML, pass);
-
-        document.write(plainHTML);
-        document.close();
-
-        return true;
-    }
-
-    function onload() {
-        if (sessionStorage.getItem(STORAGE_KEY) && decryptAndReplace(sessionStorage.getItem(STORAGE_KEY),true)) {
-
-            return;
-
-        }
-
-        // Show page because there isn't a good password
-        // Otherwise, document.write would have stop this
-        document
-        .querySelectorAll(".body")
-        .forEach(el => (el.style.display = "block"));
-
-        document
-        .getElementById("form")
-        .addEventListener("submit", e => {
-            e.preventDefault();
-
-            decryptAndReplace(
-                document.getElementById("password").value
-            );
-        });
-    }
-</script>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/crypto-js.min.js" integrity="sha384-lp4k1VRKPU9eBnPePjnJ9M2RF3i7PC30gXs70+elCVfgwLwx1tv5+ctxdtwxqZa7" crossorigin="anonymous"></script>
-</body>
+    </tbody>
+   </table>
+   <footer>
+    <hr/>
+    <h4>Legend</h4>
+    <p>
+     <span class="success"><strong>Executed</strong></span>
+     <span class="danger"><strong>Not Executed</strong></span>
+     <span class="warning"><strong>Dead Code</strong></span>
+    </p>
+    <p>
+     <small>Generated by <a href="https://github.com/sebastianbergmann/php-code-coverage" target="_top">php-code-coverage 8.0.1</a> using <a href="https://secure.php.net/" target="_top">PHP 7.4.5</a> with <a href="https://github.com/krakjoe/pcov">PCOV 1.0.6</a> and <a href="https://phpunit.de/">PHPUnit 9.1.4</a> at Wed May 13 13:50:24 UTC 2020.</small>
+    </p>
+    <a title="Back to the top" id="toplink" href="#">
+        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="16" viewBox="0 0 12 16"><path fill-rule="evenodd" d="M12 11L6 5l-6 6h12z"/></svg>
+    </a>
+   </footer>
+  </div>
+  <script src="../../../js/jquery.min.js" type="text/javascript"></script>
+  <script src="../../../js/popper.min.js" type="text/javascript"></script>
+  <script src="../../../js/bootstrap.min.js" type="text/javascript"></script>
+  <script src="../../../js/file.js" type="text/javascript"></script>
+ </body>
 </html>

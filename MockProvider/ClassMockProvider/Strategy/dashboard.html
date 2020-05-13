@@ -1,186 +1,286 @@
 <!DOCTYPE html>
-<html class="html">
-<head>
-    <meta charset="utf-8" />
-    <title>Protected Page</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    
-    <meta http-equiv="cache-control" content="max-age=0" />
-    <meta http-equiv="cache-control" content="no-cache" />
-    <meta http-equiv="expires" content="0" />
-    <meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
-    <meta http-equiv="pragma" content="no-cache" />
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>Dashboard for /home/runner/work/mockable-annotations/mockable-annotations/src/MockProvider/ClassMockProvider/Strategy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="../../../css/bootstrap.min.css" rel="stylesheet" type="text/css">
+  <link href="../../../css/nv.d3.min.css" rel="stylesheet" type="text/css">
+  <link href="../../../css/style.css" rel="stylesheet" type="text/css">
+  <link href="../../../css/custom.css" rel="stylesheet" type="text/css">
+ </head>
+ <body>
+  <header>
+   <div class="container-fluid">
+    <div class="row">
+     <div class="col-md-12">
+      <nav aria-label="breadcrumb">
+       <ol class="breadcrumb">
+         <li class="breadcrumb-item"><a href="../../../index.html">/home/runner/work/mockable-annotations/mockable-annotations/src</a></li>
+         <li class="breadcrumb-item"><a href="../../index.html">MockProvider</a></li>
+         <li class="breadcrumb-item"><a href="../index.html">ClassMockProvider</a></li>
+         <li class="breadcrumb-item"><a href="index.html">Strategy</a></li>
+         <li class="breadcrumb-item active">(Dashboard)</li>
 
-    <style>
-        .hr {
-            margin-top: 20px;
-            margin-bottom: 20px;
-            border: 0;
-            border-top: 1px solid #eee;
-        }
-
-        .page {
-            width: 360px;
-            padding: 8% 0 0;
-            margin: auto;
-            box-sizing: border-box;
-        }
-
-        .form {
-            position: relative;
-            z-index: 1;
-            background: #ffffff;
-            max-width: 360px;
-            margin: 0 auto 100px;
-            padding: 45px;
-            text-align: center;
-            border-radius: 3px;
-            box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2),
-            0 5px 5px 0 rgba(0, 0, 0, 0.24);
-        }
-
-        .form input {
-            outline: 0;
-            background: #f2f2f2;
-            width: 100%;
-            border: 0;
-            margin: 0 0 15px;
-            padding: 15px;
-            box-sizing: border-box;
-            font-size: 14px;
-            border-radius: 3px;
-        }
-
-        .form .decrypt-button {
-            text-transform: uppercase;
-            outline: 0;
-            background: #00cae9;
-            width: 100%;
-            border: 0;
-            padding: 15px;
-            color: #ffffff;
-            font-size: 14px;
-            cursor: pointer;
-            border-radius: 3px;
-        }
-
-        .form .decrypt-button:active {
-            background: #009db5;
-        }
-
-        .html {
-            height: 100%;
-        }
-
-        .body {
-            margin-bottom: 1em;
-            background: #00cae9;
-            font-family: "Arial", sans-serif;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-            display: none;
-        }
-
-        .instructions {
-            margin-top: -1em;
-            margin-bottom: 1em;
-        }
-
-        .title {
-            font-size: 1.5em;
-        }
-    </style>
-</head>
-
-<body class="body" onload="onload()">
-<div class="page">
-    <div class="form">
-        <div class="instructions">
-            <p class="title">Protected Page</p>
-        </div>
-
-        <hr class="hr" />
-
-        <form id="form" action="#" method="post">
-            <input id="password" type="password" name="password" placeholder="Password" autofocus />
-            <input type="submit" class="decrypt-button" value="DECRYPT"/>
-        </form>
+       </ol>
+      </nav>
+     </div>
     </div>
-</div>
+   </div>
+  </header>
+  <div class="container-fluid">
+   <div class="row">
+    <div class="col-md-12">
+     <h2>Classes</h2>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Coverage Distribution</h3>
+     <div id="classCoverageDistribution" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Complexity</h3>
+     <div id="classComplexity" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Insufficient Coverage</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Class</th>
+         <th class="text-right">Coverage</th>
+        </tr>
+       </thead>
+       <tbody>
 
-<script>
-    const STORAGE_KEY = 'coverage';
+       </tbody>
+      </table>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Project Risks</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Class</th>
+         <th class="text-right"><abbr title="Change Risk Anti-Patterns (CRAP) Index">CRAP</abbr></th>
+        </tr>
+       </thead>
+       <tbody>
 
-    function decryptContent(encryptedMsg, pass) {
-        const salt = CryptoJS.enc.Hex.parse(encryptedMsg.substr(0, 32));
-        const iv = CryptoJS.enc.Hex.parse(encryptedMsg.substr(32, 32));
-        const encrypted = encryptedMsg.substring(64);
+       </tbody>
+      </table>
+     </div>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-12">
+     <h2>Methods</h2>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Coverage Distribution</h3>
+     <div id="methodCoverageDistribution" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Complexity</h3>
+     <div id="methodComplexity" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Insufficient Coverage</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Method</th>
+         <th class="text-right">Coverage</th>
+        </tr>
+       </thead>
+       <tbody>
 
-        const key = CryptoJS.PBKDF2(pass, salt, {
-            keySize: 8,
-            iterations: 10
-        });
+       </tbody>
+      </table>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Project Risks</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Method</th>
+         <th class="text-right"><abbr title="Change Risk Anti-Patterns (CRAP) Index">CRAP</abbr></th>
+        </tr>
+       </thead>
+       <tbody>
 
-        return CryptoJS.AES.decrypt(encrypted, key, {
-            iv,
-            padding: CryptoJS.pad.Pkcs7,
-            mode: CryptoJS.mode.CBC
-        }).toString(CryptoJS.enc.Utf8);
-    }
+       </tbody>
+      </table>
+     </div>
+    </div>
+   </div>
+   <footer>
+    <hr/>
+    <p>
+     <small>Generated by <a href="https://github.com/sebastianbergmann/php-code-coverage" target="_top">php-code-coverage 8.0.1</a> using <a href="https://secure.php.net/" target="_top">PHP 7.4.5</a> with <a href="https://github.com/krakjoe/pcov">PCOV 1.0.6</a> and <a href="https://phpunit.de/">PHPUnit 9.1.4</a> at Wed May 13 13:50:24 UTC 2020.</small>
+    </p>
+   </footer>
+  </div>
+  <script src="../../../js/jquery.min.js" type="text/javascript"></script>
+  <script src="../../../js/d3.min.js" type="text/javascript"></script>
+  <script src="../../../js/nv.d3.min.js" type="text/javascript"></script>
+  <script type="text/javascript">
+$(document).ready(function() {
+  nv.addGraph(function() {
+    var chart = nv.models.multiBarChart();
+    chart.tooltips(false)
+      .showControls(false)
+      .showLegend(false)
+      .reduceXTicks(false)
+      .staggerLabels(true)
+      .yAxis.tickFormat(d3.format('d'));
 
-    function decryptAndReplace(pass, suppress = false) {
-        const encryptedMsg = "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";
-        const encryptedHMAC = encryptedMsg.substring(0, 64);
-        const encryptedHTML = encryptedMsg.substring(64);
-        const decryptedHMAC = CryptoJS.HmacSHA256(
-            encryptedHTML,
-            CryptoJS.SHA256(pass).toString()
-        ).toString();
+    d3.select('#classCoverageDistribution svg')
+      .datum(getCoverageDistributionData([0,0,0,0,0,0,0,0,0,0,0,2], "Class Coverage"))
+      .transition().duration(500).call(chart);
 
-        if (decryptedHMAC !== encryptedHMAC) {
-            if (!suppress) {
-                alert( 'Wrong password!' );
-            }
-            sessionStorage.removeItem(STORAGE_KEY);
-            return false;
-        }
+    nv.utils.windowResize(chart.update);
 
-        // Save for the session
-        sessionStorage.setItem(STORAGE_KEY, pass);
+    return chart;
+  });
 
-        const plainHTML = decryptContent(encryptedHTML, pass);
+  nv.addGraph(function() {
+    var chart = nv.models.multiBarChart();
+    chart.tooltips(false)
+      .showControls(false)
+      .showLegend(false)
+      .reduceXTicks(false)
+      .staggerLabels(true)
+      .yAxis.tickFormat(d3.format('d'));
 
-        document.write(plainHTML);
-        document.close();
+    d3.select('#methodCoverageDistribution svg')
+      .datum(getCoverageDistributionData([0,0,0,0,0,0,0,0,0,0,0,2], "Method Coverage"))
+      .transition().duration(500).call(chart);
 
-        return true;
-    }
+    nv.utils.windowResize(chart.update);
 
-    function onload() {
-        if (sessionStorage.getItem(STORAGE_KEY) && decryptAndReplace(sessionStorage.getItem(STORAGE_KEY),true)) {
+    return chart;
+  });
 
-            return;
+  function getCoverageDistributionData(data, label) {
+    var labels = [
+      '0%',
+      '0-10%',
+      '10-20%',
+      '20-30%',
+      '30-40%',
+      '40-50%',
+      '50-60%',
+      '60-70%',
+      '70-80%',
+      '80-90%',
+      '90-100%',
+      '100%'
+    ];
+    var values = [];
+    $.each(labels, function(key) {
+      values.push({x: labels[key], y: data[key]});
+    });
 
-        }
+    return [
+      {
+        key: label,
+        values: values,
+        color: "#4572A7"
+      }
+    ];
+  }
+  nv.addGraph(function() {
+    var chart = nv.models.scatterChart()
+      .showDistX(true)
+      .showDistY(true)
+      .showLegend(false)
+      .forceX([0, 100]);
+    chart.tooltipContent(function(graph) {
+      return '<p>' + graph.point.class + '</p>';
+    });
 
-        // Show page because there isn't a good password
-        // Otherwise, document.write would have stop this
-        document
-        .querySelectorAll(".body")
-        .forEach(el => (el.style.display = "block"));
+    chart.xAxis.axisLabel('Code Coverage (in percent)');
+    chart.yAxis.axisLabel('Cyclomatic Complexity');
 
-        document
-        .getElementById("form")
-        .addEventListener("submit", e => {
-            e.preventDefault();
+    d3.select('#classComplexity svg')
+      .datum(getComplexityData([[100,1,"<a href=\"MergeStrategy.php.html#19\">TonyBogdanov\\MockableAnnotations\\MockProvider\\ClassMockProvider\\Strategy\\MergeStrategy<\/a>"],[100,1,"<a href=\"OverrideStrategy.php.html#19\">TonyBogdanov\\MockableAnnotations\\MockProvider\\ClassMockProvider\\Strategy\\OverrideStrategy<\/a>"]], 'Class Complexity'))
+      .transition()
+      .duration(500)
+      .call(chart);
 
-            decryptAndReplace(
-                document.getElementById("password").value
-            );
-        });
-    }
-</script>
+    nv.utils.windowResize(chart.update);
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/crypto-js.min.js" integrity="sha384-lp4k1VRKPU9eBnPePjnJ9M2RF3i7PC30gXs70+elCVfgwLwx1tv5+ctxdtwxqZa7" crossorigin="anonymous"></script>
-</body>
+    return chart;
+  });
+
+  nv.addGraph(function() {
+    var chart = nv.models.scatterChart()
+      .showDistX(true)
+      .showDistY(true)
+      .showLegend(false)
+      .forceX([0, 100]);
+    chart.tooltipContent(function(graph) {
+      return '<p>' + graph.point.class + '</p>';
+    });
+
+    chart.xAxis.axisLabel('Code Coverage (in percent)');
+    chart.yAxis.axisLabel('Method Complexity');
+
+    d3.select('#methodComplexity svg')
+      .datum(getComplexityData([[100,1,"<a href=\"MergeStrategy.php.html#28\">TonyBogdanov\\MockableAnnotations\\MockProvider\\ClassMockProvider\\Strategy\\MergeStrategy::mock<\/a>"],[100,1,"<a href=\"OverrideStrategy.php.html#28\">TonyBogdanov\\MockableAnnotations\\MockProvider\\ClassMockProvider\\Strategy\\OverrideStrategy::mock<\/a>"]], 'Method Complexity'))
+      .transition()
+      .duration(500)
+      .call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  function getComplexityData(data, label) {
+    var values = [];
+    $.each(data, function(key) {
+      var value = Math.round(data[key][0]*100) / 100;
+      values.push({
+        x: value,
+        y: data[key][1],
+        class: data[key][2],
+        size: 0.05,
+        shape: 'diamond'
+      });
+    });
+
+    return [
+      {
+        key: label,
+        values: values,
+        color: "#4572A7"
+      }
+    ];
+  }
+});
+  </script>
+ </body>
 </html>

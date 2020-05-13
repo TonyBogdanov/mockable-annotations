@@ -1,186 +1,284 @@
 <!DOCTYPE html>
-<html class="html">
-<head>
-    <meta charset="utf-8" />
-    <title>Protected Page</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    
-    <meta http-equiv="cache-control" content="max-age=0" />
-    <meta http-equiv="cache-control" content="no-cache" />
-    <meta http-equiv="expires" content="0" />
-    <meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
-    <meta http-equiv="pragma" content="no-cache" />
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>Dashboard for /home/runner/work/mockable-annotations/mockable-annotations/src/Reader</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="../css/bootstrap.min.css" rel="stylesheet" type="text/css">
+  <link href="../css/nv.d3.min.css" rel="stylesheet" type="text/css">
+  <link href="../css/style.css" rel="stylesheet" type="text/css">
+  <link href="../css/custom.css" rel="stylesheet" type="text/css">
+ </head>
+ <body>
+  <header>
+   <div class="container-fluid">
+    <div class="row">
+     <div class="col-md-12">
+      <nav aria-label="breadcrumb">
+       <ol class="breadcrumb">
+         <li class="breadcrumb-item"><a href="../index.html">/home/runner/work/mockable-annotations/mockable-annotations/src</a></li>
+         <li class="breadcrumb-item"><a href="index.html">Reader</a></li>
+         <li class="breadcrumb-item active">(Dashboard)</li>
 
-    <style>
-        .hr {
-            margin-top: 20px;
-            margin-bottom: 20px;
-            border: 0;
-            border-top: 1px solid #eee;
-        }
-
-        .page {
-            width: 360px;
-            padding: 8% 0 0;
-            margin: auto;
-            box-sizing: border-box;
-        }
-
-        .form {
-            position: relative;
-            z-index: 1;
-            background: #ffffff;
-            max-width: 360px;
-            margin: 0 auto 100px;
-            padding: 45px;
-            text-align: center;
-            border-radius: 3px;
-            box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2),
-            0 5px 5px 0 rgba(0, 0, 0, 0.24);
-        }
-
-        .form input {
-            outline: 0;
-            background: #f2f2f2;
-            width: 100%;
-            border: 0;
-            margin: 0 0 15px;
-            padding: 15px;
-            box-sizing: border-box;
-            font-size: 14px;
-            border-radius: 3px;
-        }
-
-        .form .decrypt-button {
-            text-transform: uppercase;
-            outline: 0;
-            background: #00cae9;
-            width: 100%;
-            border: 0;
-            padding: 15px;
-            color: #ffffff;
-            font-size: 14px;
-            cursor: pointer;
-            border-radius: 3px;
-        }
-
-        .form .decrypt-button:active {
-            background: #009db5;
-        }
-
-        .html {
-            height: 100%;
-        }
-
-        .body {
-            margin-bottom: 1em;
-            background: #00cae9;
-            font-family: "Arial", sans-serif;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-            display: none;
-        }
-
-        .instructions {
-            margin-top: -1em;
-            margin-bottom: 1em;
-        }
-
-        .title {
-            font-size: 1.5em;
-        }
-    </style>
-</head>
-
-<body class="body" onload="onload()">
-<div class="page">
-    <div class="form">
-        <div class="instructions">
-            <p class="title">Protected Page</p>
-        </div>
-
-        <hr class="hr" />
-
-        <form id="form" action="#" method="post">
-            <input id="password" type="password" name="password" placeholder="Password" autofocus />
-            <input type="submit" class="decrypt-button" value="DECRYPT"/>
-        </form>
+       </ol>
+      </nav>
+     </div>
     </div>
-</div>
+   </div>
+  </header>
+  <div class="container-fluid">
+   <div class="row">
+    <div class="col-md-12">
+     <h2>Classes</h2>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Coverage Distribution</h3>
+     <div id="classCoverageDistribution" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Complexity</h3>
+     <div id="classComplexity" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Insufficient Coverage</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Class</th>
+         <th class="text-right">Coverage</th>
+        </tr>
+       </thead>
+       <tbody>
 
-<script>
-    const STORAGE_KEY = 'coverage';
+       </tbody>
+      </table>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Project Risks</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Class</th>
+         <th class="text-right"><abbr title="Change Risk Anti-Patterns (CRAP) Index">CRAP</abbr></th>
+        </tr>
+       </thead>
+       <tbody>
 
-    function decryptContent(encryptedMsg, pass) {
-        const salt = CryptoJS.enc.Hex.parse(encryptedMsg.substr(0, 32));
-        const iv = CryptoJS.enc.Hex.parse(encryptedMsg.substr(32, 32));
-        const encrypted = encryptedMsg.substring(64);
+       </tbody>
+      </table>
+     </div>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-12">
+     <h2>Methods</h2>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Coverage Distribution</h3>
+     <div id="methodCoverageDistribution" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Complexity</h3>
+     <div id="methodComplexity" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Insufficient Coverage</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Method</th>
+         <th class="text-right">Coverage</th>
+        </tr>
+       </thead>
+       <tbody>
 
-        const key = CryptoJS.PBKDF2(pass, salt, {
-            keySize: 8,
-            iterations: 10
-        });
+       </tbody>
+      </table>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Project Risks</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Method</th>
+         <th class="text-right"><abbr title="Change Risk Anti-Patterns (CRAP) Index">CRAP</abbr></th>
+        </tr>
+       </thead>
+       <tbody>
 
-        return CryptoJS.AES.decrypt(encrypted, key, {
-            iv,
-            padding: CryptoJS.pad.Pkcs7,
-            mode: CryptoJS.mode.CBC
-        }).toString(CryptoJS.enc.Utf8);
-    }
+       </tbody>
+      </table>
+     </div>
+    </div>
+   </div>
+   <footer>
+    <hr/>
+    <p>
+     <small>Generated by <a href="https://github.com/sebastianbergmann/php-code-coverage" target="_top">php-code-coverage 8.0.1</a> using <a href="https://secure.php.net/" target="_top">PHP 7.4.5</a> with <a href="https://github.com/krakjoe/pcov">PCOV 1.0.6</a> and <a href="https://phpunit.de/">PHPUnit 9.1.4</a> at Wed May 13 13:50:24 UTC 2020.</small>
+    </p>
+   </footer>
+  </div>
+  <script src="../js/jquery.min.js" type="text/javascript"></script>
+  <script src="../js/d3.min.js" type="text/javascript"></script>
+  <script src="../js/nv.d3.min.js" type="text/javascript"></script>
+  <script type="text/javascript">
+$(document).ready(function() {
+  nv.addGraph(function() {
+    var chart = nv.models.multiBarChart();
+    chart.tooltips(false)
+      .showControls(false)
+      .showLegend(false)
+      .reduceXTicks(false)
+      .staggerLabels(true)
+      .yAxis.tickFormat(d3.format('d'));
 
-    function decryptAndReplace(pass, suppress = false) {
-        const encryptedMsg = "6ce3e317802057d0f6905ef2060daafddf4705c086935bc9748c1245391d49af7baabed4efac51d6e2582cd7d97ca879c36de06dd97f40953cb4bab66b6ba718YTQWzfzeyEa2weoRRQVQckO3t7fpQ/mXG6qF3JQX15kOeibREkc4Zsp3fmKjmL9rqs0wuxSVp6kpxWoKfMA+hHTofoij/2bvjSwmH2wxCIvjx3jFvWWpnkzaW/ZDACGnq1vyZA8TvtoHxKOwbG2Pq7QRwZKkVMvLTDFHtmL1OdfTPcOZH8KGXtvYn0UsuMCbDIR5mb+62SBQ2z+E2MGjiGVw9OzvVNNFZfvpYCDHaS8ns5OexrPj1efJFJXGkrxF2Xry09r+8iMv4BRzXSU/cEmkrx8zfdZpZOYRgRTk22HLG+npUCmThVf7m2ZvnfOJyn4IEAE5RvS9plb1yF1Hc/e7K1yRoIRzdhNMswYpexoFCYGto9ikBShIes/EdrPA3YBBvkteL5hp3Ly23dfrftdR1x/aoScy5WBTx9dkrN9MFfeP7uuFvkCc3UC2zPtVKrEtNLw93mgWv5JuxtUXjOysDpzR6kUBNsCkNgJSjLePsN6bw5zqTpHl8m088NS1W3zlHl3GALcXGXqsVmCevL2bVEkCw1qwuUcCbEqiV5jwT1kbgYxZo5uvNZ+RQ+aoGSANZYJ9r+8TATcrSqvokx1yoekfDgoN9IEUPKV7rdEuOYYWEzK2gBLbvud56kkP4egk2kiFTe+QTDMrDgomCT86Tvmz0ZRia29e2KkuRfKKVIcpxqdMKkeckbQ4QhJldoRxkl9v/qVHjKWVOtSnt/AnaHzf/vdyXbSt+RQ/Wzrs0QHobwMZrjdeGmErRJW46JFSTiYIm0ZJjg2I2pnZYSWnaxQbwyW2Uv+P/ew79+uMyi58UAwKkLWpAnj0c1w8jUQYrNZtfx3yHqEJcIpMd9YPhPzVark+imU3ExK+dzbvZJaLmWmnmFxWnY7sHEzk3v2yTcnHgtwQSacMYNRxIZtxY6/pQ61eGkbrfFtYA6nCn2GEiwy3GSECSMCPY4TLmZCJl7kBqhkfH06HcitQDcOWA2uZGHPDowRImYqRQVwFYsPqnGi/+T3q1shCMkv81ZZNk/xqM+aPl8fsz4VQYbc0D+e6/qcx0KFQrc5iaUoTIYNzKglTfPcfGJBj2t8kmjZW/pU4sG74RoqsqBCOYvIzNB857US1z1ZNVGlVn2i6sCWHcw23zZgONV0pwoS9nizZRZa9RMgjG9NcjrZOiEoqihZFyBl5xE1oIqYTRnv5P1F8lJkmd7TKttaeZs8l0CqFEAIiwGj+WQWCa8R4PRgDoZNuUpAqSd5Z4iDGs7j/brwFEUcSz6TZLUor2Z6siBsrL182jVPb/JG5b0vVZw/+UUyk1F2b1QJQrsGLgH0m4Kkj6Pk19E5xRtpSK6tAPi/OIfb1ghjis9O1EHRmHCrbqE+y95Gw9g05lpWX99ZGROX7v/5Vg2bwGAe0XfbVG/2uQcf6a42DOCF+vJ35FZFXSmeoXNR9fzBnAPxFJccaxf7v4pk9wL6ClwciHLt/kls6lSyYn/qTyzmwRLgid5TmUTEzyu7xHaIpepNEdFj/sWIjf+sD5jKrTqsBN/XIyuUdL++2HJS2tXFMPeFoMF1vaQFBHnVcxSrYZDesLEtx8kTCOI7Y30UjNiVvEdsEZNohxtu3jKYX5oWRj+ioYmsIJApkn5lWeGFUb3hnSuN1Fylo8M8W+kLz+IHpvHuct7GcmQkH+5Qd8rA1qPy6U2qWQqCv0X73a3R4wObySRj6IQLicEI0ugrWTwOCf+SVU0ZWBpD6uBKU5JXNd3H23gvdi8GoFC7euE0pFELRd+yl6QvX4wSZVUDtVkPsgKFHGy8epTTujfSdMZ5uWqMCRW0TeXFa6GduJfmxWkuxfCtNLSNpSyYFcAitz0FixR+p/beClyNZJKJNyLxwVA8kq3vnyfKWZ3W2vkzkircWYjlXHSTSrFmoTBnrkTL/nIPy15sMjWqcwLHtLoOTp+F1jVsCDsC0O+rc7ElfMDRnFuWv9TfwT4cWKivitdZMkiZThYo6o7I/BixOiL5KVBVHOpyD1MMvkCPlYzzkM2/Iy/x0jYnW4R5+0Mb2+p4wjYJlkBnCouseaL/HTTfHzAC3Yqfgu/PB7QousxZLTPjJiKdEkJd29/Za4vvdTj+z3FPM0w7pz3NUjqD41lrUfbsIeOzPJrEeAMyaHk2kc8XerMfBakWI+QW0R7y05Z4GZdWqDmio6xVB4XY2Ao6gO70VscTKcAZry0ri5C1osVLp8Yxm26DJ4O6FrgffxNSTJgqGqyBr6UP5uIAHqfU5y7TUHQ8raauiq+hh0nzo24/2ZLXvo7FuTG/LFcmbs6dzs2vE3OmGR/QpnlZLxKnJ2c0yxL2Di7Qdaln03vhnWg7ZJKRMeewTQnSAWCQbXwUODdE07i+MJtEFCdCj8HivAftxfrbP3RT8f0w8Pp+KOPm6CSMEALSzEj0gF3NLBlE3dwLU3RO8syNEvnBkH5T2rHNBP+FbgqQREMNod1jG/oUjmVq/2VPSUQUoloj2MaQz6mwAP8rpDw2DEO75BDOLwZ0Aw6jbrSobH9lq5wdoY1kmvwHpP9XfQnyWikkBQ33uoqRRio69V+Ve9Hb9dbR7TK4LTHnTJnDTjlMnM097kqi0oRA27AJnxnBfnFINgGkWgcOWPbS/EVru4OUw9HeoJweU1RsXukugFOz6TwRjk04wRBPtRbOY+dY59u2upF6P3zC6Kri5XoHhSUuTG9YoU9rMdRscYWXx3nqgPQwOuF/oAsb3S7G9XluhY5iyQqWiFIZ+JnVNByeDVvE2ifAl16L1KuxiOcx8Wqj+Lgr2+lr27rkUutTtu3pAK9pIAqZ9WExrKrAfqKmE7HpNFh2smd6Wku3hn+hs2MtpXdCT1DCEbAq+i75z2EYF6DqIFwSo4vr/0DdfkuBffi3xy1vfrk88tkrut0Bph6xEPFo2VnLxVw3ObW1IhMVU/AwkTiyPrd9FitST3eyaudiW7PjD7RPXFfurTZOlXXbnDGr1F0yz5ZF6eWEYpkVdu43lSamC+/pd7Bxqi/3QIwIyi6D30o3KPJmPV1m83YzDWJS//tc55WapHcbiD04QYVjLho0OajaARrY5aPuA98ba43Ri9VWpitzKA5jqNvoWJ5kuKdgXsuTSVTdogahf7UhjLzIs30fTfP5MoWOnUrmrLoT0PauW7sNM0D50B5fT4Y+Pydm+aV2UqI/pLcRtGbCdDOrCSoynuromzK5/N8SOvMiH8cFxKSFUSGiAd4/SD5liqNmerI+0/of6QgMoWZv0jgpubhOb01Q95/Vh2+1u0NIGiTz5jD3EO2ReJ3d8kh4iw1NdXFUVlrc+I+07du46hjeOXfBwhsATSmXmLIUYqlwdjOfMh5hdvCNtQmHLjKhka6Do290qv+uPsdWDcVZ6E8ggfJLCBYwBc20fWIUtXQcigThQ073IVS9rcs6jEAM1KUZWusHzh9O3rxFQYqEtfs2iBxeytKAmGPVYagpKsGqi3D0yovRbzQ9wBqVYjWGkE+j7t14F8KT5S2zsKwv7YnewABopaXxZGOjdfpYr2shOSWRvCkJoxIux8/m9Tp5JRVLwpmowPtSQCXXAv6B4sDx7V0sIAXLDRPMwEwLFZJkyn40eE9DTbdean5xmfMPMBGHo498egJgC0DcXMTmN/UgjER4S/CQiiy07424GuVp8mCqrfmW7plBrvgN3hmS32nTfZWEZzSsIfAVcBHdkjH9oOG0QIGfKMJ5u8FgsUj5YhfkbpL0uQCNTwjJg7L8AxLCYuCM5n0fAObMav62QZf8F3YqUczC9h8Vv2z2LHzPr2nvJnIKi71nzATQfv8UkqLRrnAe0n46GsMsiuEOjgEHEYYBOSVyT9VO02tO6tHg+HSSG6LfccR0rmZwfTms1+Mvm445pg+qjtK0aq60TFTJxijca9fS3RMV0uDw06+hUSP9/7yXb/2WRnMY8Cs/S0uuN3WBP5i8WraGe9rowBlbVgd1W9GNgsw3ejXdcjsjlNzjHKtTXJ9GXtX3bWzIFhifkAfcugSNzc4cnSanrSGiBlg7WYkR8rqCl26COKl70e97JcGZdkHMKpEFRN5cJpVglXNgq6Lx2rh6QzuuEUhEbXqXSkN5KFd5DNfx0r48HE/wBnjjHnY+ok13ZDq1l34T9+geUWx8L7QSpNQ6FNx4fdEeO9s8qf5xfZNC8sVadPuwLlwbZooWk/lpwuxCyiutNXUf42ho73UCf7ZxWW0OQhLLnr6tU+mG/GXw2oQvRD0eq8NC0QBw57ZiMrQpzXtxRO8ItiCuxRmgNeT7BiTydmiqKY/9mua5yyx+DfHAICUqFmn0wlIL2FPay+wyoi0LjNc3rLLoWJtJ7EHpIJuzlL2eWp5mPi7ihlCH2U1UW2LbvlwZU/PzmsUsJ0JmxwL2hHKu63wPFRJMq+VLAQmWg3ZadK/PBbzXOYYGPz7BkG24mW2C1Mii3fmTSN2Tgn3hC0qv9p856qMDd68N0ovFFDNaTs8aFbFTO2VLaY7v1VGeHzq9qe9p01QP4Gd/PCNdUmyaAEKQXTdmmtJh+q0AoZHtsCuDR9qTrbH9iTXwQvxWXCEPd0mrTIId1eN9n90SImeMeM426SNUCcndOFB3RtVJDBZiux6K+LrKTfe3vbmRd+plhw0HDuSWjWBSFigkecJGK0qVxpnLFr2lJ2W77B+KzcRMAry7nYN1dku9HRQXfuExKol/2I+qPq01irE5MLSHaFBLgtSbQ9yFHdKxYAsNkdXvo15R8DAKDopJLZ4YNIoIVow+TbNu25LZMHpvmqfVJi5lKBEPED4RHXZ05jrsPnnKuZlZPwt9T9xK1cmZ6Kl5+eZ+50DuPNmE+4AoL7BhlOF0793rfxW9+FO+O12HdjSUFtxycd9Gepug/KleYSNV1VdEi9oWzOX4bYp8F55dYM3Kk+FKTB0sNwo354oWwRtoPilaink/uq35N0zqfXIuPoi4UA3yZ7tiubOGkYM79yw5y5WgHrAjvuLSHe8XDyDkPRrV/lF7b+coze77uccQYP/lZ/8HYDmg8gY1ME+Bof2FoR3jDNf6IQaOEq3k5sScur7B3gnAoAcM+YZ21GMJuQmR58CoRQ8Q2JC2PNS2/dP58lDRmNihS6Fwk/4qEDO6ITQ2sdYkEo577J88Zt+rpYKhf2Yl6pwBMXRzNNLnWNyISdqlT2e2GakvDX+oDJOOMD0BzRssGisZAo7Rj+Qffk2nFf+8aWW7DtgQC6teHd0/l6Yzj5cWZSqQaq3rqtkhk3/PCMhXFIaYvlq/SZdgJpLc3TT32j7AFCYey044dvu7LXA2M/+z/7X0CqUd8Pk/ztgtgbkvJ39r1xvICpozQUzkOj7cKfUj2ylVktgwl1a86bjc2R31rCRuRhjwqDjlYa9zaFj9lDe1IfFekACZTXPvqtgNnUhGuNhJahHgVUcHjyw86+Y0rYhpTA5eNHlXx88EfrlMFMjzyzY8o7SzxnmxbJhaxG+fn83FUVt8RegulD8YY2UUlNd1lWLCn6VBldWiwbOh1EjhgxrBLJJ8KY8vwlOrsRqAjbXnzGZY4HmLMz+8gbFOn/uv4m06CvsAw5JJjP7BTPzhLgXoOJ2ePySV/tro7Emhluhnu4V3va8+20pSEQk6VB8PvNCkpLEn2hUTGyWR61I+6h8l083wxgVcTYzvVFzJe1EAQZXEsWCXm78VNgvK7x/KIMbC33l1I87QCASPOtVvXiGJ3OvYURFa2d86dFo0Fq1jMPExyl2gHAcZY5A7HqNJm83ZFpqJngd5vBzVUebqm0HWTvRrsRCvAS97y4OiNgE+jPt8lt8LX7HXKfxMyAaM4cc0LvKlLkDSVAvO/LplvhKNTsr3B2S8pK4WaQyBEc+yBVW4rvl4OvVCqE96xCZaRc3cDO7+e+z+eDMqnuqanc3aBIimHrBe5vqu6mJKe1pf8qBhbzTe8BCXXjyq7TLPazPeLgAeTdSlG9lw1cX7KKMCBSnFxG/cKe3yq2ouIBFWF9dRVUFBLbRz0hSpNNyuyboaOz8V81W2264QIAbdnZnXH/t3ALu6v+JrnvG8ilpfpdTY1GNpDTDXblBaiBpaOG054ndsrsjagW0iugey99nTtjjtPptz5Zsw+LuIUr1BYCO0IMf2Fz48x7FwHknZ7kmdpFcrpn0QT/cScSd2JT7Fk/vU/1T6Ig4p8yWRHAWjWv1OsuLeX18Es/XgggnkJxghmlQoyOx1Pzes1zZdur4LKYBQJeg3UVTrwdpxiHcEjszINSSUlnEBUNT29oFJXa2OdBv43cLCDX0C+kipURZ4vA0wj8m/rdx1Bm6HcZJt4Ox5rVXY8/F6cWZS/41fkVe4CsVxB9sVMXzcSmbhnSREaj1JitHz+qMpkZJjruUzIN8SQfnahi5VJIZX2s0jiBpKt0kP5X0SqSToHfkpSvlgKT/NbN2DtHVytLw/Y2IrEnNQ+p5x2mrP0K7h/xWw/YmlJvD0x//qvfBkuG6oK6jOLbnym8QO6gPzHidRzxOoS3+R5HiYy8Kdxe8/RzPRIFTgicz1gEHV1l4LsxicPwYfAL4O1GwS40LqRUxtMVoOvVXLPPTmOFabQXy4eSHk6h0qaKfBPEUdgtI7/1OqpruzkVX/UFMdxEwKdz+yxG1ZwTywQYi+wWWGlm6QhSszFGqb0DX8Hhi3WFggpVczkjipz2sLbF62a8+731stXNSDBZu/fOvFdAG3nl2eQRWWCU+8/3Z2UCHniHnbVNDiP6gDaVUCcFdKx2cTCw58sAZAfLqKPYODfDNXPCkhorf5+2nQVEHTLO73TcunBHXHc4se2TktMX0ThhNy+XVk1/akGNyzsptSTrAotyQZSIMSp9YzxnRlBKV6FJ9DxudctddpzMU5DgMgXBLZn4Rh0E6k42n+2JPcfH+Ou35ca+UCfi3+6s6mED3rpz1qn0L10H0KPegpFeOtd6+pbrV+VfKvcLbLsDD8IAGlATNLBV5u8efxwods3BLuNYIDmGrKw475LLKCmjseT+Y7qr6omg8qTvuDsxzittDsDHFw4YRP2j5RANQbB2tqlbnnRsMpbWT/7vWXOfkw3JKazR7qSz7osMXtvTHETNRWbDVJfY1TMlW0keHZhPVIB8c+x3QwELJP6CvIGBjXaGPUaVTdV7l1rtEtu5Rskjm/o6U/QAiwlme2S+woyhP3JhyAl6iizT3N15OafmoEuqxswg+0EzR2g7naswRzt0oWrVBinP9X/IG2xqerclr6iQ9nGHlSBnmQT1wd5fBoaWftirZl/CGXTHkSU1NtoJq//mfMM8jEOMZAd01gg4tFBBuQNa5rjZqWFJr4uP8PN8puJP3oy8qySc5PUmGAs/0oBeVI/JlG5zxrw3qr8X2j8auhSu3RpXBn9l9vO1mwL0ARxtrNrlHOxAdEW7QYkHzx8sC0m4wNYdm703uKu9N1Z9iT+YLPHjtI6W8BYUapZQyym/aUircSw81h+nYj06jH0pu4ALjB6Q9qPKO+1UdItRQv+WrpH5FpiMGOh4xVOPaLA+euEn4BDLd0eRJE3p0Uus0MwNukRWD4Hfnl+lryktIMl/YYZNfCvqcWLvZFHIGRt8IO0vrt66iyAQKxwZW/Iu287Lu+/vyctscEzY0LxukHjML3EqOJrjN5PNlX90mzxv1f5TOpo/TzfuSBQgNkJVKXOldh+/M5SjltXdUR8ENbbX8/qwZyzNSPPmogXhMtvf5RqQqTfBhmHjMPFYWiVDEFZylc9DGdxlbfFvoZ1h1JXR5JksTdcfUt4xM7nchGPMjC7CJjySHmnUxEiOV9+4ArZvyUj0DB0OGwBj9m2v8xz9g/ORdlJrb/8zEdZ6Mb+wml60tMK3OADGIzDr+w9a+ZGkO0Pkqj658p3XpLpYFuE3rd9ywaNM1/IhumIXDb8hlsj6tEFR3ZiamlubnN3A75lQSdjMU6SpkhEVGTp2dIxJEi3IA+dWbvbTm7af71m+MNBZ3Dm1rawXKelB0jSVODft4wb/PeAImCaWtYNZlVkV3/LGfn4CW15yHzoQCWZDIlDtCdAGi7aN4Z4fje63mkPGNIP3R37c3qRUPmgQd3rYIrq6kNQjJCdoLx4Igib78fYywgq1X5uKLO37fEcvpfQkcewjjKsJ6kK676bNkrDHuCaLmjLHOKQxVfFI1hDO3dmWfEQBdi5hsbIywjGzUcU63B+aCPpvVt2H06PMeFkp31+RsAYbDpMNC/akrNt69TALL56tbA1umqQTSHOfUq2dKzTrIDysvj8JII8tlpGe3vb+DLhFFrz302JsU0yHN+9rBnbeSRavNtKJQ/HC1E7Qpub6VoBIsnPYNeQck0vxwHqWWP8dqPfCVH2sb2riPyAfbSE5AvTGCHBxScCCWMmyeRhRG0NP9y6LKXwFLs0GNQuNd7+C3E6iNnH8Dai3zPnpPYWqceq4vbGIAFM6kSkRaZrERAH/X7I14T83gfF671gXCBy/emTxyKV9n2it/iibiFZkOvU12yvley8il19NXho74WTFOzGNSN6y2PTF1wRClSUq5+MO/aGyNErbdf+tI+btyaGhaBe48JK5dqQ6VpIji05PJ6TU/HPI+srREiP/JUwIvnCM/LYbzzjdsilOyA8JC6+8UiX5Cv/V3daBYPmHbPFDtQKosoaJfeHlJAkodRESxtmtta2uK+g4tz9gQjHvtXl5CXouJW89kCRgTHLNMBarkS/jsc/miF+T66QK/vqA6H8/xtHnjJI4YpuK+hQBrb5xEAXKK0WKrBgWsINYtcBhUQc7V7IfdQKoLNe1BXZGhwPEygjr9mrVuVEKwzOhJP74RJ1vmJOw+7TshElhATrWVZC40clFxxHZexHeGvO74/GxX6OqHl9TX9J5yn2ovwQOwQr7ZvtLKA5JrfPCBLBb/FIBsqucgkNbIF5cWeiO7SopdW13TTJkFVVHiuyLTzfxPLeD1gLlBA0hwCD4Hj4YRe+9BxpRJ50wBuJNJHC8rGlbtqRVKiJgkxwOl/bGTXTmh/0GOC8tnSm/OS8hHPMbyQi5Zsc+ItNy6iyudLmi+/EC86D2dmbDc/Eu8yiEsLkKcvqryPTAovZI43GYKE3DoQEnc5Cwvvx6HEyVfaHxHniLTn7uaLyeXESyQjWQjMAJ/aUpdVIesTwvJ73+7M1LNSF3RULhYHf7q/zeS/pgQ5A5PIJzRuKOKQMQikWMM8OO+ZlsZU7KJMD/I9I0OSGZqB97MRW7O/D8yyxPOPynHY4AWcUj2P/+32g//Fe6mEJMgvhH141qqchGY9MPQBwxhsgJcRc/6tMSmnxWmDcd0y8KeMFf1dmXli7+ZHJJV7m1Za27FGsGtHPNA6sHiZpttG0LIYPlX9YRIVxyrLdqyWtd+UPA3BxJupGzrnJN79qlI44d7Pv3ZO29wY86929l/WdZVUdqlOd1eP2/9YZvqI5lQY6bUKiuwVBPXcgXm2o4G+Hu0pigrsKprdzviepEuWosMJnB5JombzFQi2+ctDr0hqndbwNLV9jAbgxAtfSe1KI/EAAFFDxg5ZxlVW84LjRqaXJzkNvjqWJgFRIUyMoXy3DngTGk3nrXnTx9nOXZnJQk1OJXpRAdVodoneIH6TtCD5u9+vRu90UuIVRb197ygQQwHSmYbb3M5FFDWbdMPve6qbHnCcfQYNAc68gWKosvyT2436RU9jnwbc2kob4lL243fmwsEKNZEqFXRDx9q2x1iwKGRgQEQCMdfMCgQ8kvgz5vs8QDI0WFG8+nJpY9zY3BhQ9pIsbFMq4fGsZNTGX/ko3+UnG1sLcjouy+RBhNDC2gFQE5rkIHilmjds833JYVWwx31oaRpMAshXq0WRgnibpWFGVmXKGFQqyMksbbsRV9PZ2toSM1NouUqlOfmXnLA3x+epBhy0GvS3zgoeygBJ9vua4VcjcQvT6yaC0Knui8pLIXm2S5/VlSaGg55wZmmSTU6TeK4JD00DxmJzLM0HeMOVI6CvXO9Gtj2YEOzWaZciOLA6FesEDe77WDBjzR6QYT7US+DtwaOMaQNkirzzvwPXA0xAUFvee4OKcHuWNry3bK0c6DbO7UQ/4Od8opH6HY2fT2w1o/ongOOADanNJnExUWKRdbESH7AwgxdB5NVmCH4PiDA5+TT2wyxtU29PmsQaVIHd1FBju1lo5mgBHv0HwySSAvc23C45MGzQumJoyCf6e0HcqLny7UA96WJJF7YxYGM/H47SiquscRpeWsb+k5s1Wf/6GdrwiHACRLxEC2B38uOzGAc84BPDUZcP9d64abZ5M9xW3n8fqVBmPc+1hQ1+K9RXhqUgyMgwN5W2ZaBLX7ayguK2i/elIfNrMCfnL5PUMNTUHUvcEMRDIITA/OkIuvDgYkygG7adCItJhkw4/k71UtznJhDMdQDB0cf7T6I/2UKL6X3XohN1M9QyT9VtaqBlAj7U32dB8hlqlob+2mXgXLZ1+zY/mzDvZt3tVSCnDgTiplkhfBunvQKOZkH9g2piNMm4IOkxnINYI7x3jB2NKlv2s5Mvnp2X9MjwvdDMqaeVhRJYyNXi9cUO8qXUy1UigLkvFUUSrN4eK5NrXYW4HNDwG1CLuNAYWSZxJ5hxslsYpM/TiROxutm3mgxL+VbN5jyotVcPdQUic+Vj3oZJHUQ+IwhLlLkqTeiDqwwJOo6S5yAbBSDaUu/4hzF0W30FlFBtN/DU0wVgfbDsTmsOltUEXKkNeuyH9Y43aGm02lrD2Ft+gvzQPPhqAo3x65oS4AFeP69F8dsG0xB5HxrEuai5gqVlhELI6xB7rynnhTdheQ9Dy5PVBn4MzWkYF6gwsHsZwVND/RF8qTF2K25iAe0t5IRmsHigy0eWNyVc+j7o57bZCzg/R5IxFwQTqsgqlQMoNiRlWOgperkd1EZBPEvifKJbRMecqfwc3wZEJ2uUsNIKlAajTnpy9DEcrqelo88J4qVl4Eho9haOCQxIQP9fSZdg1FK1ecKi+b03joV9k66IHxLLNn+JS/MejJ4WUrJQe9MwtTHocIMvMlXgNnRBIodxRPiSq37fClcMVUvaMLGTf2ht8B/P2Pfxe4nkDR9THfgzqJEdScgnu0AXcpCBilZdQzobGsO4PUlFwSZN75Zbd1HynhIqmUh7S4z/qhGzQ3+nHpym2Cn0N0iLv4SSwtPeGU3XGBqm2UfsBBgt21LQM5/MeyTESbU7j2BWSuuWr7YM6f6iKXyBQZ04fDTiiJ9abkQRcbhV2TMRolTyZN0KlUxlUzWExt2SGzORrbckgHuPUVUYXJsiy0mpdREz2d8bW5LwV0kKj5wg5j4j8v0PBNyH5F3zT0ZTvaD7EXQYOrnW53z5v5VOGTpaQdLYeb9wsgaFXlIIRBL5+p19sf43mMKgqhkDkx8IRBj7Lcfjmtj1XwYT/zN2LskWjvmd5wkjjMG/dvmoWXuu2TPOkQBsez9xi68wjk7D7cC/LeFZRsz5i0pXbAxx7Pn2NnHJ9Vkl4QTbI7HIrGjDJmgpQBa/IbIvQeJ2EjHHPL2P+h/VUPaJXFajE1MpBMiD4/bQtqXZgY/H25dHcJ2PUwh2UkvuGim0jCnmzyYp2OwmFsdimb6PAD/lf8kcRWdmNgVH5EybuxnxxOlJm1kHkMR0Vi9DyMwBQ1DcdvUzzutvdPS3eIOSHEgRMkpZs6yw0/PI/64kZ3888h88ZkxCmI3lzMkcOpOduGneYoN8pQvpmsA6N5wCyPM+Q0W3AeyBIiXOgIuPT4ifyWyhJlF5MPT+1n8k0YoObsrVe2jigs7GxvVDlilD43aT7Sf3cTecAWsGQdRDtcq1sJq9oyzPQ3niCR5gPnobKbHrTgxycp83IjGYehyUGI9WH7zguGLN+1yB9WPlqe1x5ZP8FR3U0fBDLK6aMiba2jad0hUNHcqpwInyRq51XcIU7M9MibmIWSJ65gK0GkSh1tnsYxmDqJP67GHAyu4ZgpFntu07EmejJQWay4tNoLgP8p+mEo4fZSVBpnsRjA4hjkMYUWkukR7tuVUN059X2J/SmOYf0xdZX4tGWkI0SSZMMyl8zPCAtqk371P6d+B06LhH+EnzOOtDNF4cpuUPJ8gHDR+gshE/k35lAjW8in7w2qdwt2ZaY2VvsdRBewMRc5AbRl0JLZuFq/4KghnnvUefXRdPY5q5sK9Rb3X5ExczLsPoRNvjy+JiW6vNecGuEdIB1AeZFknbUpIHcxBy5k3pYszZjAGcagvx2UdZ5o3dIdwyy+TNnK1yXlH1HzO9S5hbJhH0NL90K+Ne0WHV5v3x1gJbRmmtdvSaqgUJutVbuUXl7YDPeE12Y69xnZ8biU4pEPVwDSLKLX8LWwaQjH9hY/jClyXGNSmMVWUqkouWWd2dWoLDI3T/5v3GhejuN1gDobH2CS3ORT1M9rkoYXW2uteiyZc1BfjjgTd/0v/f/mPfox1+pcVvly1gTltIn6+QogDaCTe2I6FBs1CFRYBujBAHx78p+9njCKPo7+cfAUYOvH8SJT2B0CgTZ2gw9HPVsS07AMW51D69JwcEcNZSXvhhuEfHdw2rIVbZLhDNIeB656wX46Rj7BJk0cHoSna0LyHutOeLGtiK9ANLf1ziltQ7ERytDlNaAJhgMwCG/n5EWSztue/i/odkez9WD1vfS/c3eyQJtcy0CkkorclLAXsbWARqbj/4pcz6UofPmYGIOG/KagYKu0OOPJF00u03WleS0PrtQbYk5rvMvMR4VtoyahG3C903HwQcUQCdf7xdYP0ExXdN3ZINr9Au+Gl7JGo8iKVINjxCXqQNwf6c/zFzDr7RPH7Bftz0eGm05jTP1R8KMYA7RPQU0dywkVIqNH/TblltCKJaImcwGTvNO9OIBUzQ+nYdq4hFSHBp5CFOLRNXj2MzaCGVfMpOEyN/9ynt0RKz7S6/JM4Ydo+51SESrboIZTJoBSVjaI9pi6R8cwP2iOuacXg8eFY3ZLzK/xQN9Dh2cjkckUHK63KBi7fRQ4zDZgGV3/tpD7uoijamkrNFvDiI2PMwj8nnFzrfS2FKydK2ObBFQjk2g0jU/sVBbosCwVSdvw9RiUKoQym5BHO205/MHDp7Oh9Ke83OTOSflUSICXgincyWKuhEXQxAkeBD5TcfjUXdAQRt0doFBj2tWV4B9n0uteG5oRk+2XE22YL16v4hgUmGhCsfNGqw0ZwgfyZFlDlQZxlkiNPFoyOGBLVYXDK97yH8rPyX5oKveTjoG6OV2msv5NUL+xXsXzKcJ8Q0YvIpZNcsc5K2il1HueI0NlKq49XWP0aTmXwpIhZPOUe8a8R3TmRiQNh/3hiYiORvhi2HvJ/0Wb+VjPht3M6k4zqAON5S72Ry4Vry8BNcLqwFPxNLb4b6+129kaQ4EnE6HsLeBMUJ9e7zg5BsCSUqUA1NWhFzNLLXJHwhxfDuC0Vkt7XYXzitACf3b4r9G+roqzX4hyKDU9YPT1539lZsE9fuRY2luGxzIyidgHRs5XE/TzCuJt5jUB1NLyF4b92TgGabDXuqCBHFq4+OnvyXBjA/zRO4dFOsHYGCjpk1JgCq9Jy85uToLIFD7k24CJ3QqZx/HFCG5941HUcWR4CYyaHWMlnkHHPHvb8WQsxAvX7OPz7jUQSFAPx0b/B9fvGleC8uvBNSkv3T+46x0VD/2CHJJI259m3tqgpyGpM/adY0LFp6y4omvUvGWOhu6gpQMKjp/SM4SV7wD/StVmtQ+hstzgP+/Gw+M6GBmJiysHk5u6vdsWdFDUly2n3TF91xmYV5Ve0EqsZ/iVPZNxkwd8SVzhrSNS/nKBr/Lz3+2SztJVJo4pxua2sv3IXV1afGVjszDwZ77sbooi7MZ23n/zha1Z3eLMnaOslNzzid4tKmODXS11Pu5HBQbeuZ2vG3uezJp1IZKNUhinvW94x5b+riFHSB5XRORMBYkajzKQ8cZqGjiXrNn7khdW3Kpkq9ntpG92ybsZS01BYlE9g/Vr/0Z04PJ2xkIdaopPxupWxFQ3GLF1pHMkEGo3FNMKgNukxV7YnIbAlNBCNKvPKGQrZVg3waGhEkGr9cC/Y99r1vmY33Yo251WoBpyhDfF8sMLSpjdxOMFeC6pAuCVaSn9pVfac7X8B60/Y3mfHgnGYcFRlIGIw/CK13CvD9dRLLO9r9jWJ+3ycIR+px8cw5Lk21Lt1CgW9vye4zgAXMnKh2wQol3XbFtrQOqqEaGW/Ukl7Vw0bl6ETptk8uXuKgRM/wYVZ5defoZdhbXxe2VTEWUIg5OmukGC0vdiRKSyr19vrWx/xKtdIC8WkIAbFN1PjRz5fOx96ZO8HWIgrhHOFlORGrl33EbT2SwDMlAtbWdZwL3Fay/pV3Eb8rEj69HUaQ8BZ4GWnub8cgJWTtyN7l1rqyfaSexPAoO9COCoYh5DfI08/uRLtdEa10uj2/BRS0M1MM7IehdFGRylzKlHPgebEfoE11gVSDXMch9e7fb1LQ79JTu9zdeTxTlv8zXJdLt5t/1usqB8o6v6bhLaiEKWgI4npy16b2n2F9j4GnP25IwvwSllZmsxxjNm/qI3TMZlfqDodBdaC5x/csBmR2XfZgO2doRp+25ckAP8jUOHSrSqJwx1Vfi4tHUUEOXvuTfsfWVB+8OrQdwte1i3AsWGzGB+Ii1T+UGUxL8KqoqZjkQeGk4FVza7P/gDVAGb9aCa6lOTlgYVnpXXrHQHs0jzLneT3aowBId84a1mpycbGB+QQIgxxRiFJhRT6y2Cb+701WUc6NVrIyQGGetmUhjcET0JRpuPBUXS5KPZOwrSZo9aKyi1k9j18SXWtX34K/rOHst7taWRAzofSVP5ifIfePyfS4lW3dmPK1iOP2baKnTZyyQ+j3VAuGiPdYBcSRJvew51pGRdYL9E8bndOXbq+Vh6JoZfuaVQw19Yr4rg+HnYGktbTdbnzZqhKJBu1bKEln7SbJ8gcnbtx1c/hLW2VW9owKNe+ezh2QMbOh9dhRXtfl95/ggvNXBltrI6CkeLFrlep0dpRJ2rHyNX60i4IA1BmuJpeN/iAg+WgRipNTAif6DNT9mmHqIxUpKmqqM18LI3dLoCxFeKm47TFhXIqfcxneAKGyxVVXiNDX0v11ROaZxiHzu/Cm1m4+T628nGmuJoIvDNzre4bv/Wb6UCc9VL7vmzv5qSkzzEK3Oiu8PVAJljTIgmEt/bxrYYEvKJr4k+jsUkk2hWiackhrsR+8biPJD3pOSQ0TbaWWkY5Qq0MGCIO3Vgds9vpdPVaAJ7lL12JT7x8+lFKwDj0T7wlIC9NKYurOiME3ZvZjCtZdUwGonjK1X4vjqgLHWitY+5WiXbj8Ho0RBHz+pefOH0c+CDdcBtT6jm+NkX3LcDZsNAW3LirqgG7thd42mlUFEMKw7udXNHydCq5BZrvU7m/GXwsZ3cKCtPlPOQvpQfvYf/xOe6amqXpAUFqbr7MmPyMYAQ7BwIgJhDFV/9uMeQ3soLkvmrTDMK3QdmIOj0yBhXZKueaxBjQYPJizGmLXpg0ajzm3wRlhEHyiZ3MruCuqmFQIDP3jZDPCrtfRgq3s99cRszsZaRV4GzphIY9UUEuZrE9Tf58rdIr7GUeJGMnVDYKeCtHAAv98dR/jqd1qfK7UTCjOLKB4Xhb/ILSKIBNKL4O4HNABKv93y9o2GLLF+L9ZonPSlc/Y+d+m8wL1oRdQoFsQ5mqmMVoJ6iulKEHhkD3u01Jyd6+tn9t9Dc9X0x9D3+17j4Mz55JbcSzjWOAo9mJvqrsXryw7M8Z6lA/DkvFPMqqx64IfeWT19Zm6NFH/SoIPvWfM+u3brw8865vWY7/p4Vnlc3ihSEOWe3TbyMhMki8jXaww1BV5jnWcftS8ICqtlM5OKk3+3YORYARQ+qCLLRtvgTwrDGh4L3m+uX8E+h0zGRQSa2b9hjwk4NQR+xirnJo1F7nWSA8wYtN7Nxq5y/WU3RSfV868Xo+0p4o5T4Al6UFgFHvtzSo58fLsm9HNC0pmWTDNSp48KQVOIy+kcB9QEjjvMdBsr5Bls2fwbVMQC5oc8aj62jMx1W/MbIakeUKP4hbqYLvuCBqoCMpAiuW0YFNVTG138fEhFybdIilvRciXo5dZAv5IWSIyJXD6NANJiFJreu/lopZ+0WGOLeYeeB8xo28F3d34wXzXe2LwXaDRj+laSCHOUqNDeUSga2qu6lmJwdK3GEbdcsnZ5fp6/DBMCc7Y9OE0cl7Cjqj4At8IqGjUTBUlFk7vQAqNhBz4C5Vmlg6i00Em7RXJh9xhn2EMwYxojWzYyjBBZZmuGwInDzBNxCsv/aszTVjNsxCzDZ7VmxVbquIGBVOJuKZ7YtvLPLqbdGnVrEEHNhtVQoWQLExFfpgDtq0mjSx2xNwEQNu4/HqI0L652PN2oX33J2p9v84m/U/hY+c/wSqCkzWGwyk/DsXGDJopLVMJQpnfbfS2M5ZiAxSBBk8AbH3/AdJstaQkW11uL3uovy+Zjs9uj5DmN06yuK3yuQ01Q4r0G6GYS1zkRdXggmSFQipIEL7agHyCp4N+nE0Wl91mGSRh/t/4FqrEnzM799apMl7kjySckL4Z/ysq6LH2aVvQdpehucj7FmR0tU9R7Ds3fZ8EEmJwZCOkNbtiQwDo6b/vtdgDYpmPsQM8uX5clFEv8bz6gip7S2eku1umzYAiS3DO0wXF5A3NlmmqwlgL/vf2hvQWg0Zor7YdOxPZ/5G0pqBo7dIYxY1c541dRdXrIXpEB1bFGz8VVo7piaxLr5H/i2L+y4lFdSHe/+WkJvJqAveEqzNOjVoV3h/4TJWLXt+vLAz931C0NwQXAZC+QfbCIZ7cG8dm31d0+7OGBIkSxB5gNEcJRU7Kr5Lrxt8zg6myteOmEdlfvapFApsFANuQeBZadlspeiYsQPtfkStUApvyTvBFdZQS34BUAAohYlvP/fSU3XYFqhu+CZft4Wsvk3dV7Wt12ss1AnCx9NdDJw5asgi9smF5nQOaoM1yUKbx4Zri0ygJZQqBDRtmbpz7iKHgQ0JUSrYNj9aaapqBMUgyK4EzSlzjVSunTe48rs5QJc1A/DMe2mXWBarLgaqOdr9I2pCqbDGFOQHtuKGmU37aBKi2jRTk7Zondkk6O9hkLZ03yqh60Ylu30K+0A+AjK5UcmJuCuOqlL8DVhhlkAnerVrW630n0BeCxvATGsxk3+/sNd7VSTX2YTn4hlcCihBTUL5jFMgtVuc5IRL8UsI431GnBrfsQEWWj4eilmGwC4M79dIQ2RLHnXqzfg94fxZgMax/O7bSEyH1+7bjZwXLziLw61CJCDtLNE09opAZYnSoCzpGIAsPrJMT3RGoRWukNQGsiXm34i7NeZJ5KtXkD8Y+HNC/a/JsyHlxHpYg=";
-        const encryptedHMAC = encryptedMsg.substring(0, 64);
-        const encryptedHTML = encryptedMsg.substring(64);
-        const decryptedHMAC = CryptoJS.HmacSHA256(
-            encryptedHTML,
-            CryptoJS.SHA256(pass).toString()
-        ).toString();
+    d3.select('#classCoverageDistribution svg')
+      .datum(getCoverageDistributionData([0,0,0,0,0,0,0,0,0,0,0,2], "Class Coverage"))
+      .transition().duration(500).call(chart);
 
-        if (decryptedHMAC !== encryptedHMAC) {
-            if (!suppress) {
-                alert( 'Wrong password!' );
-            }
-            sessionStorage.removeItem(STORAGE_KEY);
-            return false;
-        }
+    nv.utils.windowResize(chart.update);
 
-        // Save for the session
-        sessionStorage.setItem(STORAGE_KEY, pass);
+    return chart;
+  });
 
-        const plainHTML = decryptContent(encryptedHTML, pass);
+  nv.addGraph(function() {
+    var chart = nv.models.multiBarChart();
+    chart.tooltips(false)
+      .showControls(false)
+      .showLegend(false)
+      .reduceXTicks(false)
+      .staggerLabels(true)
+      .yAxis.tickFormat(d3.format('d'));
 
-        document.write(plainHTML);
-        document.close();
+    d3.select('#methodCoverageDistribution svg')
+      .datum(getCoverageDistributionData([0,0,0,0,0,0,0,0,0,0,0,41], "Method Coverage"))
+      .transition().duration(500).call(chart);
 
-        return true;
-    }
+    nv.utils.windowResize(chart.update);
 
-    function onload() {
-        if (sessionStorage.getItem(STORAGE_KEY) && decryptAndReplace(sessionStorage.getItem(STORAGE_KEY),true)) {
+    return chart;
+  });
 
-            return;
+  function getCoverageDistributionData(data, label) {
+    var labels = [
+      '0%',
+      '0-10%',
+      '10-20%',
+      '20-30%',
+      '30-40%',
+      '40-50%',
+      '50-60%',
+      '60-70%',
+      '70-80%',
+      '80-90%',
+      '90-100%',
+      '100%'
+    ];
+    var values = [];
+    $.each(labels, function(key) {
+      values.push({x: labels[key], y: data[key]});
+    });
 
-        }
+    return [
+      {
+        key: label,
+        values: values,
+        color: "#4572A7"
+      }
+    ];
+  }
+  nv.addGraph(function() {
+    var chart = nv.models.scatterChart()
+      .showDistX(true)
+      .showDistY(true)
+      .showLegend(false)
+      .forceX([0, 100]);
+    chart.tooltipContent(function(graph) {
+      return '<p>' + graph.point.class + '</p>';
+    });
 
-        // Show page because there isn't a good password
-        // Otherwise, document.write would have stop this
-        document
-        .querySelectorAll(".body")
-        .forEach(el => (el.style.display = "block"));
+    chart.xAxis.axisLabel('Code Coverage (in percent)');
+    chart.yAxis.axisLabel('Cyclomatic Complexity');
 
-        document
-        .getElementById("form")
-        .addEventListener("submit", e => {
-            e.preventDefault();
+    d3.select('#classComplexity svg')
+      .datum(getComplexityData([[100,2,"<a href=\"Exceptions\/StateException.php.html#20\">TonyBogdanov\\MockableAnnotations\\Reader\\Exceptions\\StateException<\/a>"],[100,68,"<a href=\"MockableReader.php.html#42\">TonyBogdanov\\MockableAnnotations\\Reader\\MockableReader<\/a>"]], 'Class Complexity'))
+      .transition()
+      .duration(500)
+      .call(chart);
 
-            decryptAndReplace(
-                document.getElementById("password").value
-            );
-        });
-    }
-</script>
+    nv.utils.windowResize(chart.update);
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/crypto-js.min.js" integrity="sha384-lp4k1VRKPU9eBnPePjnJ9M2RF3i7PC30gXs70+elCVfgwLwx1tv5+ctxdtwxqZa7" crossorigin="anonymous"></script>
-</body>
+    return chart;
+  });
+
+  nv.addGraph(function() {
+    var chart = nv.models.scatterChart()
+      .showDistX(true)
+      .showDistY(true)
+      .showLegend(false)
+      .forceX([0, 100]);
+    chart.tooltipContent(function(graph) {
+      return '<p>' + graph.point.class + '</p>';
+    });
+
+    chart.xAxis.axisLabel('Code Coverage (in percent)');
+    chart.yAxis.axisLabel('Method Complexity');
+
+    d3.select('#methodComplexity svg')
+      .datum(getComplexityData([[100,2,"<a href=\"Exceptions\/StateException.php.html#30\">TonyBogdanov\\MockableAnnotations\\Reader\\Exceptions\\StateException::__construct<\/a>"],[100,1,"<a href=\"MockableReader.php.html#74\">TonyBogdanov\\MockableAnnotations\\Reader\\MockableReader::__construct<\/a>"],[100,1,"<a href=\"MockableReader.php.html#85\">TonyBogdanov\\MockableAnnotations\\Reader\\MockableReader::pushState<\/a>"],[100,2,"<a href=\"MockableReader.php.html#103\">TonyBogdanov\\MockableAnnotations\\Reader\\MockableReader::popState<\/a>"],[100,2,"<a href=\"MockableReader.php.html#123\">TonyBogdanov\\MockableAnnotations\\Reader\\MockableReader::restoreState<\/a>"],[100,1,"<a href=\"MockableReader.php.html#152\">TonyBogdanov\\MockableAnnotations\\Reader\\MockableReader::overrideClassAnnotations<\/a>"],[100,1,"<a href=\"MockableReader.php.html#173\">TonyBogdanov\\MockableAnnotations\\Reader\\MockableReader::overrideAliasClassAnnotations<\/a>"],[100,1,"<a href=\"MockableReader.php.html#192\">TonyBogdanov\\MockableAnnotations\\Reader\\MockableReader::mergeClassAnnotations<\/a>"],[100,1,"<a href=\"MockableReader.php.html#213\">TonyBogdanov\\MockableAnnotations\\Reader\\MockableReader::mergeAliasClassAnnotations<\/a>"],[100,1,"<a href=\"MockableReader.php.html#233\">TonyBogdanov\\MockableAnnotations\\Reader\\MockableReader::overrideMethodAnnotations<\/a>"],[100,1,"<a href=\"MockableReader.php.html#263\">TonyBogdanov\\MockableAnnotations\\Reader\\MockableReader::overrideAliasMethodAnnotations<\/a>"],[100,1,"<a href=\"MockableReader.php.html#292\">TonyBogdanov\\MockableAnnotations\\Reader\\MockableReader::mergeMethodAnnotations<\/a>"],[100,1,"<a href=\"MockableReader.php.html#322\">TonyBogdanov\\MockableAnnotations\\Reader\\MockableReader::mergeAliasMethodAnnotations<\/a>"],[100,1,"<a href=\"MockableReader.php.html#351\">TonyBogdanov\\MockableAnnotations\\Reader\\MockableReader::overridePropertyAnnotations<\/a>"],[100,1,"<a href=\"MockableReader.php.html#381\">TonyBogdanov\\MockableAnnotations\\Reader\\MockableReader::overrideAliasPropertyAnnotations<\/a>"],[100,1,"<a href=\"MockableReader.php.html#410\">TonyBogdanov\\MockableAnnotations\\Reader\\MockableReader::mergePropertyAnnotations<\/a>"],[100,1,"<a href=\"MockableReader.php.html#440\">TonyBogdanov\\MockableAnnotations\\Reader\\MockableReader::mergeAliasPropertyAnnotations<\/a>"],[100,5,"<a href=\"MockableReader.php.html#469\">TonyBogdanov\\MockableAnnotations\\Reader\\MockableReader::overrideAliasAnnotations<\/a>"],[100,5,"<a href=\"MockableReader.php.html#528\">TonyBogdanov\\MockableAnnotations\\Reader\\MockableReader::mergeAliasAnnotations<\/a>"],[100,2,"<a href=\"MockableReader.php.html#584\">TonyBogdanov\\MockableAnnotations\\Reader\\MockableReader::getClassAnnotations<\/a>"],[100,3,"<a href=\"MockableReader.php.html#604\">TonyBogdanov\\MockableAnnotations\\Reader\\MockableReader::getClassAnnotation<\/a>"],[100,2,"<a href=\"MockableReader.php.html#625\">TonyBogdanov\\MockableAnnotations\\Reader\\MockableReader::getMethodAnnotations<\/a>"],[100,3,"<a href=\"MockableReader.php.html#645\">TonyBogdanov\\MockableAnnotations\\Reader\\MockableReader::getMethodAnnotation<\/a>"],[100,2,"<a href=\"MockableReader.php.html#666\">TonyBogdanov\\MockableAnnotations\\Reader\\MockableReader::getPropertyAnnotations<\/a>"],[100,3,"<a href=\"MockableReader.php.html#686\">TonyBogdanov\\MockableAnnotations\\Reader\\MockableReader::getPropertyAnnotation<\/a>"],[100,1,"<a href=\"MockableReader.php.html#705\">TonyBogdanov\\MockableAnnotations\\Reader\\MockableReader::getDelegate<\/a>"],[100,1,"<a href=\"MockableReader.php.html#716\">TonyBogdanov\\MockableAnnotations\\Reader\\MockableReader::setDelegate<\/a>"],[100,1,"<a href=\"MockableReader.php.html#726\">TonyBogdanov\\MockableAnnotations\\Reader\\MockableReader::clearClassMockProviders<\/a>"],[100,3,"<a href=\"MockableReader.php.html#738\">TonyBogdanov\\MockableAnnotations\\Reader\\MockableReader::addClassMockProvider<\/a>"],[100,1,"<a href=\"MockableReader.php.html#762\">TonyBogdanov\\MockableAnnotations\\Reader\\MockableReader::getClassMockProviders<\/a>"],[100,2,"<a href=\"MockableReader.php.html#773\">TonyBogdanov\\MockableAnnotations\\Reader\\MockableReader::setClassMockProviders<\/a>"],[100,1,"<a href=\"MockableReader.php.html#790\">TonyBogdanov\\MockableAnnotations\\Reader\\MockableReader::clearMethodMockProviders<\/a>"],[100,3,"<a href=\"MockableReader.php.html#802\">TonyBogdanov\\MockableAnnotations\\Reader\\MockableReader::addMethodMockProvider<\/a>"],[100,1,"<a href=\"MockableReader.php.html#826\">TonyBogdanov\\MockableAnnotations\\Reader\\MockableReader::getMethodMockProviders<\/a>"],[100,2,"<a href=\"MockableReader.php.html#837\">TonyBogdanov\\MockableAnnotations\\Reader\\MockableReader::setMethodMockProviders<\/a>"],[100,1,"<a href=\"MockableReader.php.html#854\">TonyBogdanov\\MockableAnnotations\\Reader\\MockableReader::clearPropertyMockProviders<\/a>"],[100,3,"<a href=\"MockableReader.php.html#866\">TonyBogdanov\\MockableAnnotations\\Reader\\MockableReader::addPropertyMockProvider<\/a>"],[100,1,"<a href=\"MockableReader.php.html#890\">TonyBogdanov\\MockableAnnotations\\Reader\\MockableReader::getPropertyMockProviders<\/a>"],[100,2,"<a href=\"MockableReader.php.html#901\">TonyBogdanov\\MockableAnnotations\\Reader\\MockableReader::setPropertyMockProviders<\/a>"],[100,1,"<a href=\"MockableReader.php.html#918\">TonyBogdanov\\MockableAnnotations\\Reader\\MockableReader::getStateStack<\/a>"],[100,1,"<a href=\"MockableReader.php.html#929\">TonyBogdanov\\MockableAnnotations\\Reader\\MockableReader::setStateStack<\/a>"]], 'Method Complexity'))
+      .transition()
+      .duration(500)
+      .call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  function getComplexityData(data, label) {
+    var values = [];
+    $.each(data, function(key) {
+      var value = Math.round(data[key][0]*100) / 100;
+      values.push({
+        x: value,
+        y: data[key][1],
+        class: data[key][2],
+        size: 0.05,
+        shape: 'diamond'
+      });
+    });
+
+    return [
+      {
+        key: label,
+        values: values,
+        color: "#4572A7"
+      }
+    ];
+  }
+});
+  </script>
+ </body>
 </html>
